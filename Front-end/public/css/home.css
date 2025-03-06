@@ -1,5 +1,5 @@
 :root{
-    --batata:red;
+    --cor-base: #F8CA26;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -17,12 +17,12 @@ body {
     height: 15vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .header .container {
     /* background-color: blue; */
-    width: 100%;
+    width: 95%;
     height: 80%;
     display: flex;
     align-items: center;
@@ -40,9 +40,9 @@ body {
 
 .header .container .navbar .opcoes {
     /* background-color: brown; */
-    width: 52%;
+    width: 56%;
     height: 90%;
-    margin-left: 5%;
+    margin-left: 7%;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -54,12 +54,12 @@ body {
     color: white;
     padding-inline: 3%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .header .container .navbar .login-cadastro {
     /* background-color: brown; */
-    width: 35%;
+    width: 50%;
     height: 90%;
     display: flex;
     align-items: center;
@@ -71,24 +71,34 @@ body {
 .header .container .navbar .login-cadastro .opcao {
     text-decoration: none;
     color: white;
-    padding-inline: 2%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
-    background-color: #E1BC24;
+    background-color: var(--cor-base);
     width: 376px;
     height: 76px;
     display: flex;
-    margin-left: 10%;
+    margin-left: 5%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    align-items: center;
+}
+
+.header .container .navbar .login-cadastro .entrar-div .entrar {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: bold;
+    padding-left: 10%;
 }
 
 .header .container .navbar .login-cadastro .entrar-div img {
-    background-color: #E1BC24;
-    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding-left: 5px;
 
 }
 
@@ -112,7 +122,7 @@ body {
 }
 
 .tela-inicial .barra-lateral {
-    background-color: #E1BC24;
+    background-color: var(--cor-base);
     width: 10%;
     height: 100%;
 }
