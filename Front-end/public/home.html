@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header">
         <div class="container">
             <div class="navbar">
                 <div class="opcoes">
@@ -48,14 +48,75 @@
         </div>
     </div>
     <div class="tela-3">
+        <div class="frase-botao-descubra-mais">
+            <b>
+                A INTELIGÊNCIA DO TURISMO <br>
+                ESTRANGEIRO NO BRASIL, EM UM SÓ <br>
+                LUGAR!
+            </b>
+            <span>
+                Análise de dados de temporadas, <br>
+                nacionalidades, destinos e muito mais!
+            </span>
+
+            <div class="botao-descubra-mais"><b>DESCOBRIR MAIS</b></div>
+        </div>
+            <img src="../public/assets/imgs/grafico-celular.svg">
 
     </div>
     <div class="tela-4">
+        <img src="assets/imgs/passaro-direita.svg">
+        <div class="contato"><b>ENTRE EM CONTATO COM A GENTE</b>
+            <div class="imagens-contato">
+                <img src="assets/icon/phone-call.svg">
+                <img src="assets/icon/whatsapp.svg">
+                <img src="assets/icon/email.svg">
+                <img src="assets/icon/facebook.png">
+            </div>
+        </div>
+        <img src="assets/imgs/passaro-esquerda.svg">
 
     </div>
     <div class="tela-5">
-
+        <div class="footer">
+            <div class="caixa-footer">
+                <b>WISETOUR</b> <br>
+                <span>Transformando números em <br>
+                    oportunidades E dados em <br>
+                    destinos de sucesso!</span>
+            </div>
+            <div class="caixa-footer">
+                <b>MENU</b> <br>
+                <span>HOME</span> <br>
+                <span>SOBRE NÓS</span> <br>
+                <span>SERVIÇOS</span> <br>
+                <span>ENTRE EM CONTATO</span> <br>
+                <span>CADASTRO</span> <br>
+                <span>LOGIN</span> <br>
+            </div>
+            <div class="caixa-footer">
+                <b>TIME DA WISETOUR</b> <br>
+                <span>Ian Medeiros de Jesus Pimenta</span> <br>
+                <span>Kenner Eduardo Souza Lima</span> <br>
+                <span>Leonardo Sardinha Santana</span> <br>
+                <span>Luana Liriel Brito dos Santos</span> <br>
+                <span>Phelipe Bruione da Silva</span> <br>
+                <span>Samara Martins Damacena</span> <br>
+            </div>
+        </div>
+        <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
     </div>
 </body>
 </html>
+
+<script>
+    window.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "#F8CA26";
+    } else {
+        header.style.backgroundColor = "transparent";
+    }
+});
+</script>
 

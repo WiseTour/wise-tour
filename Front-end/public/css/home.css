@@ -16,6 +16,7 @@ body {
 
 .header {
     /* background-color: var(--batata); */
+    background-color: transparent;
     position: fixed;
     width: 100%;
     height: 15vh;
@@ -171,7 +172,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
 .tela-2 .frase-botao-saiba-mais .botao-saiba-mais {
@@ -196,22 +197,99 @@ body {
     align-items: center; 
 }
 
+.tela-3 .frase-botao-descubra-mais {
+    font-size: 35px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 10%;
+}
+
+.tela-3 .frase-botao-descubra-mais .botao-descubra-mais {
+    width: 324px;
+    height: 67px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #E7E6E6;
+    background-color: var(--cor-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
+}
+
 .tela-4 {
     background-color: var(--cor-base);
     width: 100%;
-    height: 90vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-.tela-5 {
-    background-color: #3B3B3B;
-    width: 100%;
-    height: 95vh;
+.tela-4 .contato {
+    /* background-color: black; */
+    color: #E7E6E6;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+}
+
+.tela-4 .contato .imagens-contato {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    margin-top: 25px;
+    width: 90%;
+}
+
+.tela-4 .contato .imagens-contato img {
+    padding-inline: 4%;
+    height: 120px;
+    width: 120px;
+}
+
+.tela-5 {
+    background-color: #3B3B3B;
+    color: #E7E6E6;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.tela-5 .direitos {
+    margin-inline: 13%;
+}
+
+.tela-5 .footer {
+    /* background-color: white; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5%;
+}
+
+.tela-5 .footer .caixa-footer {
+    /* background-color: aqua; */
+    width: 20%;
+    height: 80%;
+    color: #E7E6E6;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-inline: 5%;
 }
 
 @media (max-width: 500px) {
