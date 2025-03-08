@@ -1,8 +1,14 @@
 :root {
-    --batata: red;
+    --cor-base: #F8CA26;
+    --cinza: #3B3B3B;
+    --cinza-medio: #D6D1D1;
+    --cinza-claro: #E7E6E6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -13,18 +19,17 @@ body {
 }
 
 .header {
-    /* background-color: var(--batata); */
+    background-color: black;
     position: fixed;
     width: 100%;
     height: 15vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .header .container {
-    /* background-color: blue; */
-    width: 100%;
+    width: 95%;
     height: 80%;
     display: flex;
     align-items: center;
@@ -32,7 +37,6 @@ body {
 }
 
 .header .container .navbar {
-    /* background-color: green; */
     width: 100%;
     height: 90%;
     display: flex;
@@ -41,10 +45,9 @@ body {
 }
 
 .header .container .navbar .opcoes {
-    /* background-color: brown; */
-    width: 52%;
+    width: 56%;
     height: 90%;
-    margin-left: 5%;
+    margin-left: 7%;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -56,65 +59,88 @@ body {
     color: white;
     padding-inline: 3%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .header .container .navbar .login-cadastro {
-    /* background-color: brown; */
-    width: 35%;
+    width: 50%;
     height: 90%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     text-decoration: none;
     color: white;
+    gap: 10px;
 }
 
 .header .container .navbar .login-cadastro .opcao {
     text-decoration: none;
     color: white;
-    padding-inline: 2%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
-    background-color: #E1BC24;
-    width: 376px;
+    background-color: var(--cor-base);
+    width: 230px;
     height: 76px;
     display: flex;
-    margin-left: 10%;
+    margin-left: 5%;
     font-weight: bold;
-    font-size: 20px;
-}
-
-.header .container .navbar .login-cadastro .entrar-div img {
-    background-color: #E1BC24;
-    border-radius: 50%;
-
-}
-
-.tela-inicial {
-    background-image: linear-gradient(to bottom,
-            rgba(21, 20, 20, 1.0) 0%,
-            rgba(63, 63, 63, 0.75) 39%,
-            rgba(63, 63, 63, 0.50) 58%,
-            rgba(25, 25, 25, 0.80) 73%,
-            rgba(21, 20, 20, 0.90) 87%),
-        url(../assets/imgs/fundo-home.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: flex-start;
+    font-size: 25px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     align-items: center;
 }
 
-.tela-inicial .barra-lateral {
-    background-color: #E1BC24;
+.header .container .navbar .login-cadastro .entrar-div .entrar {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: bold !important;
+    padding-left: 10%;
+}
+
+.header .container .navbar .login-cadastro .entrar-div img {
+    height: 59px;
+    width: 59px;
+    padding-left: 8px;
+
+}
+
+.header .container .navbar .opcoes .opcao:hover {
+    color: var(--cor-base);
+}
+
+.header .container .navbar .login-cadastro .opcao:hover {
+    color: var(--cor-base);
+}
+
+.tela-inicial {
+    width: 100%;
+    height: 80vh;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    box-sizing: border-box;
+}
+
+.barra-lateral {
+    background-color: var(--cor-base);
     width: 10%;
-    height: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    width: 70%;
 }
 
 .tela-inicial .filtro {
@@ -127,4 +153,193 @@ body {
         background-color: aquamarine;
     }
 
+}
+
+.navbar a {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+.container-sobre-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.imgsobre1 {
+    width: 100%;
+}
+
+.container-esquerda h1 {
+    width: 70%;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 700;
+}
+
+.container-esquerda h2 {
+    width: 60%;
+
+}
+
+.container-esquerda {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-direita {
+    width: 45%;
+}
+
+
+.tela-inicial-2 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza);
+    box-sizing: border-box;
+}
+
+.container-sobre-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.imgsobre2 {
+    width: 80%;
+}
+
+.container-esquerda-2 h1 {
+    width: 70%;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 700;
+}
+
+.container-esquerda-2 h2 {
+    width: 60%;
+    color: white;
+}
+
+.container-esquerda-2 {
+    width: 50%;
+}
+
+.container-direita-2 {
+    width: 45%;
+}
+
+.tela-inicial-3 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-medio);
+    box-sizing: border-box;
+}
+
+.container-sobre-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.imgsobre3 {
+    width: 80%;
+}
+
+.container-esquerda-3 h1 {
+    width: 70%;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 700;
+}
+
+.container-esquerda-3 h2 {
+    width: 60%;
+    color: white;
+}
+
+.container-esquerda-3 {
+    width: 50%;
+}
+
+.container-direita-3 {
+    width: 45%;
+}
+
+.container-direita-3 h1 {
+    width: 70%;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 700;
+}
+
+.tela-inicial-4 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    box-sizing: border-box;
+    padding: 7vh;
+}
+
+.container-sobre-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.tela-inicial-4 h1 {
+    font-size: 6vh;
+    color: #3B3B3B;
+    margin-bottom: 10vh;
+}
+
+.imgsobre4 {
+    width: 70%;
+    max-width: 100%;
+}
+
+.container-sobre-4 h1 {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 700;
+}
+
+.tela-inicial-5 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-medio);
+    box-sizing: border-box;
+    padding: 4vh;
+}
+
+.container-sobre-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.imgsobre5 {
+    width: 60%;
+    max-width: 100%;
 }
