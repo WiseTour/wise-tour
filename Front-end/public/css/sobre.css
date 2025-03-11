@@ -1,6 +1,7 @@
 :root {
     --cor-base: #F8CA26;
     --cinza: #3B3B3B;
+    --cinza-escuro: #1E1E1E;
     --cinza-medio: #D6D1D1;
     --cinza-claro: #E7E6E6;
 }
@@ -8,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 * {
@@ -19,7 +22,7 @@ body {
 }
 
 .header {
-    background-color: black;
+    background-color: var(--cinza-escuro);
     position: fixed;
     width: 100%;
     height: 15vh;
@@ -294,6 +297,22 @@ body {
     padding: 7vh;
 }
 
+.tela-inicial-4 h1 {
+    font-weight: 700;
+    font-size: 6vh;
+    margin-bottom: 9vh;
+    color: #1E1E1E;
+    width: 80%;
+}
+
+.tela-inicial-4 p {
+    font-weight: 700;
+    font-size: 2vh; 
+    color: white; 
+    margin: 10px 0; 
+    margin-top: 2vh;
+}
+
 .container-sobre-4 {
     display: flex;
     flex-direction: column;
@@ -303,43 +322,24 @@ body {
     width: 100%;
 }
 
-.tela-inicial-4 h1 {
-    font-size: 6vh;
-    color: #3B3B3B;
-    margin-bottom: 10vh;
-}
-
-.imgsobre4 {
-    width: 70%;
-    max-width: 100%;
-}
-
-.container-sobre-4 h1 {
-    font-family: "Anton SC", sans-serif;
-    font-weight: 700;
-}
-
-.tela-inicial-5 {
-    width: 100%;
-    min-height: 100vh;
+.coluna1, .coluna2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cinza-medio);
+    justify-content: space-evenly; 
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.passaporte {
+    background-color: var(--cor-base);
+    width: 22%;
+    padding: 5vh 3.5vh;
     box-sizing: border-box;
-    padding: 4vh;
-}
-
-.container-sobre-5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 2.5vh;
     text-align: center;
-    max-width: 1200px;
-    width: 100%;
+    color: white;
+    margin: 1vh -10vh;
 }
 
-.imgsobre5 {
-    width: 60%;
-    max-width: 100%;
+.passaporte h4 {
+    font-weight: normal; 
 }
