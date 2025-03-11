@@ -58,13 +58,13 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
     font-size: 19px;
-    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
+    letter-spacing: 1px; 
 }
 
 .header .container .navbar .login-cadastro {
@@ -79,12 +79,12 @@ body {
 }
 
 .header .container .navbar .login-cadastro .opcao {
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
     text-decoration: none;
     color: white;
     font-size: 19px;
-    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
+    letter-spacing: 1px; 
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -115,12 +115,12 @@ body {
 }
 
 .header .container .navbar .login-cadastro .entrar {
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
     text-decoration: none;
     color: #1e1e1e;
     font-size: 25px;
-    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
+    letter-spacing: 1px; 
 }
 
 .header .container .navbar .opcoes .opcao:hover {

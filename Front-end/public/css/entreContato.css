@@ -56,13 +56,13 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
     font-size: 19px;
-    letter-spacing: 1px; /* Espaçamento entre as letras */
+    letter-spacing: 1px; 
 }
 
 .header .container .navbar .login-cadastro {
@@ -77,21 +77,21 @@ body {
 }
 
 .header .container .navbar .login-cadastro .entrar {
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
     text-decoration: none;
     color: #1e1e1e;
     font-size: 25px;
-    letter-spacing: 1px; /* Espaçamento entre as letras */
+    letter-spacing: 1px;
 }
 
 .navbar a {
     display: inline-block;
-    transition: transform 0.4s ease-in-out; /* Adiciona transição suave */
+    transition: transform 0.4s ease-in-out; 
 }
 
 .navbar a:hover {
-    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    transform: scale(1.2); 
 }
 
 .header .container .navbar .login-cadastro .opcao {
@@ -99,7 +99,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 19px;
-    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-family: 'Anton SC', sans-serif; 
     font-weight: 700;
 }
 
@@ -170,7 +170,7 @@ body {
 
 .barra-lateral {
     background-color: var(--cor-base);
-    width: 10%;
+    width: 8%;
     height: 15vh;
     position: fixed;
     top: 0;
