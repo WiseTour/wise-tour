@@ -55,12 +55,15 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
+    font-family: 'Anton SC', sans-serif;
+    font-weight: 700;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
-    font-weight: bold;
     font-size: 19px;
+    letter-spacing: 1px;
 }
+
 
 .header .container .navbar .login-cadastro {
     width: 50%;
@@ -74,10 +77,12 @@ body {
 }
 
 .header .container .navbar .login-cadastro .opcao {
+    font-family: 'Anton SC', sans-serif;
+    font-weight: 700;
     text-decoration: none;
     color: white;
-    font-weight: bold;
     font-size: 19px;
+    letter-spacing: 1px;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -107,6 +112,14 @@ body {
 
 }
 
+.header .container .navbar .login-cadastro .entrar {
+    font-family: 'Anton SC', sans-serif;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
 .header .container .navbar .opcoes .opcao:hover {
     color: var(--cor-base);
 }
@@ -115,9 +128,18 @@ body {
     color: var(--cor-base);
 }
 
+.navbar a {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
 .barra-lateral {
     background-color: var(--cor-base);
-    width: 10%;
+    width: 8%;
     height: 15vh;
     position: fixed;
     top: 0;
@@ -132,38 +154,38 @@ body {
     width: 70%;
 }
 
-.container-servicos-1{
-        background-color: var(--cinza-claro);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height:80vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 140px;
+.container-servicos-1 {
+    background-color: var(--cinza-claro);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 140px;
 }
 
-.container-esquerda{
+.container-esquerda {
     display: flex;
     padding-left: 200px;
     height: 350px;
     padding-top: 90px;
 }
 
-.tela-inicial-2{
+.tela-inicial-2 {
     background-color: var(--cinza-medio);
-     background-size: cover;
-     background-position: center;
-     width: 100%;
-     height:70vh;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-     gap: 140px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 140px;
 }
 
-.container-servicos-2{
+.container-servicos-2 {
     display: flex;
     flex-direction: row;
     gap: 200px;
@@ -171,90 +193,90 @@ body {
     padding-bottom: 50px;
 }
 
-.container-esquerda-2{
+.container-esquerda-2 {
     padding-left: 150px;
 }
 
-.img-grafico-servicos{
+.img-grafico-servicos {
     height: 50vh;
 }
 
-.tela-inicial-3{
+.tela-inicial-3 {
     background-color: var(--cinza-claro);
-     background-size: cover;
-     background-position: center;
-     width: 100%;
-     height:70vh;
-     display: flex;
-     justify-content: flex-start;
-     align-items: center;
-     gap: 140px;
-}
-
-.container-servicos-3{
-    display: flex;
-    flex-direction: row;
-}
-
-.container-esquerda-3{
-    display: flex;
-    flex-direction: row;
-}
-
-.passaro-1-servicos{
-    height: 200px;
-    padding-top: 220px;
-}
-
-.img-servicos-tela-3{
-    height: 350px;
-    padding-left: 40px;
-}
-
-.container-meio-3{
-    padding-left: 300px;
-}
-
-.container-direita-3{
-    padding-left: 30px;
-}
-
-tela-inicial-4{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height:70vh;
+    height: 70vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 140px;
 }
 
-.container-servicos-4{
+.container-servicos-3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-esquerda-3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.passaro-1-servicos {
+    height: 200px;
+    padding-top: 220px;
+}
+
+.img-servicos-tela-3 {
+    height: 350px;
+    padding-left: 40px;
+}
+
+.container-meio-3 {
+    padding-left: 300px;
+}
+
+.container-direita-3 {
+    padding-left: 30px;
+}
+
+tela-inicial-4 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 140px;
+}
+
+.container-servicos-4 {
     background-color: var(--cinza-medio);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-cima{
+.container-cima {
     padding-top: 50px;
 }
 
-.container-cima h1{
+.container-cima h1 {
     display: flex;
     justify-content: center
 }
 
-.container-cima h2{
+.container-cima h2 {
     padding-top: 40px;
 }
 
-.container-baixo{
+.container-baixo {
     padding-top: 40px;
 }
 
-.img-rotas-servicos{
+.img-rotas-servicos {
     height: 100vh;
 }
 

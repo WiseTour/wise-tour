@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    background-color: var(--cinza-escuro);
+    background-color: black;
     position: fixed;
     width: 100%;
     height: 15vh;
@@ -58,11 +58,13 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
-    font-weight: bold;
     font-size: 19px;
+    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
 }
 
 .header .container .navbar .login-cadastro {
@@ -77,10 +79,12 @@ body {
 }
 
 .header .container .navbar .login-cadastro .opcao {
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
     text-decoration: none;
     color: white;
-    font-weight: bold;
     font-size: 19px;
+    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -110,6 +114,15 @@ body {
 
 }
 
+.header .container .navbar .login-cadastro .entrar {
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 25px;
+    letter-spacing: 1px; /* Adiciona um espaçamento entre as letras */
+}
+
 .header .container .navbar .opcoes .opcao:hover {
     color: var(--cor-base);
 }
@@ -131,7 +144,7 @@ body {
 
 .barra-lateral {
     background-color: var(--cor-base);
-    width: 10%;
+    width: 8%;
     height: 15vh;
     position: fixed;
     top: 0;
@@ -416,4 +429,41 @@ flex-direction: row;
 
 .valores .imgsobre6 {
     width: 25%;
+}
+
+.tela-6 {
+    background-color: #3B3B3B;
+    color: #E7E6E6;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.tela-6 .direitos {
+    margin-inline: 13%;
+}
+
+.tela-6 .footer {
+    /* background-color: white; */
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5%;
+}
+
+.tela-6 .footer .caixa-footer {
+    /* background-color: aqua; */
+    width: 20%;
+    height: 80%;
+    color: #E7E6E6;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-inline: 5%;
 }

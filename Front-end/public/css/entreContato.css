@@ -56,11 +56,13 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
-    font-weight: bold;
     font-size: 19px;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
 }
 
 .header .container .navbar .login-cadastro {
@@ -74,11 +76,31 @@ body {
     gap: 10px;
 }
 
+.header .container .navbar .login-cadastro .entrar {
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 25px;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+}
+
+.navbar a {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out; /* Adiciona transição suave */
+}
+
+.navbar a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+}
+
 .header .container .navbar .login-cadastro .opcao {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 19px;
+    font-family: 'Anton SC', sans-serif; /* Aplica a fonte Anton SC */
+    font-weight: 700;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -119,7 +141,7 @@ body {
 
 .barra-lateral {
     background-color: var(--cor-base);
-    width: 10%;
+    width: 8%;
     height: 15vh;
     position: fixed;
     top: 0;
