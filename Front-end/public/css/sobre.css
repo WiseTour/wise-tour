@@ -299,7 +299,7 @@ body {
 
 .tela-inicial-4 h1 {
     font-weight: 700;
-    font-size: 6vh;
+    font-size: 4.5vh;
     margin-bottom: 9vh;
     color: #1E1E1E;
     width: 80%;
@@ -342,4 +342,78 @@ body {
 
 .passaporte h4 {
     font-weight: normal; 
+}
+
+.tela-inicial-5 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-medio);
+    box-sizing: border-box;
+    padding: 7vh;
+}
+
+.container-sobre-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 5vh;
+}
+
+.tela-inicial-5 h1 {
+    font-weight: 700;
+    font-size: 4.5vh;
+    margin-bottom: 4vh;
+    color: #1E1E1E;
+    width: 80%;
+}
+
+
+.imgsobre6 {
+    width: 8%;
+}
+
+.missao, .visao, .valores {
+    background-color: var(--cinza);
+    color: var(--cinza-medio);
+    padding: 4vh;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+
+.missao, .visao {
+display: flex;
+flex-direction: row;
+}
+
+.destinos {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.missao p, .visao p {
+    max-width: 55%;
+}
+
+.missao p, .visao p, .valores p {
+    font-size: 2vh;
+    letter-spacing: 0.5px;
+}
+
+.destinos h2 {
+    font-size: 3vh;
+}
+
+.valores .imgsobre6 {
+    width: 25%;
 }
