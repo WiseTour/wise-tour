@@ -2,90 +2,89 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>AquaTech | Login</title>
+  <title>WiseTour</title>
 
-    <script src="./js/sessao.js"></script>
+  <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
+<!-- onload="listar()" -->
+
 <body>
-
-    <!--Header-->
-
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
-            </ul>
+  <div class="login">
+    <div class="container">
+      <img class="seta" onclick="redirecionar('home')" src="assets/icon/arrow.png">
+      
+      <div class="campo-trocar">
+        <img class="passaporte-frente" src="assets/imgs/cadastro-login/passaporte-frente.svg">
+        <div onclick="redirecionar('cadastro')" class="campo-mudar">
+          <h2>CADASTRAR</h2>
+          <div class="span-centralizar">
+            <span>DE: <span>ESTADO</span><br>
+            PARA: <span>WISETOUR</span></span>
+          </div>
         </div>
+        <div class="campo-mudar-abaixo"></div>
+      </div>
+      <div class="campo-inputs">
+        <h2>ACESSAR CONTA</h2>
+        <img src="assets/icon/logo-preto.png">
+        <div class="input-icon">
+          <img src="assets/icon/email.png">
+          <input type="text" placeholder="Digite seu email">
+        </div>
+        <div class="input-icon">
+          <img src="assets/icon/password.png">
+          <input id="inp_senha" type="password" placeholder="Digite sua senha">
+          <img class="password" onclick="mudarVisualisacaoSenha('open')" src="assets/icon/eyes-open.png" id="img_eye_open">
+          <img class="password" onclick="mudarVisualisacaoSenha('closed')" src="assets/icon/eyes-closed.png" id="img_eye_closed" style="display: none;">
+        </div>
+        <button>ENTRAR</button>
+      </div>
+      <img class="logo" src="assets/icon/logo-preto.png">
     </div>
-
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
-                </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
-            </div>
-        </div>
-    </div>
-
-    <!--footer inicio-->
+  </div>
+  <div class="tela-footer">
     <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+        <div class="caixa-footer">
+            <b>WISETOUR</b> <br>
+            <span>Transformando números em <br>
+                oportunidades E dados em <br>
+                destinos de sucesso!</span>
+        </div>
+        <div class="caixa-footer">
+            <b>MENU</b> <br>
+            <span>HOME</span> <br>
+            <span>SOBRE NÓS</span> <br>
+            <span>SERVIÇOS</span> <br>
+            <span>ENTRE EM CONTATO</span> <br>
+            <span>CADASTRO</span> <br>
+            <span>LOGIN</span> <br>
+        </div>
+        <div class="caixa-footer">
+            <b>TIME DA WISETOUR</b> <br>
+            <span>Ian Medeiros de Jesus Pimenta</span> <br>
+            <span>Kenner Eduardo Souza Lima</span> <br>
+            <span>Leonardo Sardinha Santana</span> <br>
+            <span>Luana Liriel Brito dos Santos</span> <br>
+            <span>Phelipe Bruione da Silva</span> <br>
+            <span>Samara Martins Damacena</span> <br>
         </div>
     </div>
-    <!--footer fim-->
-
+    <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
+</div>
 </body>
 
 </html>
 
 <script>
-
 
     function entrar() {
         aguardar();

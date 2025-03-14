@@ -12,6 +12,26 @@ function validarSessao() {
     }
 }
 
+function redirecionar(tela) {
+    window.location.href = tela + ".html"
+}
+
+function mudarVisualisacaoSenha(atual) { 
+    const inpSenha = document.getElementById('inp_senha')
+    const imgEyeOpen = document.getElementById('img_eye_open')
+    const imgEyeClosed = document.getElementById('img_eye_closed')
+
+    if (atual == 'closed') {
+        inpSenha.type = 'text'
+        imgEyeOpen.style.display = 'flex'
+        imgEyeClosed.style.display = 'none'
+    } else {
+        inpSenha.type = 'password'
+        imgEyeOpen.style.display = 'none'
+        imgEyeClosed.style.display = 'flex'
+    }
+} 
+
 function limparSessao() {
     sessionStorage.clear();
     window.location = "../login.html";
