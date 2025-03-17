@@ -161,6 +161,7 @@ body {
     padding: 16px 24px;
     margin-top: 20px;
 }
+
 .header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
     background-color: white;
 
@@ -182,10 +183,6 @@ body {
     position: absolute;
     width: 70%;
 }
-
-
-
-
 
 
 /* HOVER AUMENTANDO FONTE */
@@ -221,8 +218,6 @@ body {
     background-color: var(--cinza-claro);
     box-sizing: border-box;
 }
-
-
 
 .container-sobre-1 {
     display: flex;
@@ -260,7 +255,6 @@ body {
 .container-direita {
     width: 45%;
 }
-
 
 .tela-inicial-2 {
     width: 100%;
@@ -309,7 +303,6 @@ body {
 .container-direita-2 h2 {
     font-family: "Roboto", sans-serif;
 }
-
 
 .tela-inicial-3 {
     width: 100%;
@@ -366,9 +359,6 @@ body {
     font-size: 20px;
     font-weight: 100;
 }
-
-
-
 
 .tela-inicial-4 {
     width: 100%;
@@ -427,17 +417,19 @@ body {
     color: black;
 }
 
-.passaporte p,
+
 .passaporte h4 {
     color: var(--cinza-escuro);
+}
+
+.passaporte p {
+    font-size: 22px;
+    color: var(--cinza);
 }
 
 .passaporte h4 {
     font-weight: normal;
 }
-
-
-
 
 .tela-inicial-5 {
     width: 100%;
@@ -468,7 +460,6 @@ body {
     width: 80%;
 }
 
-
 .imgsobre6 {
     width: 8%;
 }
@@ -485,7 +476,6 @@ body {
     align-items: center;
     gap: 5vh;
 }
-
 
 .missao,
 .visao {
@@ -559,12 +549,12 @@ body {
     margin-inline: 5%;
 }
 
-.tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
+.tela-6 .footer .caixa-footer span,
+.tela-6 .footer .caixa-footer b,
+.direitos {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-
-
 
 
 
@@ -592,7 +582,6 @@ body {
         width: 50px;
     }
 
-
     .tela-inicial {
         width: 100%;
         height: 100%;
@@ -602,7 +591,6 @@ body {
         background-color: var(--cinza-claro);
         box-sizing: border-box;
     }
-
 
     .container-sobre-1 {
         display: flex;
@@ -647,7 +635,6 @@ body {
 
     /* TELA 2 */
 
-
     .tela-inicial-2 {
         width: 100%;
         height: 70vh;
@@ -666,7 +653,6 @@ body {
         flex-direction: column;
         text-align: center;
     }
-
 
     .imgsobre2 {
         display: none;
@@ -942,8 +928,4 @@ body {
         justify-content: center;
         margin-inline: 0;
     }
-
-
-
-
 }
