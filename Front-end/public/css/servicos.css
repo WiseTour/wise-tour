@@ -116,6 +116,7 @@ body {
     padding-left: 8px;
 }
 
+/* Header Mobile */
 .header .container-mobile {
     position: relative;
     width: 100%;
@@ -177,10 +178,13 @@ body {
     width: 70%;
 }
 
+
+
 .navbar a {
     display: inline-block;
     transition: transform 0.4s ease-in-out;
 }
+
 
 /* HOVER AUMENTANDO FONTE */
 .navbar a:hover {
@@ -202,6 +206,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .tela-inicial {
     width: 100%;
     height: 100%;
@@ -209,11 +214,11 @@ body {
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
-
     align-items: center;
     background-color: var(--cinza-claro);
     box-sizing: border-box;
 }
+
 
 .container-servicos-1 {
     display: flex;
@@ -223,26 +228,6 @@ body {
     gap: 10%;
 }
 
-.img-servicos-inicio-mobile {
-    display: none;
-}
-
-.img-servicos-inicio {
-    width: 30%;
-}
-
-    align-items: center;
-    background-color: var(--cinza-claro);
-    box-sizing: border-box;
-}
-
-.container-servicos-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    gap: 10%;
-}
 
 .img-servicos-inicio-mobile {
     display: none;
@@ -250,20 +235,14 @@ body {
 .img-servicos-inicio {
     width: 30%;
 }
+
+
+
 
 .container-s-1 {
     width: 40%;
     display: flex;
     flex-direction: column;
-
-}
-
-.container-s-1 h2,
-.container-s-1 h1 {
-    text-align: end;
-    font-weight: 100;
-}
-
 }
 
 .container-s-1 h2, .container-s-1 h1 {
@@ -275,6 +254,8 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
+
+
 
 .tela-2 {
     width: 100%;
@@ -294,13 +275,6 @@ body {
     align-items: center;
     width: 90%;
     gap: 10%;
-
-}
-
-.container-s-2 {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
 }
 
 .container-s-2 {
@@ -310,7 +284,6 @@ body {
 }
 
 .container-s-2 h2, .container-s-2 h1 {
-
     text-align: start;
     font-weight: 100;
 }
@@ -328,6 +301,13 @@ body {
 .img-grafico-servicos-mobile {
     display: none;
 }
+
+
+
+
+
+
+
 
 .tela-3 {
     width: 100%;
@@ -348,17 +328,6 @@ body {
     align-items: center;
     width: 90%;
     gap: 10%;
-
-}
-
-.img-servicos-tela-3 {
-    width: 25%;
-}
-
-.img-servicos-tela-3-mobile {
-    display: none;
-}
-
 }
 
 .img-servicos-tela-3 {
@@ -376,11 +345,7 @@ body {
     gap: 30px 0px;
 }
 
-.container-s-3 h2,
-.container-s-3 h1 {
-
 .container-s-3 h2, .container-s-3 h1 {
-
     text-align: end;
     font-weight: 100;
 }
@@ -402,6 +367,7 @@ body {
     left: 0;
 }
 
+
 .tela-4 {
     width: 100%;
     min-height: 100vh;
@@ -417,15 +383,6 @@ body {
     font-weight: 400;
     margin-bottom: 50px;
     color: #1E1E1E;
-
-}
-
-.tela-4 h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    width: 70%;
-    margin-bottom: 50px;
-
 }
 
 .tela-4 h2 {
@@ -492,6 +449,7 @@ body {
     display: none;
 }
 
+
 .tela-6 {
     background-color: #3B3B3B;
     color: #E7E6E6;
@@ -532,14 +490,29 @@ body {
     margin-inline: 5%;
 }
 
-.tela-6 .footer .caixa-footer span,
-.tela-6 .footer .caixa-footer b,
-.direitos {
-
 .tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsividade */
 @media screen and (max-width: 1080px) {
@@ -580,15 +553,9 @@ body {
     }
 
     .container-servicos-1 {
-
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
-
         font-size: 15px;
         text-align: center;
     }
@@ -602,38 +569,22 @@ body {
         width: 100%;
     }
 
-
-    .container-s-1 {
-
     .container-s-1{
-
         width: 80%;
         text-align: center;
     }
-
-
-    .container-s-1 h1 {
-        text-align: center;
-    }
-
-    .container-s-1 h2 {
 
     .container-s-1 h1{
         text-align: center;
     }
 
     .container-s-1 h2{
-
         text-align: center;
     }
 
     /* TELA 2 */
 
-
-    .tela-2 {
-
     .tela-2{
-
         width: 100%;
         height: 100%;
         padding-top: 50px;
@@ -647,40 +598,19 @@ body {
     }
 
     .container-servicos-2 {
-
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
-
         font-size: 15px;
         text-align: center;
     }
 
 
-    .container-s-2 {
-
-
     .container-s-2{
-
         width: 80%;
         text-align: center;
         align-items: center;
     }
-
-    .container-s-2 h1 {
-        text-align: center;
-    }
-
-    .container-s-2 h2 {
-        text-align: center;
-    }
-
-    .passaro,
-    .passaro2 {
 
     .container-s-2 h1{
         text-align: center;
@@ -691,7 +621,6 @@ body {
     }
 
     .passaro, .passaro2 {
-
         display: none;
     }
 
@@ -706,11 +635,7 @@ body {
 
     /* TELA 3 */
 
-
-    .tela-3 {
-
     .tela-3{
-
         width: 100%;
         height: 100%;
         padding-top: 50px;
@@ -724,40 +649,19 @@ body {
     }
 
     .container-servicos-3 {
-
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
-
         font-size: 15px;
         text-align: center;
     }
 
-    .container-s-3 {
-
 
     .container-s-3{
-
         width: 80%;
         text-align: center;
         align-items: center;
     }
-
-
-    .container-s-3 h1 {
-        text-align: center;
-    }
-
-    .container-s-3 h2 {
-        text-align: center;
-    }
-
-    .passaro,
-    .passaro2 {
 
     .container-s-3 h1{
         text-align: center;
@@ -768,7 +672,6 @@ body {
     }
 
     .passaro, .passaro2 {
-
         display: none;
     }
 
@@ -788,6 +691,30 @@ body {
     #rotas-mobile {
         display: block;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .tela-6 {
         height: 100%;

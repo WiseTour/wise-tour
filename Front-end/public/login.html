@@ -8,14 +8,6 @@
 
   <title>WiseTour</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
-
   <script src="./js/sessao.js"></script>
   <script src="js/login.js"></script>
 
@@ -25,13 +17,7 @@
 </head>
 
 <body>
-
-
-
-
-
   <!-- Cabeçalho Mobile -->
-
   <div id="header" class="header">
     <div class="container-mobile">
       <div id="header-container-mobile" class="navbar">
@@ -50,19 +36,10 @@
     </div>
   </div>
 
-
-
-
-  <!-- CAMPO TROCAR -- LOGIN  -->
-  <div class="login">
-    <div class="container">
-      <img class="seta" onclick="redirecionar('home')" src="assets/icon/arrow.png">
-
   <!-- Conteúdo da Tela de Login -->
   <div class="login">
     <div class="container">
       <img class="seta" onclick="redirecionar('home')" src="assets/icon/arrow.png">
-
 
       <div class="campo-trocar">
         <img class="passaporte-frente" src="assets/imgs/cadastro-login/passaporte-frente-login.svg">
@@ -95,14 +72,7 @@
     </div>
   </div>
 
-
-
-
-
-  <!-- FOOTER  -->
-
   <!-- Rodapé -->
-
   <div class="tela-footer">
     <div class="footer">
       <div class="caixa-footer">
@@ -136,19 +106,10 @@
 
 </html>
 
-
-
-
 <script>
 
   function entrar() {
     aguardar();
-
-
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-
-
 
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
@@ -158,68 +119,10 @@
       mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
       finalizarAguardar();
       return false;
-
-    }
-    else {
-      setInterval(sumirMensagem, 5000)
-
     }
     else {
       setInterval(sumirMensagem, 5000)
     }
-
-    console.log("FORM LOGIN: ", emailVar);
-    console.log("FORM SENHA: ", senhaVar);
-
-    fetch("/usuarios/autenticar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      })
-    }).then(function (resposta) {
-      console.log("ESTOU NO THEN DO entrar()!")
-
-      if (resposta.ok) {
-        console.log(resposta);
-
-        resposta.json().then(json => {
-          console.log(json);
-          console.log(JSON.stringify(json));
-          sessionStorage.EMAIL_USUARIO = json.email;
-          sessionStorage.NOME_USUARIO = json.nome;
-          sessionStorage.ID_USUARIO = json.id;
-          sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
-
-          setTimeout(function () {
-            window.location = "./dashboard/cards.html";
-          }, 1000); // apenas para exibir o loading
-
-        });
-
-      } else {
-
-        console.log("Houve um erro ao tentar realizar o login!");
-
-        resposta.text().then(texto => {
-          console.error(texto);
-          finalizarAguardar(texto);
-        });
-      }
-
-    }).catch(function (erro) {
-      console.log(erro);
-    })
-
-    return false;
-  }
-
-  function sumirMensagem() {
-    cardErro.style.display = "none"
-  }
 
     console.log("FORM LOGIN: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);

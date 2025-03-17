@@ -186,9 +186,6 @@ body {
 }
 
 
-
-
-
 /* HOVER AUMENTANDO FONTE */
 .navbar a:hover {
     transform: scale(1.2);
@@ -202,9 +199,6 @@ body {
 .header .container .navbar .login-cadastro .opcao:hover {
     color: var(--cor-base);
 }
-
-
-
 
 
 
@@ -247,22 +241,12 @@ body {
     font-size: 45px;
     color: #3B3B3B;
     font-weight: 200;
-
 }
 
 .container-direita {
     font-size: 25px;
     padding: 25px 25px;
 }
-
-
-}
-
-.container-direita {
-    font-size: 25px;
-    padding: 25px 25px;
-}
-
 
 .container-direita h2,
 .container-direita i,
@@ -343,13 +327,7 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 
-
 }
-
-
-
-}
-
 
 .tela-6 .direitos {
     margin-inline: 13%;
@@ -383,12 +361,8 @@ body {
     font-weight: 400;
 }
 
-/*--- End Tela 5 footer ---*/
-
-
 
 /*--- End Tela 5 footer ---*/
-
 
 
 /* RESPONSIVIDADE */
@@ -437,9 +411,6 @@ body {
     }
 
 
-
-
-
     .container-direita h1 {
         width: 100%;
         font-family: "Anton SC", sans-serif;
@@ -447,9 +418,6 @@ body {
         color: #3B3B3B;
         font-weight: 200;
     }
-
-
-
 
 
     .container-direita {

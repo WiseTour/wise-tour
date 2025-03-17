@@ -2,6 +2,8 @@
     --cor-base: #F8CA26;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
 * {
     font-family: "Anton SC", serif;
     letter-spacing: 0.75px;
@@ -259,15 +261,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 25%;
-    font-weight: 100;
-}
-
-
-/* TELA 4 */
-
-
-.tela-4 #imagens-mobile {
-    display: none;
 }
 
 
@@ -352,14 +345,10 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     margin-inline: 5%;
+    font-weight: 100;
 }
 
-
-.tela-5 .footer .caixa-footer span,
-.tela-6 .footer .caixa-footer b,
-.direitos {
 .tela-5 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
-
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
@@ -409,19 +398,12 @@ body {
     text-align: right;
     padding: 16px 24px;
     margin-top: 20px;
-
-    font-weight: 100;
-
     font-family: 'Roboto', sans-serif !important;
-
 }
 
 .header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
     background-color: white;
 }
-
-
-
 
 
 
@@ -437,19 +419,11 @@ body {
         background-color: #F8CA26;
         display: flex;
         padding: 0 5%;
-
     }
 
     .header .container {
         display: none;
     }
-
-    }
-
-    .header .container {
-        display: none;
-    }
-
 
     .barra-lateral {
         display: none;
@@ -463,11 +437,7 @@ body {
         width: 50px;
     }
 
-
-
-
     
-
 
     .tela-inicial {
         display: flex;
@@ -495,10 +465,6 @@ body {
         height: 100vh;
         padding: auto;
     }
-
-
-
-
 
     .tela-2 img {
         width: 55%;
