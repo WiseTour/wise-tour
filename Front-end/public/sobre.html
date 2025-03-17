@@ -5,12 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WiseTour</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/sobre.css">
+
+    <script src="js/sobre.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
+    <div id="header" class="header">
+        <div id="header-container" class="container">
             <div class="navbar">
                 <div class="opcoes">
                     <a class="opcao" href="home.html">HOME</a>
@@ -19,17 +31,34 @@
                     <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
                 </div>
                 <div class="login-cadastro">
-                    <a class="opcao" href="">CADASTRE-SE</a>
+                    <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
                     <div class="entrar-div">
                         <img src="assets/icon/user.svg">
-                        <a class="entrar" href="">ENTRAR</a>
+                        <a class="entrar" href="login.html">ENTRAR</a>
                     </div>
                 </div>
             </div>
+            <div class="barra-lateral">
+                <img src="assets/imgs/logowisetour.png" alt="Logo" class="logo">
+            </div>
         </div>
-    </div>
-    <div class="barra-lateral">
-        <img src="assets/imgs/logowisetour.png" alt="Logo" class="logo">
+
+
+        <div class="container-mobile">
+            <div id="header-container-mobile" class="navbar">
+                <div class="opcoes">
+                    <a class="opcao" href="home.html">HOME</a>
+                    <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+                    <a class="opcao" href="servicos.html">SERVIÇOS</a>
+                    <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+                    <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+                    <a class="opcao" href="login.html">ENTRAR</a>
+                </div>
+            </div>
+
+            <img src="assets/icon/logo.svg" id="logo">
+            <img src="assets/icon/barra-navegacao.svg" id="botao-nav-bar" onclick="mobileNav()"></img>
+        </div>
     </div>
 
 
@@ -38,6 +67,7 @@
             <div class="container-esquerda">
                 <h1><span style="color: #F8CA26;">WISETOUR,</span> TRANSFORMANDO NÚMEROS EM OPORTUNIDADES E DADOS EM
                     DESTINOS DE SUCESSO!</h1>
+                <img src="assets/imgs/sobre-1.png" alt="imgsobre1mobile" class="imgsobre1mobile">
                 <h2><i style="color: #3B3B3B;">A melhor ferramenta de análise de turismo estrangeiro no Brasil!</i></h2>
             </div>
             <div class="container-direita">
@@ -55,6 +85,7 @@
             <div class="container-direita-2">
                 <h1 style="color: #F8CA26;">A plataforma definitiva para quem quer entender e impulsionar o turismo
                     estrangeiro no Brasil.</h1>
+                <img src="assets/imgs/sobre-2.png" alt="imgsobre2mobile" class="imgsobre2mobile">
                 <h2 style="color: white;">Reunimos dados, insights e análises estratégicas em um só lugar, oferecendo
                     uma visão completa do mercado turístico brasileiro.</h2>
             </div>
@@ -68,7 +99,8 @@
                 <img src="assets/imgs/sobre-3.png" alt="imgsobre3" class="imgsobre3">
             </div>
             <div class="container-direita-3">
-                <h1 style="font-size: 7vh; color: #3B3B3B;">DA ANÁLISE À AÇÃO</h1>
+                <h1 style="color: #3B3B3B;">DA ANÁLISE À AÇÃO</h1>
+                <img src="assets/imgs/sobre-3.png" alt="imgsobre3mobile" class="imgsobre3mobile">
                 <h2>Com uma equipe formada por profissionais incríveis, garantimos soluções inteligentes para que o seu
                     negócio encontre o destino <i>correto.</i></h2>
             </div>
@@ -79,7 +111,7 @@
     <div class="tela-inicial-4">
         <div class="container-sobre-4">
             <h1>NOSSA EQUIPE E SEUS PASSAPORTES DIGITAIS</h1>
-            <div class="coluna1">
+            <div class="coluna-passaporte">
                 <div class="passaporte">
                     <img src="assets/imgs/ian.png" alt="ian" class="ian">
                     <p>Ian Medeiros</p>
@@ -98,8 +130,6 @@
                     <p>Passaporte da Inteligência de Mercado</p>
                     <h4>Conecta tecnologia e estratégia</h4>
                 </div>
-            </div>
-            <div class="coluna2">
                 <div class="passaporte">
                     <img src="assets/imgs/kenner.png" alt="kenner" class="kenner">
                     <p>Kenner Lima</p>
@@ -129,6 +159,7 @@
             <div class="destinos">
                 <div class="missao">
                     <h2>DESTINO 1: MISSÃO</h2>
+
                     <p><b>"Transformar dados em destinos de sucesso”</b> através de ferramentas e insights estratégicos
                         que
                         ajudem
@@ -138,12 +169,11 @@
 
 
                 <div class="visao">
-
+                    <h2>DESTINO 2: VISÃO</h2>
                     <img src="assets/imgs/sobre-6.png" alt="imgsobre6" class="imgsobre6">
                     <p><b>"Ser a bússola do turismo inteligente no Brasil”,</b> ajudando a transformar o setor em um
                         modelo de
                         eficiência, sustentabilidade e inovação.</p>
-                    <h2>DESTINO 2: VISÃO</h2>
                 </div>
 
 
@@ -168,7 +198,7 @@
         </div>
     </div>
 
-    <div class="tela-6">
+    <div class="tela-6 conteudo">
         <div class="footer">
             <div class="caixa-footer">
                 <b>WISETOUR</b> <br>
@@ -197,6 +227,10 @@
         </div>
         <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
     </div>
+
+
+
+
 </body>
 
 </html>

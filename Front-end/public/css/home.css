@@ -1,17 +1,18 @@
-:root{
+:root {
     --cor-base: #F8CA26;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
 * {
-    font-family: 'Anton SC', sans-serif;
-    font-style: normal;
-  }
+    font-family: "Anton SC", serif;
+    letter-spacing: 0.75px;
+}
 
 
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -19,7 +20,8 @@ body {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    height: 15vh;
+    /* height: 70px; */
+    /* padding: 16px 0; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -37,7 +39,7 @@ body {
 .header .container .navbar {
     /* background-color: green; */
     width: 100%;
-    height: 90%;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -54,12 +56,33 @@ body {
     color: white;
 }
 
+/* HOVER AUMENTANDO FONTE */
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+/* HOVER FONTE EM AMARELO */
+.header .container .navbar .opcoes .opcao:hover {
+    color: var(--cor-base);
+}
+
+.header .container .navbar .login-cadastro .opcao:hover {
+    color: var(--cor-base);
+}
+
+.navbar a {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+}
+
 .header .container .navbar .opcoes .opcao {
     text-decoration: none;
     color: white;
     padding-inline: 3%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 .header .container .navbar .login-cadastro {
@@ -77,7 +100,9 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -107,16 +132,16 @@ body {
 
 }
 
+/* TELA 1 INICIAL */
+
 .tela-inicial {
-    background-image:   linear-gradient(
-        to bottom,
-        rgba(21, 20, 20, 1.0) 0%,
-        rgba(63, 63, 63, 0.75) 39%, 
-        rgba(63, 63, 63, 0.50) 58%, 
-        rgba(25, 25, 25, 0.80) 73%, 
-        rgba(21, 20, 20, 0.90) 87%  
-      ),
-    url(../assets/imgs/fundo-home.jpg);
+    background-image: linear-gradient(to bottom,
+            rgba(21, 20, 20, 1.0) 0%,
+            rgba(63, 63, 63, 0.75) 39%,
+            rgba(63, 63, 63, 0.50) 58%,
+            rgba(25, 25, 25, 0.80) 73%,
+            rgba(21, 20, 20, 0.90) 87%),
+        url(../assets/imgs/fundo-home.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -133,28 +158,31 @@ body {
 }
 
 .tela-inicial img {
-    width: 652px;
-    height: 442px;
-    padding-left: 100px;
-    padding-top: 40px;
+    width: 40%;
+    padding-left: 10%;
+    padding-top: 3%;
 }
+
 
 .tela-inicial .frase-efeito {
     display: flex;
     flex-direction: column;
-    padding-top: 150px;
-    font-size: 30px;   
+    padding-top: 10%;
+    font-size: 32px;
 }
 
-.tela-inicial .frase-efeito .frase-branca{
+.tela-inicial .frase-efeito .frase-branca {
     color: white;
+}
+
+.tela-inicial .frase-efeito .frase-amarela {
+    color: var(--cor-base);
+    font-size: bold;
+    font-weight: 100;
     font-style: italic;
 }
 
-.tela-inicial .frase-efeito .frase-amarela{
-    color: var(--cor-base);
-    font-size: bold;
-}
+/* TELA 2 */
 
 .tela-2 {
     background-color: #E7E6E6;
@@ -162,7 +190,7 @@ body {
     height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .tela-2 .frase-botao-saiba-mais {
@@ -188,13 +216,28 @@ body {
     margin-top: 25%;
 }
 
+#botao-descubra-mais-mobile {
+    display: none;
+}
+
+
+/* TELA 3 */
+
+.tela-3 h4 {
+    display: none;
+}
+
+.tela-3 section {
+    display: none;
+}
+
 .tela-3 {
     background-color: #D6D1D1;
     width: 100%;
     height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .tela-3 .frase-botao-descubra-mais {
@@ -220,13 +263,21 @@ body {
     margin-top: 25%;
 }
 
+
+/* TELA 4 */
+
+
+.tela-4 #imagens-mobile {
+    display: none;
+}
+
 .tela-4 {
     background-color: var(--cor-base);
     width: 100%;
     height: 75vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .tela-4 .contato {
@@ -255,6 +306,9 @@ body {
     width: 120px;
 }
 
+
+/* TELA 5 */
+
 .tela-5 {
     background-color: #3B3B3B;
     color: #E7E6E6;
@@ -263,11 +317,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .tela-5 .direitos {
     margin-inline: 13%;
+    font-weight: bold;
 }
 
 .tela-5 .footer {
@@ -292,10 +347,323 @@ body {
     margin-inline: 5%;
 }
 
-@media (max-width: 500px) {
-    .tela-inicial .barra-lateral{
-        background-color: aquamarine;
-    }
-
+.tela-5 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
+.conteudo {
+    padding: auto 1120px;
+    overflow-x: hidden;
+}
+
+
+.header .container-mobile {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+
+.header .container-mobile .navbar {
+    background-color: #F8CA26;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    /* alterei altura da header */
+    display: none;
+    width: 100vw;
+}
+
+.header .container-mobile .navbar .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+    margin: 15px 15px;
+}
+
+.header .container-mobile .navbar .opcoes .opcao {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    text-align: right;
+    padding: 16px 24px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
+    background-color: white;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+
+@media screen and (max-width: 1080px) {
+
+    /* TELA 1 */
+
+
+    .header .container-mobile {
+        background-color: #F8CA26;
+        display: flex;
+        padding: 0 5%;
+    }
+
+    .header .container {
+        display: none;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    #botao-nav-bar {
+        width: 50px;
+    }
+
+    
+
+    .tela-inicial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tela-inicial img {
+        margin-top: 8%;
+        width: 65%;
+    }
+
+    .tela-inicial .frase-efeito {
+        padding-top: 3%;
+        font-size: 25px;
+    }
+
+
+    /* TELA 2 */
+
+    .tela-2 {
+        flex-direction: column;
+        height: 100vh;
+        padding: auto;
+    }
+
+    .tela-2 img {
+        width: 55%;
+    }
+
+    .tela-2 .frase-botao-saiba-mais {
+        font-size: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        margin-top: 5%;
+    }
+
+    .tela-2 .frase-botao-saiba-mais .botao-saiba-mais {
+        width: 70%;
+        height: 8vh;
+        border-radius: 20px;
+        font-size: 25px;
+        color: #E7E6E6;
+        background-color: var(--cor-base);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12%;
+    }
+
+    /* TELA 3 */
+
+    .tela-3 {
+        height: 110vh;
+        flex-direction: column;
+    }
+
+    .tela-3 img {
+        width: 55%;
+    }
+
+    .tela-3 .frase-botao-descubra-mais {
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .tela-3 .frase-botao-descubra-mais .botao-descubra-mais {
+        display: none;
+    }
+
+    #botao-descubra-mais-mobile {
+        display: block;
+        width: 50%;
+        height: 8vh;
+        border-radius: 20px;
+        font-size: 120%;
+        color: #E7E6E6;
+        background-color: var(--cor-base);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .tela-3 span {
+        display: none;
+    }
+
+    .tela-3 h4 {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        color: #3B3B3B;
+    }
+
+    /* TELA 4 */
+
+    .tela-4 {
+        background-color: var(--cor-base);
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tela-4 img {
+        width: 25%;
+    }
+
+    .tela-4 .contato {
+        color: #E7E6E6;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0%;
+        width: 70%;
+        text-align: center;
+    }
+
+    .tela-4 #imagens-geral {
+        display: none;
+    }
+
+    .tela-4 #imagens-mobile {
+        display: block;
+        flex-direction: row;
+    }
+
+    .tela-4 .imagens-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 7%;
+    }
+
+
+    /* TELA 5 */
+
+    .tela-5 {
+        height: 130vh;
+    }
+
+    .tela-5 .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .tela-5 .footer .caixa-footer {
+        width: 40%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tela-5 .direitos {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 0;
+    }
+}
+
+
+/* QUEBRA 2 ::: RESPONSIVIDADE */
+
+
+@media screen and (max-width: 500px) {
+
+    /* TELA 1 */
+
+    .tela-inicial img {
+        margin-top: 8%;
+        width: 80%;
+    }
+
+    .tela-inicial .frase-efeito {
+        padding-top: 6%;
+        font-size: 25px;
+    }
+
+    /* TELA 2 */
+
+    .tela-2 .frase-botao-saiba-mais {
+        font-size: 150%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        margin-top: 5%;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .tela-2 .frase-botao-saiba-mais .botao-saiba-mais {
+        width: 60%;
+        height: 7vh;
+        border-radius: 20px;
+        font-size: 25px;
+        color: #E7E6E6;
+        background-color: var(--cor-base);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12%;
+    }
+}
