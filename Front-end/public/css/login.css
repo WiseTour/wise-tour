@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
 * {
-    font-family: 'Anton SC', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
 }
 
@@ -55,6 +55,8 @@ html, body {
     padding: 16px 24px;
     margin-top: 20px;
     font-weight: bold;
+    font-family: "Anton SC", serif;
+    font-weight: 100;
 }
 
 .header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
