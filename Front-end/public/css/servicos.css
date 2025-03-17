@@ -116,7 +116,6 @@ body {
     padding-left: 8px;
 }
 
-/* Header Mobile */
 .header .container-mobile {
     position: relative;
     width: 100%;
@@ -197,6 +196,7 @@ body {
     color: var(--cor-base);
 }
 
+
 .conteudo {
     /* padding: auto 1120px; */
     overflow-x: hidden;
@@ -209,6 +209,7 @@ body {
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
+
     align-items: center;
     background-color: var(--cinza-claro);
     box-sizing: border-box;
@@ -230,14 +231,42 @@ body {
     width: 30%;
 }
 
+    align-items: center;
+    background-color: var(--cinza-claro);
+    box-sizing: border-box;
+}
+
+.container-servicos-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 10%;
+}
+
+.img-servicos-inicio-mobile {
+    display: none;
+}
+.img-servicos-inicio {
+    width: 30%;
+}
+
 .container-s-1 {
     width: 40%;
     display: flex;
     flex-direction: column;
+
 }
 
 .container-s-1 h2,
 .container-s-1 h1 {
+    text-align: end;
+    font-weight: 100;
+}
+
+}
+
+.container-s-1 h2, .container-s-1 h1 {
     text-align: end;
     font-weight: 100;
 }
@@ -265,6 +294,7 @@ body {
     align-items: center;
     width: 90%;
     gap: 10%;
+
 }
 
 .container-s-2 {
@@ -273,8 +303,14 @@ body {
     flex-direction: column;
 }
 
-.container-s-2 h2,
-.container-s-2 h1 {
+.container-s-2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-s-2 h2, .container-s-2 h1 {
+
     text-align: start;
     font-weight: 100;
 }
@@ -312,6 +348,17 @@ body {
     align-items: center;
     width: 90%;
     gap: 10%;
+
+}
+
+.img-servicos-tela-3 {
+    width: 25%;
+}
+
+.img-servicos-tela-3-mobile {
+    display: none;
+}
+
 }
 
 .img-servicos-tela-3 {
@@ -331,6 +378,9 @@ body {
 
 .container-s-3 h2,
 .container-s-3 h1 {
+
+.container-s-3 h2, .container-s-3 h1 {
+
     text-align: end;
     font-weight: 100;
 }
@@ -367,6 +417,15 @@ body {
     font-weight: 400;
     margin-bottom: 50px;
     color: #1E1E1E;
+
+}
+
+.tela-4 h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    width: 70%;
+    margin-bottom: 50px;
+
 }
 
 .tela-4 h2 {
@@ -375,6 +434,7 @@ body {
     width: 70%;
     margin-bottom: 50px;
 }
+
 
 .container-servicos-4 {
     display: flex;
@@ -475,10 +535,11 @@ body {
 .tela-6 .footer .caixa-footer span,
 .tela-6 .footer .caixa-footer b,
 .direitos {
+
+.tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-
 
 /* Responsividade */
 @media screen and (max-width: 1080px) {
@@ -502,6 +563,7 @@ body {
         width: 50px;
     }
 
+
     /* TELA 1 */
 
     .tela-inicial {
@@ -518,9 +580,15 @@ body {
     }
 
     .container-servicos-1 {
+
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+
         font-size: 15px;
         text-align: center;
     }
@@ -534,22 +602,38 @@ body {
         width: 100%;
     }
 
+
     .container-s-1 {
+
+    .container-s-1{
+
         width: 80%;
         text-align: center;
     }
+
 
     .container-s-1 h1 {
         text-align: center;
     }
 
     .container-s-1 h2 {
+
+    .container-s-1 h1{
+        text-align: center;
+    }
+
+    .container-s-1 h2{
+
         text-align: center;
     }
 
     /* TELA 2 */
 
+
     .tela-2 {
+
+    .tela-2{
+
         width: 100%;
         height: 100%;
         padding-top: 50px;
@@ -563,14 +647,25 @@ body {
     }
 
     .container-servicos-2 {
+
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+
         font-size: 15px;
         text-align: center;
     }
 
+
     .container-s-2 {
+
+
+    .container-s-2{
+
         width: 80%;
         text-align: center;
         align-items: center;
@@ -586,6 +681,17 @@ body {
 
     .passaro,
     .passaro2 {
+
+    .container-s-2 h1{
+        text-align: center;
+    }
+
+    .container-s-2 h2{
+        text-align: center;
+    }
+
+    .passaro, .passaro2 {
+
         display: none;
     }
 
@@ -600,7 +706,11 @@ body {
 
     /* TELA 3 */
 
+
     .tela-3 {
+
+    .tela-3{
+
         width: 100%;
         height: 100%;
         padding-top: 50px;
@@ -614,18 +724,29 @@ body {
     }
 
     .container-servicos-3 {
+
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+
         font-size: 15px;
         text-align: center;
     }
 
     .container-s-3 {
+
+
+    .container-s-3{
+
         width: 80%;
         text-align: center;
         align-items: center;
     }
+
 
     .container-s-3 h1 {
         text-align: center;
@@ -637,6 +758,17 @@ body {
 
     .passaro,
     .passaro2 {
+
+    .container-s-3 h1{
+        text-align: center;
+    }
+
+    .container-s-3 h2{
+        text-align: center;
+    }
+
+    .passaro, .passaro2 {
+
         display: none;
     }
 

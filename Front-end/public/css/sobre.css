@@ -185,10 +185,22 @@ body {
 }
 
 
+
 /* HOVER AUMENTANDO FONTE */
 .navbar a:hover {
     transform: scale(1.2);
 }
+
+
+
+
+
+
+/* HOVER AUMENTANDO FONTE */
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
 
 /* HOVER FONTE EM AMARELO */
 .header .container .navbar .opcoes .opcao:hover {
@@ -218,6 +230,8 @@ body {
     background-color: var(--cinza-claro);
     box-sizing: border-box;
 }
+
+
 
 .container-sobre-1 {
     display: flex;
@@ -304,6 +318,10 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+
+
+
+
 .tela-inicial-3 {
     width: 100%;
     display: flex;
@@ -358,7 +376,16 @@ body {
 .container-direita-3 h2 {
     font-size: 20px;
     font-weight: 100;
+
 }
+
+.container-direita-3 h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+
 
 .tela-inicial-4 {
     width: 100%;
@@ -418,6 +445,7 @@ body {
 }
 
 
+
 .passaporte h4 {
     color: var(--cinza-escuro);
 }
@@ -425,11 +453,19 @@ body {
 .passaporte p {
     font-size: 22px;
     color: var(--cinza);
+
+.passaporte p,
+.passaporte h4 {
+    color: var(--cinza-escuro);
+
 }
 
 .passaporte h4 {
     font-weight: normal;
 }
+
+
+
 
 .tela-inicial-5 {
     width: 100%;
@@ -476,6 +512,7 @@ body {
     align-items: center;
     gap: 5vh;
 }
+
 
 .missao,
 .visao {
@@ -549,12 +586,17 @@ body {
     margin-inline: 5%;
 }
 
+
 .tela-6 .footer .caixa-footer span,
 .tela-6 .footer .caixa-footer b,
 .direitos {
+
+.tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
+
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
+
 
 
 
@@ -591,6 +633,7 @@ body {
         background-color: var(--cinza-claro);
         box-sizing: border-box;
     }
+
 
     .container-sobre-1 {
         display: flex;
@@ -635,6 +678,7 @@ body {
 
     /* TELA 2 */
 
+
     .tela-inicial-2 {
         width: 100%;
         height: 70vh;
@@ -653,6 +697,7 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
 
     .imgsobre2 {
         display: none;
@@ -928,4 +973,5 @@ body {
         justify-content: center;
         margin-inline: 0;
     }
+
 }

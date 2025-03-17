@@ -173,6 +173,8 @@ body {
     align-items: center;
 }
 
+
+
 .logo {
     position: absolute;
     width: 70%;
@@ -182,6 +184,10 @@ body {
     display: inline-block;
     transition: transform 0.4s ease-in-out;
 }
+
+
+
+
 
 /* HOVER AUMENTANDO FONTE */
 .navbar a:hover {
@@ -196,6 +202,14 @@ body {
 .header .container .navbar .login-cadastro .opcao:hover {
     color: var(--cor-base);
 }
+
+
+
+
+
+
+
+
 
 /*--- Msg Inicial --- */
 .msg-inicial {
@@ -233,12 +247,22 @@ body {
     font-size: 45px;
     color: #3B3B3B;
     font-weight: 200;
+
 }
 
 .container-direita {
     font-size: 25px;
     padding: 25px 25px;
 }
+
+
+}
+
+.container-direita {
+    font-size: 25px;
+    padding: 25px 25px;
+}
+
 
 .container-direita h2,
 .container-direita i,
@@ -319,7 +343,13 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 
+
 }
+
+
+
+}
+
 
 .tela-6 .direitos {
     margin-inline: 13%;
@@ -354,6 +384,12 @@ body {
 }
 
 /*--- End Tela 5 footer ---*/
+
+
+
+/*--- End Tela 5 footer ---*/
+
+
 
 /* RESPONSIVIDADE */
 
@@ -400,6 +436,10 @@ body {
         text-align: center;
     }
 
+
+
+
+
     .container-direita h1 {
         width: 100%;
         font-family: "Anton SC", sans-serif;
@@ -407,6 +447,10 @@ body {
         color: #3B3B3B;
         font-weight: 200;
     }
+
+
+
+
 
     .container-direita {
         font-size: 25px;
@@ -440,6 +484,7 @@ body {
 
     }
 
+
     .imgContato {
         display: none;
     }
@@ -451,6 +496,7 @@ body {
     }
 
     /* TELA CONTATO */
+
 
     .tela-4 {
         background-color: var(--cor-base);

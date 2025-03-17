@@ -227,8 +227,11 @@ body {
     padding: 16px 24px;
     margin-top: 20px;
     font-weight: bold;
+
     font-family: "Anton SC", sans-serif;
     font-weight: 100;
+
+
 }
 
 .header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
@@ -283,9 +286,18 @@ body {
 }
 
 
+
+
+
+
+
 @media screen and (max-width: 1080px) {
 
     /* HEADER */
+
+
+
+
 
     .header .container-mobile {
         background-color: #F8CA26;
