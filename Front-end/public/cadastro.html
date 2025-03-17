@@ -9,6 +9,7 @@
   <title>WiseTour</title>
 
   <script src="./js/sessao.js"></script>
+  <script src="js/cadastro.js"></script>
 
   <link rel="stylesheet" href="./css/cadastro.css" />
   <link rel="icon" href="./assets/icon/favicon2.ico" />
@@ -18,12 +19,33 @@
 <!-- onload="listar()" -->
 
 <body>
+  <div id="header" class="header">
+    <div class="container-mobile">
+      <div id="header-container-mobile" class="navbar">
+        <div class="opcoes">
+          <a class="opcao" href="home.html">HOME</a>
+          <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+          <a class="opcao" href="servicos.html">SERVIÇOS</a>
+          <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+          <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+          <a class="opcao" href="login.html">ENTRAR</a>
+        </div>
+      </div>
+
+      <img src="assets/icon/logo.svg" id="logo">
+      <img src="assets/icon/barra-navegacao.svg" id="botao-nav-bar" onclick="mobileNav()"></img>
+    </div>
+  </div>
+
+
+
   <div class="cadastro">
     <div class="container">
       <img class="seta" onclick="redirecionar('home')" src="assets/icon/arrow.png">
       <div class="campo-inputs">
         <h2>CADASTRAR</h2>
-        <span>Quer fazer parte do <span style="font-weight: bold;">WiseTour?</span><br>Nossa equipe entrará em contato <br>com você para entender suas <br>necessidades e guiar os próximos<br> passos.</span>
+        <span>Quer fazer parte do <span style="font-weight: bold;">WiseTour?</span><br>Nossa equipe entrará em contato
+          <br>com você para entender suas <br>necessidades e guiar os próximos<br> passos.</span>
         <div class="input-icon">
           <img src="assets/icon/user-1.svg">
           <input type="text" placeholder="Digite seu nome">
@@ -38,53 +60,62 @@
         </div>
         <button>ENVIAR</button>
       </div>
-      
+
       <div class="campo-trocar">
         <img class="passaporte-frente" src="assets/imgs/cadastro-login/passaporte-frente.svg">
         <div onclick="redirecionar('login')" class="campo-mudar">
           <h2>ENTRAR</h2>
           <div class="span-centralizar">
             <span>DE: <span>ESTADO</span><br>
-            PARA: <span>WISETOUR</span></span>
+              PARA: <span>WISETOUR</span></span>
           </div>
         </div>
         <div class="campo-mudar-abaixo"></div>
       </div>
-      <img class="logo" src="assets/icon/logo-preto.png">
     </div>
   </div>
-  <div class="tela-footer">
+
+
+
+
+  <div class="tela-6 conteudo">
     <div class="footer">
-        <div class="caixa-footer">
-            <b>WISETOUR</b> <br>
-            <span>Transformando números em <br>
-                oportunidades E dados em <br>
-                destinos de sucesso!</span>
-        </div>
-        <div class="caixa-footer">
-            <b>MENU</b> <br>
-            <span>HOME</span> <br>
-            <span>SOBRE NÓS</span> <br>
-            <span>SERVIÇOS</span> <br>
-            <span>ENTRE EM CONTATO</span> <br>
-            <span>CADASTRO</span> <br>
-            <span>LOGIN</span> <br>
-        </div>
-        <div class="caixa-footer">
-            <b>TIME DA WISETOUR</b> <br>
-            <span>Ian Medeiros de Jesus Pimenta</span> <br>
-            <span>Kenner Eduardo Souza Lima</span> <br>
-            <span>Leonardo Sardinha Santana</span> <br>
-            <span>Luana Liriel Brito dos Santos</span> <br>
-            <span>Phelipe Bruione da Silva</span> <br>
-            <span>Samara Martins Damacena</span> <br>
-        </div>
+      <div class="caixa-footer">
+        <b>WISETOUR</b> <br>
+        <span>Transformando números em <br>
+          oportunidades E dados em <br>
+          destinos de sucesso!</span>
+      </div>
+      <div class="caixa-footer">
+        <b>MENU</b> <br>
+        <span>HOME</span> <br>
+        <span>SOBRE NÓS</span> <br>
+        <span>SERVIÇOS</span> <br>
+        <span>ENTRE EM CONTATO</span> <br>
+        <span>CADASTRO</span> <br>
+        <span>LOGIN</span> <br>
+      </div>
+      <div class="caixa-footer">
+        <b>TIME DA WISETOUR</b> <br>
+        <span>Ian Medeiros de Jesus Pimenta</span> <br>
+        <span>Kenner Eduardo Souza Lima</span> <br>
+        <span>Leonardo Sardinha Santana</span> <br>
+        <span>Luana Liriel Brito dos Santos</span> <br>
+        <span>Phelipe Bruione da Silva</span> <br>
+        <span>Samara Martins Damacena</span> <br>
+      </div>
     </div>
     <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
-</div>
+  </div>
+
 </body>
 
 </html>
+
+
+
+
+
 
 <script>
   // Array para armazenar empresas cadastradas para validação de código de ativação 

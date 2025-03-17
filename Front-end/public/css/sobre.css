@@ -6,26 +6,31 @@
     --cinza-claro: #E7E6E6;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Anton SC", serif;
+    letter-spacing: 0.75px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
 }
 
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 
 .header {
     background-color: black;
     position: fixed;
     width: 100%;
-    height: 15vh;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -58,13 +63,15 @@ body {
 }
 
 .header .container .navbar .opcoes .opcao {
-    font-family: 'Anton SC', sans-serif; 
-    font-weight: 700;
+    font-family: 'Anton SC', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     color: white;
     padding-inline: 3%;
-    font-size: 19px;
-    letter-spacing: 1px; 
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 .header .container .navbar .login-cadastro {
@@ -79,12 +86,14 @@ body {
 }
 
 .header .container .navbar .login-cadastro .opcao {
-    font-family: 'Anton SC', sans-serif; 
-    font-weight: 700;
+    font-family: 'Anton SC', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     color: white;
     font-size: 19px;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 .header .container .navbar .login-cadastro .entrar-div {
@@ -93,7 +102,7 @@ body {
     height: 76px;
     display: flex;
     margin-left: 5%;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 25px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -103,7 +112,7 @@ body {
 .header .container .navbar .login-cadastro .entrar-div .entrar {
     text-decoration: none;
     color: #1e1e1e;
-    font-weight: bold !important;
+    font-weight: 400 !important;
     padding-left: 10%;
 }
 
@@ -111,41 +120,56 @@ body {
     height: 59px;
     width: 59px;
     padding-left: 8px;
-
 }
 
-.header .container .navbar .login-cadastro .entrar {
-    font-family: 'Anton SC', sans-serif; 
-    font-weight: 700;
-    text-decoration: none;
-    color: #1e1e1e;
-    font-size: 25px;
-    letter-spacing: 1px; 
-}
-
-.header .container .navbar .opcoes .opcao:hover {
-    color: var(--cor-base);
-}
-
-.header .container .navbar .login-cadastro .opcao:hover {
-    color: var(--cor-base);
-}
-
-.tela-inicial {
+/* Header Mobile */
+.header .container-mobile {
+    position: relative;
     width: 100%;
-    height: 80vh;
-    padding-top: 15vh;
-    display: flex;
-    justify-content: center;
+    height: 130px;
+    display: none;
     align-items: center;
-    background-color: var(--cinza-claro);
-    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.header .container-mobile .navbar {
+    background-color: #F8CA26;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    display: none;
+    width: 100vw;
+}
+
+.header .container-mobile .navbar .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+    margin: 15px 15px;
+}
+
+.header .container-mobile .navbar .opcoes .opcao {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    text-align: right;
+    padding: 16px 24px;
+    margin-top: 20px;
+}
+.header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
+    background-color: white;
+
 }
 
 .barra-lateral {
     background-color: var(--cor-base);
     width: 8%;
-    height: 15vh;
+    height: 130px;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,16 +183,19 @@ body {
     width: 70%;
 }
 
-.tela-inicial .filtro {
-    width: 90%;
-    height: 100vh;
+
+
+
+
+
+/* HOVER AUMENTANDO FONTE */
+.navbar a:hover {
+    transform: scale(1.2);
 }
 
-@media (max-width: 500px) {
-    .tela-inicial .barra-lateral {
-        background-color: aquamarine;
-    }
-
+/* HOVER FONTE EM AMARELO */
+.header .container .navbar .opcoes .opcao:hover {
+    color: var(--cor-base);
 }
 
 .navbar a {
@@ -176,9 +203,26 @@ body {
     transition: transform 0.4s ease-in-out;
 }
 
-.navbar a:hover {
-    transform: scale(1.2);
+.header .container .navbar .login-cadastro .opcao:hover {
+    color: var(--cor-base);
 }
+
+
+
+
+.tela-inicial {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+    box-sizing: border-box;
+}
+
+
 
 .container-sobre-1 {
     display: flex;
@@ -191,15 +235,20 @@ body {
     width: 100%;
 }
 
+.imgsobre1mobile {
+    display: none;
+}
+
 .container-esquerda h1 {
     width: 70%;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 700;
 }
 
 .container-esquerda h2 {
-    width: 60%;
+    width: 70%;
+}
 
+.container-esquerda h2 i {
+    font-family: "Roboto", sans-serif;
 }
 
 .container-esquerda {
@@ -234,10 +283,14 @@ body {
     width: 80%;
 }
 
+.imgsobre2mobile {
+    display: none;
+}
+
 .container-esquerda-2 h1 {
     width: 70%;
     font-family: "Anton SC", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .container-esquerda-2 h2 {
@@ -253,14 +306,20 @@ body {
     width: 45%;
 }
 
+.container-direita-2 h2 {
+    font-family: "Roboto", sans-serif;
+}
+
+
 .tela-inicial-3 {
     width: 100%;
-    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--cinza-medio);
     box-sizing: border-box;
+    height: 100%;
+    padding: 30px 0px;
 }
 
 .container-sobre-3 {
@@ -274,10 +333,14 @@ body {
     width: 80%;
 }
 
+.imgsobre3mobile {
+    display: none;
+}
+
 .container-esquerda-3 h1 {
     width: 70%;
     font-family: "Anton SC", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .container-esquerda-3 h2 {
@@ -296,8 +359,16 @@ body {
 .container-direita-3 h1 {
     width: 70%;
     font-family: "Anton SC", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
+
+.container-direita-3 h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+
 
 .tela-inicial-4 {
     width: 100%;
@@ -311,7 +382,7 @@ body {
 }
 
 .tela-inicial-4 h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 4.5vh;
     margin-bottom: 9vh;
     color: #1E1E1E;
@@ -319,10 +390,10 @@ body {
 }
 
 .tela-inicial-4 p {
-    font-weight: 700;
-    font-size: 2vh; 
-    color: white; 
-    margin: 10px 0; 
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
     margin-top: 2vh;
 }
 
@@ -335,27 +406,38 @@ body {
     width: 100%;
 }
 
-.coluna1, .coluna2 {
+.coluna-passaporte {
     display: flex;
-    justify-content: space-evenly; 
-    width: 100%; 
-    margin-bottom: 20px; 
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 840px;
+    margin-bottom: 20px;
 }
 
 .passaporte {
     background-color: var(--cor-base);
-    width: 22%;
+    width: 264px;
+    min-width: 264px;
     padding: 5vh 3.5vh;
     box-sizing: border-box;
-    border-radius: 2.5vh;
+    border-radius: 24px;
     text-align: center;
-    color: white;
-    margin: 1vh -10vh;
+    color: black;
+}
+
+.passaporte p,
+.passaporte h4 {
+    color: var(--cinza-escuro);
 }
 
 .passaporte h4 {
-    font-weight: normal; 
+    font-weight: normal;
 }
+
+
+
 
 .tela-inicial-5 {
     width: 100%;
@@ -379,7 +461,7 @@ body {
 }
 
 .tela-inicial-5 h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 4.5vh;
     margin-bottom: 4vh;
     color: #1E1E1E;
@@ -391,7 +473,9 @@ body {
     width: 8%;
 }
 
-.missao, .visao, .valores {
+.missao,
+.visao,
+.valores {
     background-color: var(--cinza);
     color: var(--cinza-medio);
     padding: 4vh;
@@ -403,9 +487,10 @@ body {
 }
 
 
-.missao, .visao {
-display: flex;
-flex-direction: row;
+.missao,
+.visao {
+    display: flex;
+    flex-direction: row;
 }
 
 .destinos {
@@ -414,11 +499,14 @@ flex-direction: row;
     gap: 5vh;
 }
 
-.missao p, .visao p {
+.missao p,
+.visao p {
     max-width: 55%;
 }
 
-.missao p, .visao p, .valores p {
+.missao p,
+.visao p,
+.valores p {
     font-size: 2vh;
     letter-spacing: 0.5px;
 }
@@ -435,15 +523,18 @@ flex-direction: row;
     background-color: #3B3B3B;
     color: #E7E6E6;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .tela-6 .direitos {
     margin-inline: 13%;
+    font-weight: bold;
 }
 
 .tela-6 .footer {
@@ -466,4 +557,393 @@ flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     margin-inline: 5%;
+}
+
+.tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1080px) {
+
+    /* HEADER */
+    .header .container-mobile {
+        background-color: #F8CA26;
+        display: flex;
+        padding: 0 5%;
+    }
+
+    .header .container {
+        display: none;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    #botao-nav-bar {
+        width: 50px;
+    }
+
+
+    .tela-inicial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cinza-claro);
+        box-sizing: border-box;
+    }
+
+
+    .container-sobre-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+
+    .imgsobre1 {
+        display: none;
+    }
+
+    .imgsobre1mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .container-esquerda h1 {
+        width: 100%;
+        font-family: "Anton SC", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .container-esquerda h2 {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .container-esquerda {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-direita {
+        width: 100%;
+    }
+
+
+    /* TELA 2 */
+
+
+    .tela-inicial-2 {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cinza);
+        box-sizing: border-box;
+    }
+
+    .container-sobre-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .imgsobre2 {
+        display: none;
+    }
+
+    .imgsobre2mobile {
+        display: block;
+        width: 100%;
+    }
+
+
+    .container-esquerda-2 h1 {
+        width: 80%;
+        font-family: "Anton SC", sans-serif;
+        font-weight: 400;
+    }
+
+    .container-esquerda-2 h2 {
+        width: 80%;
+        color: white;
+    }
+
+    .container-esquerda-2 {
+        width: 80%;
+    }
+
+    .container-direita-2 {
+        width: 80%;
+    }
+
+    .container-direita-2 h1 {
+        font-size: 20px;
+    }
+
+    .container-direita-2 h2 {
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    /* TELA 3 */
+
+    .tela-inicial-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cinza-medio);
+        box-sizing: border-box;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .container-sobre-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .imgsobre3 {
+        display: none;
+    }
+
+    .imgsobre3mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .container-esquerda-3 h1 {
+        width: 90%;
+        font-family: "Anton SC", sans-serif;
+        font-weight: 400;
+
+    }
+
+    .container-esquerda-3 h2 {
+        width: 90%;
+        color: white;
+    }
+
+    .container-esquerda-3 {
+        width: 90%;
+    }
+
+    .container-direita-3 {
+        width: 90%;
+    }
+
+    .container-direita-3 h1 {
+        width: 100%;
+        font-family: "Anton SC", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    /* TELA 4 */
+
+    .tela-inicial-4 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cinza-claro);
+        box-sizing: border-box;
+        padding: 35px 0px;
+    }
+
+    .tela-inicial-4 h1 {
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 5%;
+        width: 70%;
+    }
+
+    .tela-inicial-4 p {
+        font-weight: 400;
+        font-size: 23px;
+        margin: 10px 0;
+        margin-top: 10%;
+    }
+
+    .container-sobre-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* TELA 5 */
+
+
+    .tela-inicial-5 {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cinza-medio);
+        box-sizing: border-box;
+        padding: 7vh;
+    }
+
+    .container-sobre-5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 1200px;
+        width: 100%;
+        gap: 5vh;
+    }
+
+    .tela-inicial-5 h1 {
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 4vh;
+        color: var(--cinza-escuro);
+        width: 80%;
+    }
+
+
+    .imgsobre6 {
+        width: 30%;
+    }
+
+    .missao,
+    .visao,
+    .valores {
+        background-color: var(--cinza);
+        color: var(--cinza-medio);
+        padding: 4vh;
+        border-radius: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+        flex-direction: column;
+    }
+
+    .missao h2,
+    .visao h2 {
+        order: 1
+    }
+
+    .missao img,
+    .visao img {
+        order: 2
+    }
+
+    .missao p,
+    .visao p {
+        order: 3
+    }
+
+
+    .missao,
+    .visao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .destinos {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .missao p,
+    .visao p {
+        max-width: 55%;
+    }
+
+    .missao p,
+    .visao p,
+    .valores p {
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        font-family: "Roboto", sans-serif;
+    }
+
+
+    .missao b,
+    .visao b,
+    .valores b {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .destinos h2 {
+        font-size: 3vh;
+    }
+
+    .valores .imgsobre6 {
+        width: 25%;
+    }
+
+    .conteudo {
+        padding: auto 1120px;
+        overflow-x: hidden;
+    }
+
+
+    .tela-6 {
+        height: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .tela-6 .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .tela-6 .footer .caixa-footer {
+        width: 40%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tela-6 .direitos {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 0;
+    }
+
+
+
+
 }

@@ -4,125 +4,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WiseTour</title>
+  <title>WiseTour - Serviços</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/servicos.css">
 </head>
 
 <body>
 
-<div class="header">
-  <div class="container">
-    <div class="navbar">
-      <div class="opcoes">
-        <a class="opcao" href="home.html">HOME</a>
-        <a class="opcao" href="sobre.html">SOBRE NÓS</a>
-        <a class="opcao" href="servicos.html">SERVIÇOS</a>
-        <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
-      </div>
-      <div class="login-cadastro">
-        <a class="opcao" href="">CADASTRE-SE</a>
-        <div class="entrar-div">
-          <img src="assets/icon/user.svg">
-          <a class="entrar" href="">ENTRAR</a>
+
+
+  <div id="header" class="header">
+    <div id="header-container" class="container">
+      <div class="navbar">
+        <div class="opcoes">
+          <a class="opcao" href="home.html">HOME</a>
+          <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+          <a class="opcao" href="servicos.html">SERVIÇOS</a>
+          <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+        </div>
+        <div class="login-cadastro">
+          <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+          <div class="entrar-div">
+            <img src="assets/icon/user.svg">
+            <a class="entrar" href="login.html">ENTRAR</a>
+          </div>
         </div>
       </div>
+      <div class="barra-lateral">
+        <img src="assets/imgs/logowisetour.png" alt="Logo" class="logo">
+      </div>
+    </div>
+
+
+
+    <div class="container-mobile">
+      <div id="header-container-mobile" class="navbar">
+        <div class="opcoes">
+          <a class="opcao" href="home.html">HOME</a>
+          <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+          <a class="opcao" href="servicos.html">SERVIÇOS</a>
+          <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+          <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+          <a class="opcao" href="login.html">ENTRAR</a>
+        </div>
+      </div>
+      <img src="assets/icon/logo.svg" id="logo">
+      <img src="assets/icon/barra-navegacao.svg" id="botao-nav-bar" onclick="mobileNav()"></img>
     </div>
   </div>
-</div>
 
-<div class="barra-lateral">
-  <img src="assets/imgs/logowisetour.png" alt="Logo" class="logo">
-</div>
+
 
   <div class="tela-inicial">
     <div class="container-servicos-1">
-        <div class="container-esquerda">
-            <img src="assets/imgs/notebook-celular.svg" alt="img-servicos-inicio" class="img-servicos-inicio">
-        </div>
-
-        <div class="container-direita">
-            <h1><span style="color: #F8CA26;">WISETOUR</span>: A INTELIGÊNCIA QUE<br> TRANSFORMA O TURISMO NO
-              BRASIL</h1>
-                <h2>Nosso sistema foi cuidadosamente desenvolvido<br> para atender às necessidades do mercado de<br>
-                    turismo estrangeiro no Brasil.</h2>
-        </div>
+      <img src="assets/imgs/notebook-celular.svg" class="img-servicos-inicio">
+      <div class="container-s-1">
+        <h1><span style="color: #F8CA26;">WISETOUR</span>: A INTELIGÊNCIA QUE TRANSFORMA O TURISMO NO BRASIL</h1>
+        <img src="assets/imgs/notebook-celular.svg" class="img-servicos-inicio-mobile">
+        <h2>Nosso sistema foi cuidadosamente desenvolvido para atender às necessidades do mercado de turismo estrangeiro
+          no Brasil.</h2>
+      </div>
     </div>
   </div>
 
-  <div class="tela-inicial-2">
+
+
+  <div class="tela-2 ">
     <div class="container-servicos-2">
-        <div class="container-esquerda-2">
-            <h1>O QUE FAZEMOS: DE DADO À DECISÃO<br> ESTRATÉGICA</h1>
-            <h2>Coletamos dados de fontes confiáveis,<br> analisamos e processamos essas<br> informações, e
-              transformamos dados<br> complexos em relatórios claros,<br> dashboards interativos e insights<br>
-              acionáveis. </h2>
-        </div>
-        <div class="container-direita-2">
-            <img src="assets/imgs/grafico-celular.svg" alt="grafico-celular" class="img-grafico-servicos">
-        </div>
+      <div class="container-s-2">
+        <h1>O QUE FAZEMOS: DE DADO À DECISÃO ESTRATÉGICA</h1>
+        <img src="assets/imgs/grafico-celular.svg" class="img-grafico-servicos-mobile">
+        <h2>Coletamos dados de fontes confiáveis, analisamos e processamos essas informações, e transformamos dados
+          complexos em relatórios claros, dashboards interativos e insights acionáveis.</h2>
+      </div>
+      <img src="assets/imgs/grafico-celular.svg" class="img-grafico-servicos">
     </div>
   </div>
 
-  <div class="tela-inicial-3">
-      <div class="container-servicos-3">
-          <div class="container-esquerda-3">
-              <img src="assets/imgs/passaro-1-servicos.png" alt="passaro-1-servicos" class="passaro-1-servicos">
-              <img src="assets/imgs/servicos-tela-3.png" alt="servicos-tela-3" class="img-servicos-tela-3">
-          </div>
-          <div class="container-meio-3">
-              <h1>PARCERIA ESTRATÉGICA QUE<br> TRANSFORMA DADOS EM<br> RESULTADOS</h1>
-              <h2>No final, você não recebe apenas números e<br> gráficos. Recebe soluções que transformam<br> dados em
-                  decisões estratégicas, resultados<br> extraordinários e um parceiro estratégico que<br> vai guiar suas
-                  decisões e conectar seu<br> negócio ao sucesso. </h2>
-          </div>
-          <div class="container-direita-3">
-              <img src="assets/imgs/passaro-servicos.png">
-          </div>
+
+
+  <div class="tela-3 ">
+    <img src="assets/imgs/passaropng.png" alt="" class="passaro">
+    <img src="assets/imgs/passaropng.png" alt="" class="passaro2">
+    <div class="container-servicos-3">
+      <img src="assets/imgs/img-graficos-servicos.png" class="img-servicos-tela-3">
+      <div class="container-s-3">
+        <h1>PARCERIA ESTRATÉGICA QUE TRANSFORMA DADOS EM RESULTADOS</h1>
+        <img src="assets/imgs/img-graficos-servicos.png" class="img-servicos-tela-3-mobile">
+        <h2>No final, você não recebe apenas números e gráficos. Recebe soluções que transformam dados em decisões
+          estratégicas, resultados extraordinários e um parceiro estratégico que vai guiar suas decisões e conectar seu
+          negócio ao sucesso.</h2>
       </div>
+    </div>
   </div>
 
-  <div class="tela-inicial-4">
-      <div class="container-servicos-4">
-          <div class="container-cima">
-                <h1>AS ROTAS DOS NOSSOS SERVIÇOS</h1>
-              <h2>Analisamos anuários, datasets governamentais e pesquisas de mercado, extraímos as<br> informações mais
-                  relevantes e transformamos números em conhecimento estratégico<br> para impulsionar o seu negócio.</h2>
-          </div>
-          <div class="container-baixo">
-              <img src="assets/imgs/rotas-servicos.png" alt="rotas-servicos" class="img-rotas-servicos">
-          </div>
+
+
+  <div class="tela-4 ">
+    <div class="container-servicos-4">
+      <div class="texto-servicos">
+        <h1>AS ROTAS DOS NOSSOS SERVIÇOS</h1>
+        <h2 id="rotas">Analisamos anuários, datasets governamentais e pesquisas de mercado, extraímos as informações
+          mais
+          relevantes
+          e transformamos números em conhecimento estratégico para impulsionar o seu negócio.</h2>
       </div>
+
+
+
+      <div class="container-s-4">
+        <div class="card">
+          <h2>Perfil Dos Visitantes</h2>
+          <img src="assets/imgs/perfil-visitantes.png">
+        </div>
+        <div class="card">
+          <h2>Comparativos entre Estados</h2>
+          <img src="assets/imgs/comparativos-estados.png">
+        </div>
+        <div class="card">
+          <h2>Avaliação das Infraestruturas</h2>
+          <img src="assets/imgs/infra-avaliacao.png">
+        </div>
+        <div class="card">
+          <h2>Análise de Temporadas</h2>
+          <img src="assets/imgs/analise-temporadas.png">
+        </div>
+        <div class="card">
+          <h2>Classificação de Tipo de Passeios</h2>
+          <img src="assets/imgs/classif-passeio.png">
+        </div>
+        <div class="card">
+          <h2>Identificação das Vias de Acesso</h2>
+          <img src="assets/imgs/vias-acesso.png">
+        </div>
+      </div>
+      <h2 id="rotas-mobile">Analisamos anuários, datasets governamentais e pesquisas de mercado, extraímos as
+        informações mais
+        relevantes
+        e transformamos números em conhecimento estratégico para impulsionar o seu negócio.</h2>
+    </div>
   </div>
 
-<div class="tela-5">
+
+
+  <div class="tela-6 conteudo">
     <div class="footer">
-        <div class="caixa-footer">
-            <b>WISETOUR</b> <br>
-            <span>Transformando números em <br>
-                    oportunidades E dados em <br>
-                    destinos de sucesso!</span>
-        </div>
-        <div class="caixa-footer">
-            <b>MENU</b> <br>
-            <span>HOME</span> <br>
-            <span>SOBRE NÓS</span> <br>
-            <span>SERVIÇOS</span> <br>
-            <span>ENTRE EM CONTATO</span> <br>
-            <span>CADASTRO</span> <br>
-            <span>LOGIN</span> <br>
-        </div>
-        <div class="caixa-footer">
-            <b>TIME DA WISETOUR</b> <br>
-            <span>Ian Medeiros de Jesus Pimenta</span> <br>
-            <span>Kenner Eduardo Souza Lima</span> <br>
-            <span>Leonardo Sardinha Santana</span> <br>
-            <span>Luana Liriel Brito dos Santos</span> <br>
-            <span>Phelipe Bruione da Silva</span> <br>
-            <span>Samara Martins Damacena</span> <br>
-        </div>
+      <div class="caixa-footer">
+        <b>WISETOUR</b> <br>
+        <span>Transformando números em <br>
+          oportunidades E dados em <br>
+          destinos de sucesso!</span>
+      </div>
+      <div class="caixa-footer">
+        <b>MENU</b> <br>
+        <span>HOME</span> <br>
+        <span>SOBRE NÓS</span> <br>
+        <span>SERVIÇOS</span> <br>
+        <span>ENTRE EM CONTATO</span> <br>
+        <span>CADASTRO</span> <br>
+        <span>LOGIN</span> <br>
+      </div>
+      <div class="caixa-footer">
+        <b>TIME DA WISETOUR</b> <br>
+        <span>Ian Medeiros de Jesus Pimenta</span> <br>
+        <span>Kenner Eduardo Souza Lima</span> <br>
+        <span>Leonardo Sardinha Santana</span> <br>
+        <span>Luana Liriel Brito dos Santos</span> <br>
+        <span>Phelipe Bruione da Silva</span> <br>
+        <span>Samara Martins Damacena</span> <br>
+      </div>
     </div>
     <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
-</div>
+  </div>
 
+
+
+  <script src="js/servicos.js"></script>
 </body>
+
 </html>
