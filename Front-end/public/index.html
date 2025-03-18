@@ -3,80 +3,204 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiseTour</title>
 
-    <title>AquaTech | Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <script src="./js/sessao.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
+    <script src="js/home.js"></script>
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+    <header id="header" class="header">
+        <div id="header-container" class="container">
+            <div class="barra-lateral">
+
+            </div>
+
+            <div class="navbar">
+                <div class="opcoes">
+                    <a class="opcao" href="index.html">HOME</a>
+                    <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+                    <a class="opcao" href="servicos.html">SERVIÇOS</a>
+                    <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+                </div>
+                <div class="login-cadastro">
+                    <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+                    <a class="entrar-div" href="login.html">
+                        <div class="user-div"><i class="fa-solid fa-user"></i></div>
+                        <span class="entrar">ENTRAR</span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
-    </div>
-  </body>
+
+
+        <div class="container-mobile">
+            <div id="header-container-mobile" class="navbar">
+                <div class="opcoes">
+                    <a class="opcao" href="index.html">HOME</a>
+                    <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+                    <a class="opcao" href="servicos.html">SERVIÇOS</a>
+                    <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+                    <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+                    <a class="opcao" href="login.html">ENTRAR</a>
+                </div>
+            </div>
+
+            <img src="assets/icon/logo.svg" id="logo">
+            <img src="assets/icon/barra-navegacao.svg" id="botao-nav-bar" onclick="mobileNav()"></img>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="tela-inicial ">
+            <div class="barra-lateral">
+            </div>
+            <div class="main-tela-inicial">
+                <img src="assets/imgs/Logo.svg">
+                <div class="frase-efeito">
+                    <span class="frase-branca">Sua bússola estratégica:</span>
+                    <span class="frase-amarela">transformando dados em destinos de sucesso!</span>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <section class="tela-2 ">
+            <img src="assets/imgs/notebook-celular.svg">
+            <div class="frase-botao-saiba-mais">
+                <p><span style="color: #F8CA26;">WISETOUR,</span><br>
+                    TRANSFORMANDO NÚMEROS
+                    EM OPORTUNIDADES E DADOS
+                    EM DESTINOS DE SUCESSO!</p>
+                <a class="botao-saiba-mais btn" href="./servicos.html">SAIBA MAIS</a>
+            </div>
+    
+    
+        </section>
+    
+        <section class="tela-2-mobile section-mobile">
+    
+            <p><span style="color: #F8CA26;">WISETOUR,</span><br>
+                TRANSFORMANDO NÚMEROS
+                EM OPORTUNIDADES E DADOS
+                EM DESTINOS DE SUCESSO!</p>
+            <img src="assets/imgs/notebook-celular.svg">
+            <a class="botao-saiba-mais btn" href="./servicos.html">SAIBA MAIS</a>
+    
+        </section>
+    
+    
+        <section class="tela-3 ">
+            <div class="frase-botao-descubra-mais">
+                <span style="color: #4d4d4d;">
+                    A INTELIGÊNCIA DO TURISMO <br>
+                    ESTRANGEIRO NO BRASIL, EM UM SÓ <br>
+                    LUGAR!
+                </span>
+                <span>
+                    Análise de dados de temporadas, <br>
+                    nacionalidades, destinos e muito mais!
+                </span>
+    
+    
+    
+                <div class="botao-descubra-mais btn">DESCOBRIR MAIS</div>
+    
+            </div>
+            <img src="assets/imgs/grafico-celular.svg">
+            <h4>
+                Análise de dados de temporadas, <br>
+                nacionalidades, <br> destinos e muito mais!
+            </h4>
+    
+            <div id="botao-descubra-mais-mobile" class="botao-descubra-mais btn"><b>DESCOBRIR MAIS</b></div>
+    
+        </section>
+    
+        <section class="tela-3-mobile section-mobile">
+            <span style="color: #4d4d4d;">
+                A INTELIGÊNCIA DO TURISMO <br>
+                ESTRANGEIRO NO BRASIL, EM UM SÓ <br>
+                LUGAR!
+            </span>
+            <img src="assets/imgs/grafico-celular.svg">
+            <span>
+                Análise de dados de temporadas, <br>
+                nacionalidades, destinos e muito mais!
+            </span>
+    
+    
+    
+            <div class="botao-descubra-mais btn">DESCOBRIR MAIS</div>
+    
+    
+        </section>
+    
+    
+        <section class="tela-4 ">
+            <img id="passaro-direita" src="assets/imgs/passaro-direita.svg">
+            <div class="contato">
+    
+                <b>ENTRE EM CONTATO COM A GENTE</b>
+                <div id="imagens-geral" class="imagens-contato">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+    
+        
+    
+            </div>
+            <img id="passaro-esquerda" src="assets/imgs/passaro-esquerda.svg">
+        </section>
+    </main>
+
+
+
+    <footer class="tela-5 ">
+        <div class="footer-container">
+            <div id="caixa-footer-container-1" class="caixa-footer-container">
+                WISETOUR <br>
+                <span>Transformando números em <br>
+                    oportunidades E dados em <br>
+                    destinos de sucesso!</span>
+            </div>
+            <div class="caixa-footer-container">
+                <b>MENU</b> <br>
+                <span>HOME</span> <br>
+                <span>SOBRE NÓS</span> <br>
+                <span>SERVIÇOS</span> <br>
+                <span>ENTRE EM CONTATO</span> <br>
+                <span>CADASTRO</span> <br>
+                <span>LOGIN</span> <br>
+            </div>
+            <div class="caixa-footer-container">
+                <b>TIME DA WISETOUR</b> <br>
+                <span>Ian Medeiros de Jesus Pimenta</span> <br>
+                <span>Kenner Eduardo Souza Lima</span> <br>
+                <span>Leonardo Sardinha Santana</span> <br>
+                <span>Luana Liriel Brito dos Santos</span> <br>
+                <span>Phelipe Bruione da Silva</span> <br>
+                <span>Samara Martins Damacena</span> <br>
+            </div>
+        </div>
+        <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
+    </footer>
+</body>
 
 </html>

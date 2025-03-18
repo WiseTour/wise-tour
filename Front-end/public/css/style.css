@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+
+:root {
+  --cor-base: #f8ca26;
+  --cinza: #3b3b3b;
+  --cinza-escuro: #1e1e1e;
+  --cinza-medio: #d6d1d1;
+  --cinza-claro: #e7e6e6;
+}
+
+* {
+  font-family: "Anton SC", serif;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+a,
+span {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header {
+  background-color: var(--cinza-escuro);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 100;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header .container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 8vw auto;
+}
+
+.header .container .barra-lateral {
+  background-color: var(--cor-base);
+  width: 8vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .container .barra-lateral .logo {
+  width: 70%;
+  height: 70%;
+}
+
+.header .container .navbar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 20px;
+}
+
+.header .container .navbar .opcoes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cinza-claro);
+  white-space: nowrap;
+}
+
+/* HOVER AUMENTANDO FONTE */
+.navbar a:hover {
+  transform: scale(1.2);
+}
+
+/* HOVER FONTE EM AMARELO */
+.header .container .navbar .opcoes .opcao:hover {
+  color: var(--cor-base);
+}
+
+.header .container .navbar .login-cadastro .opcao:hover {
+  color: var(--cor-base);
+}
+
+.navbar a {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.header .container .navbar .opcoes .opcao {
+  text-decoration: none;
+  color: var(--cinza-claro);
+  padding-inline: 3%;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.header .container .navbar .login-cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 25px;
+  text-decoration: none;
+  color: var(--cinza-claro);
+}
+
+.header .container .navbar .login-cadastro .opcao {
+  text-decoration: none;
+  color: var(--cinza-claro);
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  display: block;
+}
+
+.header .container .navbar .login-cadastro .entrar-div {
+  background-color: var(--cor-base);
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  align-items: center;
+  gap: 10px;
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+
+.header .container .navbar .login-cadastro .entrar-div:hover {
+  width: 40%;
+}
+
+.header .container .navbar .login-cadastro .entrar-div .entrar {
+  text-decoration: none;
+  color: var(--cinza-escuro);
+  transform: scale(1);
+  width: 100%;
+  color: var(--cinza-escuro);
+}
+
+.header .container .navbar .login-cadastro .entrar-div .user-div {
+  background-color: var(--cinza-escuro);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .container .navbar .login-cadastro .entrar-div .user-div i {
+  padding: 12px;
+  color: var(--cinza-claro);
+}
+
+section {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 8vw;
+  padding-block: 70px;
+}
+
+section div {
+  font-size: 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  transition: 0.5s ease;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  font-size: 25px;
+  color: var(--cinza-escuro);
+  background-color: var(--cor-base);
+  padding: 15px 40px;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+/* INDEX */
+
+/* TELA 1 INICIAL */
+
+.tela-inicial {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(21, 20, 20, 1) 0%,
+      rgba(63, 63, 63, 0.75) 39%,
+      rgba(63, 63, 63, 0.5) 58%,
+      rgba(25, 25, 25, 0.8) 73%,
+      rgba(21, 20, 20, 0.9) 87%
+    ),
+    url(../assets/imgs/fundo-home.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 8vw;
+}
+
+.tela-inicial .barra-lateral {
+  background-color: var(--cor-base);
+  width: 8vw;
+  height: 100%;
+}
+
+.tela-inicial .main-tela-inicial {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.tela-inicial img {
+  height: 80%;
+}
+
+.tela-inicial .frase-efeito {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  font-size: 32px;
+  padding-top: 12vh;
+}
+
+.tela-inicial .frase-efeito .frase-branca {
+  color: var(--cinza-claro);
+  font-style: italic;
+}
+
+.tela-inicial .frase-efeito .frase-amarela {
+  color: var(--cor-base);
+
+  font-style: italic;
+}
+
+/* TELA 2 */
+
+.tela-2 {
+  background-color: var(--cinza-claro);
+}
+
+.tela-2 .frase-botao-saiba-mais {
+  text-align: end;
+  align-items: flex-end;
+}
+
+.tela-2 .frase-botao-saiba-mais span {
+  font-size: 55px;
+}
+
+/* .tela-2 .frase-botao-saiba-mais .botao-saiba-mais {
+  
+  
+} */
+
+#botao-descubra-mais-mobile {
+  display: none;
+}
+
+/* TELA 3 */
+.tela-3 h4 {
+  display: none;
+}
+
+.tela-3 section {
+  display: none;
+}
+
+.tela-3 {
+  background-color: var(--cinza-medio);
+}
+
+.tela-3 .frase-botao-descubra-mais {
+  text-align: start;
+  align-items: flex-start;
+}
+
+.tela-3 img {
+  justify-self: right;
+}
+
+/* .tela-3 .frase-botao-descubra-mais .botao-descubra-mais {
+  width: 324px;
+  height: 67px;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #e7e6e6;
+  background-color: var(--cor-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
+} */
+
+/* TELA 4 */
+
+.tela-4 #imagens-mobile {
+  display: none;
+}
+
+.tela-4 {
+  background-color: var(--cor-base);
+  grid-template-columns: 100%;
+}
+
+.tela-4 .contato {
+  color: var(--cinza-escuro);
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 50px;
+}
+
+.tela-4 .contato .imagens-contato {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.tela-4 .contato .imagens-contato a {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cinza-escuro);
+  color: var(--cinza-claro);
+  border-radius: 100%;
+  font-size: 70px;
+  transition: 0.2s ease;
+}
+
+.tela-4 .contato .imagens-contato a:hover {
+  border: solid 7px var(--cinza-claro);
+}
+
+#passaro-direita {
+  position: absolute;
+  right: -7%;
+}
+
+#passaro-esquerda {
+  position: absolute;
+  left: -10%;
+}
+
+/* .tela-4 .contato .imagens-contato img {
+  padding-inline: 4%;
+  height: 120px;
+  width: 120px;
+} */
+
+/* TELA 5 */
+
+footer {
+  background-color: var(--cinza);
+  color: var(--cinza-claro);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 70px 8vw;
+}
+
+.tela-5 .direitos {
+  font-weight: bold;
+}
+
+.tela-5 .footer-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tela-5 .footer-container .caixa-footer-container {
+  width: fit-content;
+  height: auto;
+  color: var(--cinza-claro);
+  flex-direction: column;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  font-weight: 100;
+}
+
+#caixa-footer-container-1 {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tela-5 .footer-container .caixa-footer-container span,
+.tela-6 .footer-container .caixa-footer-container b,
+.direitos {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+
+
+/* /INDEX */
+
+.tela-2-mobile, .container-mobile{
+  display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1080px) {
+
+  
+  img{
+    width: 70%;
+  }
+
+  .header{
+    background-color: var(--cor-base);
+    padding: 0;
+  }
+
+  .header .container {
+    display: none;
+  }
+
+  .header .container-mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 50px 8vw;
+   
+  }
+  
+  .header .container-mobile .navbar {
+    background-color: var(--cor-base);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    width: 100vw;
+    padding: 50px;
+  }
+  
+  .header .container-mobile .navbar .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
+    color: var(--cinza-claro);
+    margin: 15px 15px;
+  }
+  
+  .header .container-mobile .navbar .opcoes .opcao {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    text-align: right;
+    padding: 16px 24px;
+    margin-top: 20px;
+    font-family: "Anton SC", serif;
+    font-weight: 100;
+  }
+  
+  .header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
+    background-color: var(--cinza-claro);
+  }
+
+  .barra-lateral {
+    display: none;
+  }
+
+  #logo {
+    width: 70px;
+  }
+
+  #botao-nav-bar {
+    width: 50px;
+  }
+
+  .tela-inicial {
+    padding: 50px;
+    height: fit-content;
+  }
+
+  .tela-inicial .main-tela-inicial {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8vw;
+    padding-block: 70px;
+    
+  }
+
+  section div {
+    font-size: 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tela-inicial img {
+    width: 65%;
+  }
+
+  .tela-inicial .frase-efeito {
+    padding-top: 3%;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  /* TELA 2 */
+
+
+  .tela-2, .tela-3 {
+    display: none;
+  }
+
+  .section-mobile{
+    display:block;
+  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    
+  }
+
+  .section-mobile  p {
+    font-size: 25px;
+  }
+  
+  .section-mobile  span {
+    font-size: 55px;
+  }
+
+  .tela-2-mobile {
+    background-color: var(--cinza-claro);
+  }
+
+  .tela-3-mobile {
+    background-color: var(--cinza-medio);
+  }
+
+  .tela-3-mobile span {
+    font-size: 25px;
+  }
+  
+
+  /* TELA 4 */
+
+  .tela-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .tela-4 b{
+    text-align: center;
+    z-index: 1;
+  }
+
+
+  
+  .tela-4 .contato {
+    gap: 50px;
+  }
+
+ 
+  
+  .tela-4 .contato .imagens-contato {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px;
+   
+  }
+
+  
+  
+  .tela-4 .contato .imagens-contato a {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza-escuro);
+    color: var(--cinza-claro);
+    border-radius: 100%;
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+  
+  .tela-4 .contato .imagens-contato a:hover {
+    border: solid 7px var(--cinza-claro);
+  }
+  
+  #passaro-direita {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: -7%;
+    
+  }
+  
+  #passaro-esquerda {
+    width: 30%;
+    position: absolute;
+    left: -10%;
+    bottom: -10%;
+
+  }
+
+  /* TELA 5 */
+
+  .tela-5 .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .tela-5 .footer-container .caixa-footer-container {
+
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tela-5 .direitos {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
