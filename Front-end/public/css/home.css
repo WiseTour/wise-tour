@@ -125,7 +125,7 @@ body {
 .header .container .navbar .login-cadastro .entrar-div .entrar {
     text-decoration: none;
     color: #1e1e1e;
-    font-weight: bold;
+    font-weight: 100;
     padding-left: 10%;
 }
 
