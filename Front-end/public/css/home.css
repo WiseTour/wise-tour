@@ -1,5 +1,9 @@
 :root {
     --cor-base: #F8CA26;
+    --cinza: #3B3B3B;
+    --cinza-escuro: #1E1E1E;
+    --cinza-medio: #D6D1D1;
+    --cinza-claro: #E7E6E6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
@@ -16,8 +20,8 @@ body {
 }
 
 .header {
-    /* background-color: var(--batata); */
-    background-color: transparent;
+    
+    background-color: var(--cinza-escuro);
     position: fixed;
     width: 100%;
     /* height: 70px; */
