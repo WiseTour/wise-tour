@@ -14,6 +14,15 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
 a,
 span {
   text-decoration: none;
@@ -195,6 +204,7 @@ section div {
   color: var(--cinza-escuro);
   background-color: var(--cor-base);
   padding: 15px 40px;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -444,7 +454,7 @@ footer {
 
 /* /INDEX */
 
-.tela-2-mobile, .container-mobile{
+.section-mobile, .container-mobile{
   display: none;
 }
 

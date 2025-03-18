@@ -1,376 +1,72 @@
-:root {
-    --cor-base: #F8CA26;
-    --cinza: #3B3B3B;
-    --cinza-escuro: #1E1E1E;
-    --cinza-medio: #D6D1D1;
-    --cinza-claro: #E7E6E6;
-}
 
-* {
-    font-family: "Anton SC", serif;
-    letter-spacing: 0.75px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-.header {
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.header .container {
-    width: 95%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header .container .navbar {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.header .container .navbar .opcoes {
-    width: 56%;
-    height: 90%;
-    margin-left: 7%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
-.header .container .navbar .opcoes .opcao {
-    font-family: 'Anton SC', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: white;
-    padding-inline: 3%;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-}
-
-.header .container .navbar .login-cadastro {
-    width: 50%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    text-decoration: none;
-    color: white;
-    gap: 10px;
-}
-
-.header .container .navbar .login-cadastro .opcao {
-    font-family: 'Anton SC', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
-    letter-spacing: 1px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-}
-
-.header .container .navbar .login-cadastro .entrar-div {
-    background-color: var(--cor-base);
-    width: 230px;
-    height: 76px;
-    display: flex;
-    margin-left: 5%;
-    font-weight: 400;
-    font-size: 25px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    align-items: center;
-}
-
-.header .container .navbar .login-cadastro .entrar-div .entrar {
-    text-decoration: none;
-    color: #1e1e1e;
-    font-weight: 400 !important;
-    padding-left: 10%;
-}
-
-.header .container .navbar .login-cadastro .entrar-div img {
-    height: 59px;
-    width: 59px;
-    padding-left: 8px;
-}
-
-/* Header Mobile */
-.header .container-mobile {
-    position: relative;
-    width: 100%;
-    height: 130px;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-}
-
-.header .container-mobile .navbar {
-    background-color: #F8CA26;
-    position: absolute;
-    left: 0;
-    top: 130px;
-    display: none;
-    width: 100vw;
-}
-
-.header .container-mobile .navbar .opcoes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-decoration: none;
-    color: white;
-    margin: 15px 15px;
-}
-
-.header .container-mobile .navbar .opcoes .opcao {
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-size: 16px;
-    width: 100%;
-    text-align: right;
-    padding: 16px 24px;
-    margin-top: 20px;
-}
-.header .container-mobile .navbar .opcoes .opcao:is(:active, :focus) {
-    background-color: white;
-
-}
-
-.barra-lateral {
-    background-color: var(--cor-base);
-    width: 8%;
-    height: 130px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    position: absolute;
-    width: 70%;
-}
-
-
-
-
-
-
-/* HOVER AUMENTANDO FONTE */
-.navbar a:hover {
-    transform: scale(1.2);
-}
-
-/* HOVER FONTE EM AMARELO */
-.header .container .navbar .opcoes .opcao:hover {
-    color: var(--cor-base);
-}
-
-.navbar a {
-    display: inline-block;
-    transition: transform 0.4s ease-in-out;
-}
-
-.header .container .navbar .login-cadastro .opcao:hover {
-    color: var(--cor-base);
-}
-
-
-
-
-.tela-inicial {
-    width: 100%;
-    height: 100vh;
-    padding-top: 150px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#main-sobre .tela-inicial {
+    background-image: none;
     background-color: var(--cinza-claro);
-    box-sizing: border-box;
+    height: fit-content;
+    padding-inline: 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
 }
 
-
-
-.container-sobre-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+#main-sobre .tela-inicial h1, h2{
+    font-size: 25px;
 }
 
-.imgsobre1 {
-    width: 100%;
+#main-sobre .tela-inicial h2{
+    color: var(--cinza);
 }
 
-.imgsobre1mobile {
-    display: none;
-}
-
-.container-esquerda h1 {
-    width: 70%;
-}
-
-.container-esquerda h2 {
-    width: 70%;
-}
-
-.container-esquerda h2 i {
-    font-family: "Roboto", sans-serif;
-}
-
-.container-esquerda {
-    width: 80%;
+#main-sobre .tela-inicial .container-esquerda{
     display: flex;
     flex-direction: column;
-}
-
-.container-direita {
-    width: 45%;
-}
-
-
-.tela-inicial-2 {
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+#main-sobre .tela-inicial img{
+    width: 80%;
+    justify-self: end;
+}
+
+#main-sobre .tela-inicial-2 {
+
     background-color: var(--cinza);
-    box-sizing: border-box;
+
 }
 
-.container-sobre-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#main-sobre .imgsobre2 {
     width: 80%;
 }
 
-.imgsobre2 {
-    width: 80%;
-}
 
-.imgsobre2mobile {
-    display: none;
-}
-
-.container-esquerda-2 h1 {
+#main-sobre .container-esquerda-2 h1 {
     width: 70%;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
 }
 
-.container-esquerda-2 h2 {
+#main-sobre .container-esquerda-2 h2 {
     width: 60%;
     color: white;
 }
 
-.container-esquerda-2 {
-    width: 50%;
-}
 
-.container-direita-2 {
-    width: 45%;
-}
-
-.container-direita-2 h2 {
-    font-family: "Roboto", sans-serif;
-}
-
-
-.tela-inicial-3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#main-sobre .tela-inicial-3 {
+ 
     background-color: var(--cinza-medio);
-    box-sizing: border-box;
-    height: 100%;
-    padding: 30px 0px;
+
 }
 
-.container-sobre-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#main-sobre .imgsobre3 {
     width: 80%;
 }
 
-.imgsobre3 {
-    width: 80%;
-}
 
-.imgsobre3mobile {
-    display: none;
-}
-
-.container-esquerda-3 h1 {
-    width: 70%;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-}
-
-.container-esquerda-3 h2 {
-    width: 60%;
-    color: white;
-}
-
-.container-esquerda-3 {
-    width: 50%;
-}
-
-.container-direita-3 {
-    width: 45%;
-}
-
-.container-direita-3 h1 {
-    width: 70%;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-}
-
-.container-direita-3 h2 {
-    font-size: 20px;
-    font-weight: 100;
-}
-
-
-
-
-.tela-inicial-4 {
+#main-sobre .tela-inicial-4 {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -381,7 +77,7 @@ body {
     padding: 7vh;
 }
 
-.tela-inicial-4 h1 {
+#main-sobre .tela-inicial-4 h1 {
     font-weight: 400;
     font-size: 4.5vh;
     margin-bottom: 9vh;
@@ -389,7 +85,7 @@ body {
     width: 80%;
 }
 
-.tela-inicial-4 p {
+#main-sobre .tela-inicial-4 p {
     font-weight: 400;
     font-size: 20px;
     color: white;
@@ -397,7 +93,7 @@ body {
     margin-top: 2vh;
 }
 
-.container-sobre-4 {
+#main-sobre .container-sobre-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -406,7 +102,7 @@ body {
     width: 100%;
 }
 
-.coluna-passaporte {
+#main-sobre .coluna-passaporte {
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -416,7 +112,7 @@ body {
     margin-bottom: 20px;
 }
 
-.passaporte {
+#main-sobre .passaporte {
     background-color: var(--cor-base);
     width: 264px;
     min-width: 264px;
@@ -427,104 +123,97 @@ body {
     color: black;
 }
 
-.passaporte p,
-.passaporte h4 {
+#main-sobre .passaporte p,
+#main-sobre .passaporte h4 {
     color: var(--cinza-escuro);
 }
 
-.passaporte p {
+#main-sobre .passaporte p {
     font-size: 22px;
     color: var(--cinza);
 }
 
-.passaporte h4 {
+#main-sobre .passaporte h4 {
     font-weight: normal;
 }
 
 
 
 
-.tela-inicial-5 {
-    width: 100%;
-    min-height: 100vh;
+#main-sobre .tela-inicial-5 {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--cinza-medio);
-    box-sizing: border-box;
-    padding: 7vh;
-}
-
-.container-sobre-5 {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+
+#main-sobre .tela-inicial-5 h2{
     text-align: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 5vh;
 }
 
-.tela-inicial-5 h1 {
-    font-weight: 400;
-    font-size: 4.5vh;
-    margin-bottom: 4vh;
-    color: #1E1E1E;
-    width: 80%;
+#main-sobre .imgsobre6 {
+    height: 50px;
+    width: 50px;
 }
 
-
-.imgsobre6 {
-    width: 8%;
-}
-
-.missao,
-.visao,
-.valores {
+#main-sobre .missao,
+#main-sobre .visao,
+#main-sobre .valores {
     background-color: var(--cinza);
     color: var(--cinza-medio);
-    padding: 4vh;
+    padding: 50px 8vw ;
     border-radius: 3vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5vh;
-}
+} 
 
 
-.missao,
-.visao {
+#main-sobre .missao,
+#main-sobre .visao {
     display: flex;
     flex-direction: row;
 }
 
-.destinos {
+#main-sobre .destinos {
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
 
-.missao p,
-.visao p {
+#main-sobre .missao p,
+#main-sobre .visao p {
     max-width: 55%;
 }
 
-.missao p,
-.visao p,
-.valores p {
+#main-sobre .missao p,
+#main-sobre .visao p,
+#main-sobre .valores p {
     font-size: 2vh;
     letter-spacing: 0.5px;
 }
 
-.destinos h2 {
+#main-sobre .destinos h2 {
     font-size: 3vh;
 }
 
-.valores .imgsobre6 {
-    width: 25%;
+#main-sobre .valores {
+    
+    flex-direction: row;
 }
 
-.tela-6 {
+#main-sobre .valores #container-esquerda-valores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+
+#main-sobre .tela-6 {
     background-color: #3B3B3B;
     color: #E7E6E6;
     width: 100%;
@@ -537,12 +226,12 @@ body {
     padding-bottom: 30px;
 }
 
-.tela-6 .direitos {
+#main-sobre .tela-6 #main-sobre .direitos {
     margin-inline: 13%;
     font-weight: bold;
 }
 
-.tela-6 .footer {
+#main-sobre .tela-6 #main-sobre .footer {
     /* background-color: white; */
     height: 90%;
     width: 90%;
@@ -552,7 +241,7 @@ body {
     margin-inline: 5%;
 }
 
-.tela-6 .footer .caixa-footer {
+#main-sobre .tela-6 #main-sobre .footer #main-sobre .caixa-footer {
     /* background-color: aqua; */
     width: 20%;
     height: 80%;
@@ -564,7 +253,7 @@ body {
     margin-inline: 5%;
 }
 
-.tela-6 .footer .caixa-footer span, .tela-6 .footer .caixa-footer b, .direitos {
+#main-sobre .tela-6 #main-sobre .footer #main-sobre .caixa-footer span, #main-sobre .tela-6 #main-sobre .footer #main-sobre .caixa-footer b, #main-sobre .direitos {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
@@ -579,13 +268,13 @@ body {
 @media screen and (max-width: 1080px) {
 
     /* HEADER */
-    .header .container-mobile {
+    #main-sobre .header #main-sobre .container-mobile {
         background-color: #F8CA26;
         display: flex;
         padding: 0 5%;
     }
 
-    .header .container {
+    #main-sobre .header #main-sobre .container {
         display: none;
     }
 
@@ -598,7 +287,7 @@ body {
     }
 
 
-    .tela-inicial {
+    #main-sobre .tela-inicial {
         width: 100%;
         height: 100%;
         display: flex;
@@ -609,7 +298,7 @@ body {
     }
 
 
-    .container-sobre-1 {
+    #main-sobre .container-sobre-1 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -618,34 +307,34 @@ body {
         text-align: center;
     }
 
-    .imgsobre1 {
+    #main-sobre .imgsobre1 {
         display: none;
     }
 
-    .imgsobre1mobile {
+    #main-sobre .imgsobre1mobile {
         display: block;
         width: 100%;
     }
 
-    .container-esquerda h1 {
+    #main-sobre .container-esquerda h1 {
         width: 100%;
         font-family: "Anton SC", sans-serif;
         font-weight: 400;
         font-size: 20px;
     }
 
-    .container-esquerda h2 {
+    #main-sobre .container-esquerda h2 {
         width: 100%;
         font-size: 18px;
     }
 
-    .container-esquerda {
+    #main-sobre .container-esquerda {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .container-direita {
+    #main-sobre .container-direita {
         width: 100%;
     }
 
@@ -653,7 +342,7 @@ body {
     /* TELA 2 */
 
 
-    .tela-inicial-2 {
+    #main-sobre .tela-inicial-2 {
         width: 100%;
         height: 70vh;
         display: flex;
@@ -663,7 +352,7 @@ body {
         box-sizing: border-box;
     }
 
-    .container-sobre-2 {
+    #main-sobre .container-sobre-2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -673,47 +362,47 @@ body {
     }
 
 
-    .imgsobre2 {
+    #main-sobre .imgsobre2 {
         display: none;
     }
 
-    .imgsobre2mobile {
+    #main-sobre .imgsobre2mobile {
         display: block;
         width: 100%;
     }
 
 
-    .container-esquerda-2 h1 {
+    #main-sobre .container-esquerda-2 h1 {
         width: 80%;
         font-family: "Anton SC", sans-serif;
         font-weight: 400;
     }
 
-    .container-esquerda-2 h2 {
+    #main-sobre .container-esquerda-2 h2 {
         width: 80%;
         color: white;
     }
 
-    .container-esquerda-2 {
+    #main-sobre .container-esquerda-2 {
         width: 80%;
     }
 
-    .container-direita-2 {
+    #main-sobre .container-direita-2 {
         width: 80%;
     }
 
-    .container-direita-2 h1 {
+    #main-sobre .container-direita-2 h1 {
         font-size: 20px;
     }
 
-    .container-direita-2 h2 {
+    #main-sobre .container-direita-2 h2 {
         font-size: 15px;
         font-weight: 100;
     }
 
     /* TELA 3 */
 
-    .tela-inicial-3 {
+    #main-sobre .tela-inicial-3 {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -724,7 +413,7 @@ body {
         padding-top: 50px;
     }
 
-    .container-sobre-3 {
+    #main-sobre .container-sobre-3 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -732,36 +421,36 @@ body {
         flex-direction: column;
     }
 
-    .imgsobre3 {
+    #main-sobre .imgsobre3 {
         display: none;
     }
 
-    .imgsobre3mobile {
+    #main-sobre .imgsobre3mobile {
         display: block;
         width: 100%;
     }
 
-    .container-esquerda-3 h1 {
+    #main-sobre .container-esquerda-3 h1 {
         width: 90%;
         font-family: "Anton SC", sans-serif;
         font-weight: 400;
 
     }
 
-    .container-esquerda-3 h2 {
+    #main-sobre .container-esquerda-3 h2 {
         width: 90%;
         color: white;
     }
 
-    .container-esquerda-3 {
+    #main-sobre .container-esquerda-3 {
         width: 90%;
     }
 
-    .container-direita-3 {
+    #main-sobre .container-direita-3 {
         width: 90%;
     }
 
-    .container-direita-3 h1 {
+    #main-sobre .container-direita-3 h1 {
         width: 100%;
         font-family: "Anton SC", sans-serif;
         font-weight: 400;
@@ -770,7 +459,7 @@ body {
 
     /* TELA 4 */
 
-    .tela-inicial-4 {
+    #main-sobre .tela-inicial-4 {
         width: 100%;
         height: 100%;
         display: flex;
@@ -781,21 +470,21 @@ body {
         padding: 35px 0px;
     }
 
-    .tela-inicial-4 h1 {
+    #main-sobre .tela-inicial-4 h1 {
         font-weight: 400;
         font-size: 25px;
         margin-bottom: 5%;
         width: 70%;
     }
 
-    .tela-inicial-4 p {
+    #main-sobre .tela-inicial-4 p {
         font-weight: 400;
         font-size: 23px;
         margin: 10px 0;
         margin-top: 10%;
     }
 
-    .container-sobre-4 {
+    #main-sobre .container-sobre-4 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -806,7 +495,7 @@ body {
     /* TELA 5 */
 
 
-    .tela-inicial-5 {
+    #main-sobre .tela-inicial-5 {
         width: 100%;
         min-height: 100vh;
         display: flex;
@@ -817,7 +506,7 @@ body {
         padding: 7vh;
     }
 
-    .container-sobre-5 {
+    #main-sobre .container-sobre-5 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -827,7 +516,7 @@ body {
         gap: 5vh;
     }
 
-    .tela-inicial-5 h1 {
+    #main-sobre .tela-inicial-5 h1 {
         font-weight: 400;
         font-size: 25px;
         margin-bottom: 4vh;
@@ -836,13 +525,13 @@ body {
     }
 
 
-    .imgsobre6 {
+    #main-sobre .imgsobre6 {
         width: 30%;
     }
 
-    .missao,
-    .visao,
-    .valores {
+    #main-sobre .missao,
+    #main-sobre .visao,
+    #main-sobre .valores {
         background-color: var(--cinza);
         color: var(--cinza-medio);
         padding: 4vh;
@@ -854,83 +543,83 @@ body {
         flex-direction: column;
     }
 
-    .missao h2,
-    .visao h2 {
+    #main-sobre .missao h2,
+    #main-sobre .visao h2 {
         order: 1
     }
 
-    .missao img,
-    .visao img {
+    #main-sobre .missao img,
+    #main-sobre .visao img {
         order: 2
     }
 
-    .missao p,
-    .visao p {
+    #main-sobre .missao p,
+    #main-sobre .visao p {
         order: 3
     }
 
 
-    .missao,
-    .visao {
+    #main-sobre .missao,
+    #main-sobre .visao {
         display: flex;
         flex-direction: column;
     }
 
-    .destinos {
+    #main-sobre .destinos {
         display: flex;
         flex-direction: column;
         gap: 5vh;
     }
 
-    .missao p,
-    .visao p {
+    #main-sobre .missao p,
+    #main-sobre .visao p {
         max-width: 55%;
     }
 
-    .missao p,
-    .visao p,
-    .valores p {
+    #main-sobre .missao p,
+    #main-sobre .visao p,
+    #main-sobre .valores p {
         font-size: 17px;
         letter-spacing: 0.5px;
         font-family: "Roboto", sans-serif;
     }
 
 
-    .missao b,
-    .visao b,
-    .valores b {
+    #main-sobre .missao b,
+    #main-sobre .visao b,
+    #main-sobre .valores b {
         font-size: 20px;
         letter-spacing: 0.5px;
     }
 
 
-    .destinos h2 {
+    #main-sobre .destinos h2 {
         font-size: 3vh;
     }
 
-    .valores .imgsobre6 {
+    #main-sobre .valores #main-sobre .imgsobre6 {
         width: 25%;
     }
 
-    .conteudo {
+    #main-sobre .conteudo {
         padding: auto 1120px;
         overflow-x: hidden;
     }
 
 
-    .tela-6 {
+    #main-sobre .tela-6 {
         height: 100%;
         padding-bottom: 20px;
         padding-top: 20px;
     }
 
-    .tela-6 .footer {
+    #main-sobre .tela-6 #main-sobre .footer {
         flex-direction: column;
         align-items: center;
         gap: 5px;
     }
 
-    .tela-6 .footer .caixa-footer {
+    #main-sobre .tela-6 #main-sobre .footer #main-sobre .caixa-footer {
         width: 40%;
         text-align: center;
         align-items: center;
@@ -939,7 +628,7 @@ body {
         align-items: center;
     }
 
-    .tela-6 .direitos {
+    #main-sobre .tela-6 #main-sobre .direitos {
         width: 100%;
         text-align: center;
         display: flex;
