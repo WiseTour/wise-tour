@@ -288,6 +288,7 @@ html, body {
 @media screen and (max-width: 1080px) {
     .header .container-mobile {
         display: flex;
+        padding: 0 5%;
     }
 
     .login {
