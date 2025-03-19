@@ -441,6 +441,10 @@ body {
     font-weight: normal;
 }
 
+.passaporte img {
+    width: 150px;
+}
+
 
 
 
@@ -522,6 +526,15 @@ body {
 
 .valores .imgsobre6 {
     width: 25%;
+}
+
+.destinos p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.destinos p span {
+    font-weight: 400;
 }
 
 .tela-6 {

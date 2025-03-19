@@ -178,6 +178,26 @@ body {
     width: 70%;
 }
 
+/* HOVER AUMENTANDO FONTE */
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+/* HOVER FONTE EM AMARELO */
+.header .container .navbar .opcoes .opcao:hover {
+    color: var(--cor-base);
+}
+
+.navbar a {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.header .container .navbar .login-cadastro .opcao:hover {
+    color: var(--cor-base);
+}
+
+
 /* TELA 1 INICIAL */
 
 .tela-inicial {
