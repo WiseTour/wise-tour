@@ -665,7 +665,9 @@ body {
     /* TELA 5 */
 
     .tela-5 {
-        height: 130vh;
+        height: fit-content;
+        padding-top:  50px;
+        padding-bottom:  50px;
     }
 
     .tela-5 .footer {

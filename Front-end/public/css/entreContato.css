@@ -330,6 +330,7 @@ body {
 
 }
 
+
 .tela-6 .direitos {
     margin-inline: 13%;
     font-weight: bold;
@@ -508,4 +509,34 @@ body {
         align-items: center;
         margin: 7%;
     }
+
+    .tela-6 {
+        height: fit-content;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    
+      .tela-6 .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+    
+      .tela-6 .footer .caixa-footer {
+        width: 40%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .tela-6 .direitos {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: 0;
+      }
 }

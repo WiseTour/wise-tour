@@ -317,9 +317,9 @@ html, body {
     }
 
     .tela-footer {
-        height: 100%;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
     }
 
     .tela-footer .footer {
