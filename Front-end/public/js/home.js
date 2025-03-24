@@ -1,5 +1,5 @@
 function mobileNav() {
-    var x = document.getElementById("header-container-mobile");
+    var x = document.getElementById("header_container_mobile");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {

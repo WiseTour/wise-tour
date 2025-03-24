@@ -471,13 +471,14 @@ footer .footer_container b{
 /* RESPONSIVIDADE */
 
 @media screen and (max-width: 1080px) {
-  img {
-    width: 70%;
+
+  *{
+    font-size: 3rem;
   }
+  
 
   header {
     background-color: var(--cor_base);
-    padding: 0;
   }
 
   header .container {
@@ -491,42 +492,34 @@ footer .footer_container b{
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 50px 8vw;
+    padding: 30px 8vw;
   }
 
   header .container_mobile .navbar {
     background-color: var(--cor_base);
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
     display: none;
-    width: 100vw;
-    padding: 50px;
+    width: fit-content;
   }
 
-  header .container_mobile .navbar .right_container {
+  header .container_mobile .navbar .container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    text-decoration: none;
-    color: var(--cinza_claro);
-    margin: 15px 15px;
+    padding: 50px 8vw;
+    gap: 35px;
+    height: fit-content;
   }
 
-  header .container_mobile .navbar .right_container .opcao {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
+  header .container_mobile .navbar .container .opcao {
     width: 100%;
     text-align: right;
-    padding: 16px 24px;
-    margin-top: 20px;
-    font-family: var(--font_family_2);
-    font-weight: 100;
+    font-weight: bold;
   }
 
-  header .container_mobile .navbar .right_container .opcao:is(:active, :focus) {
+  header .container_mobile .navbar .container .opcao:is(:active, :focus) {
     background-color: var(--cinza_claro);
   }
 
@@ -535,11 +528,11 @@ footer .footer_container b{
   }
 
   #logo {
-    width: 70px;
+    height: 200px;
   }
 
   #botao_nav_bar {
-    width: 50px;
+    font-size: 5rem;
   }
 
   .tela_1 {
