@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF_8">
+    <meta name="viewport" content="width=device_width, initial_scale=1.0">
     <title>WiseTour</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,176 +20,147 @@
     <script src="js/home.js"></script>
 </head>
 
-<body>
+<body id="index_body">
     <header id="header" class="header">
-        <div id="header-container" class="container">
-            <div class="barra-lateral">
-
+        <div id="header_container" class="container">
+            <div class="barra_lateral">
+                <img class="logo" src="./assets/logo/logo_cinza_escuro.svg" alt="">
             </div>
 
             <div class="navbar">
-                <div class="opcoes">
-                    <a class="opcao" href="index.html">HOME</a>
+                <div class="right_container">
+                    <a class="opcao active" href="index.html">HOME</a>
                     <a class="opcao" href="sobre.html">SOBRE NÓS</a>
                     <a class="opcao" href="servicos.html">SERVIÇOS</a>
-                    <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
+                    <a class="opcao" href="contato.html">ENTRE EM CONTATO</a>
                 </div>
-                <div class="login-cadastro">
+                <div class="left_container">
                     <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
-                    <a class="entrar-div" href="login.html">
-                        <div class="user-div"><i class="fa-solid fa-user"></i></div>
-                        <span class="entrar">ENTRAR</span>
+                    <a class="opcao entrar" href="login.html">
+                        <div class="user_div"><i class="fa-solid fa-user"></i></div>
+                        <span>ENTRAR</span>
                     </a>
                 </div>
             </div>
         </div>
 
 
-        <div class="container-mobile">
-            <div id="header-container-mobile" class="navbar">
+        <div class="container_mobile">
+            <div id="header_container_mobile" class="navbar">
                 <div class="opcoes">
                     <a class="opcao" href="index.html">HOME</a>
                     <a class="opcao" href="sobre.html">SOBRE NÓS</a>
                     <a class="opcao" href="servicos.html">SERVIÇOS</a>
-                    <a class="opcao" href="entreContato.html">ENTRE EM CONTATO</a>
-                    <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
+                    <a class="opcao" href="contato.html">ENTRE EM CONTATO</a>
+                    <a class="opcao" href="cadastro.html">CADASTRE_SE</a>
                     <a class="opcao" href="login.html">ENTRAR</a>
                 </div>
             </div>
 
             <img src="assets/icon/logo.svg" id="logo">
-            <img src="assets/icon/barra-navegacao.svg" id="botao-nav-bar" onclick="mobileNav()"></img>
+            <img src="assets/icon/barra_navegacao.svg" id="botao_nav_bar" onclick="mobileNav()"></img>
         </div>
     </header>
 
-
-
     <main>
-        <div class="tela-inicial ">
-            <div class="barra-lateral">
-            </div>
-            <div class="main-tela-inicial">
-                <img src="assets/imgs/Logo.svg">
-                <div class="frase-efeito">
-                    <span class="frase-branca">Sua bússola estratégica:</span>
-                    <span class="frase-amarela">transformando dados em destinos de sucesso!</span>
+        <section class="tela_1 ">
+            <div class="barra_lateral"></div>
+            <div class="container">
+                <img src="assets/logo/logo_padrao.svg">
+                <div class="slogan">
+                    <h2 class="frase_branca">Sua bússola estratégica:</h2>
+                    <h2 class="frase_amarela">transformando dados em destinos de sucesso!</h2>
                 </div>
             </div>
-        </div>
-    
-    
-    
-        <section class="tela-2 ">
-            <img src="assets/imgs/notebook-celular.svg">
-            <div class="frase-botao-saiba-mais">
-                <p><span style="color: #F8CA26;">WISETOUR,</span><br>
+        </section>
+
+        <section class="tela_2 ">
+            <img src="assets/img/home/notebook_celular.svg">
+            <div class="container">
+                <h3><b>WISETOUR,</b><br>
                     TRANSFORMANDO NÚMEROS
                     EM OPORTUNIDADES E DADOS
-                    EM DESTINOS DE SUCESSO!</p>
-                <a class="botao-saiba-mais btn" href="./servicos.html">SAIBA MAIS</a>
+                    EM DESTINOS DE SUCESSO!</h3>
+                <a class="botao_saiba_mais btn" href="./servicos.html">SAIBA MAIS</a>
             </div>
-    
-    
         </section>
-    
-        <section class="tela-2-mobile section-mobile">
-    
-            <p><span style="color: #F8CA26;">WISETOUR,</span><br>
+
+        <section class="tela_2_mobile section_mobile">
+            <h3><b>WISETOUR,</b><br>
                 TRANSFORMANDO NÚMEROS
                 EM OPORTUNIDADES E DADOS
-                EM DESTINOS DE SUCESSO!</p>
-            <img src="assets/imgs/notebook-celular.svg">
-            <a class="botao-saiba-mais btn" href="./servicos.html">SAIBA MAIS</a>
-    
+                EM DESTINOS DE SUCESSO!</h3>
+            <img src="assets/imgs/notebook_celular.svg">
+            <a class="botao_saiba_mais btn" href="./servicos.html">SAIBA MAIS</a>
         </section>
-    
-    
-        <section class="tela-3 ">
-            <div class="frase-botao-descubra-mais">
-                <span style="color: #4d4d4d;">
-                    A INTELIGÊNCIA DO TURISMO <br>
-                    ESTRANGEIRO NO BRASIL, EM UM SÓ <br>
+
+
+        <section class="tela_3 ">
+            <div class="container">
+                <h3>
+                    A INTELIGÊNCIA DO TURISMO
+                    ESTRANGEIRO NO BRASIL, EM UM SÓ
                     LUGAR!
-                </span>
-                <span>
-                    Análise de dados de temporadas, <br>
+                </h3>
+                <p>
+                    Análise de dados de temporadas
                     nacionalidades, destinos e muito mais!
-                </span>
-    
-    
-    
-                <div class="botao-descubra-mais btn">DESCOBRIR MAIS</div>
-    
+                </p>
+
+                <a class="botao_descubra_mais btn" href="./servicos.html">DESCOBRIR MAIS</a>
             </div>
-            <img src="assets/imgs/grafico-celular.svg">
-            <h4>
-                Análise de dados de temporadas, <br>
-                nacionalidades, <br> destinos e muito mais!
-            </h4>
-    
-            <div id="botao-descubra-mais-mobile" class="botao-descubra-mais btn"><b>DESCOBRIR MAIS</b></div>
-    
+            <img src="assets/img/home/grafico.svg">
         </section>
-    
-        <section class="tela-3-mobile section-mobile">
-            <span style="color: #4d4d4d;">
+
+        <section class="tela_3_mobile section_mobile">
+            <h3>
                 A INTELIGÊNCIA DO TURISMO <br>
                 ESTRANGEIRO NO BRASIL, EM UM SÓ <br>
                 LUGAR!
-            </span>
-            <img src="assets/imgs/grafico-celular.svg">
-            <span>
+            </h3>
+            <img src="assets/imgs/grafico_celular.svg">
+            <p>
                 Análise de dados de temporadas, <br>
                 nacionalidades, destinos e muito mais!
-            </span>
-    
-    
-    
-            <div class="botao-descubra-mais btn">DESCOBRIR MAIS</div>
-    
-    
+            </p>
+            <a class="botao_descubra_mais btn" href="./servicos.html">DESCOBRIR MAIS</a>
         </section>
-    
-    
-        <section class="tela-4 ">
-            <img id="passaro-direita" src="assets/imgs/passaro-direita.svg">
-            <div class="contato">
-    
-                <b>ENTRE EM CONTATO COM A GENTE</b>
-                <div id="imagens-geral" class="imagens-contato">
+
+
+        <section class="tela_4 ">
+            <img id="arara_direita" src="assets/img/home/arara.svg">
+            <div class="container">
+                <h3>ENTRE EM CONTATO COM A GENTE</h3>
+                <div class="icones_contato">
                     <a href="#"><i class="fa-solid fa-phone"></i></a>
                     <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="#"><i class="fa-solid fa-envelope"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
-    
-        
-    
             </div>
-            <img id="passaro-esquerda" src="assets/imgs/passaro-esquerda.svg">
+            <img id="arara_esquerda" src="assets/img/home/arara.svg">
         </section>
     </main>
 
-
-
-    <footer class="tela-5 ">
-        <div class="footer-container">
-            <div id="caixa-footer-container-1" class="caixa-footer-container">
-                WISETOUR <br>
-                <span>Transformando números em <br>
-                    oportunidades E dados em <br>
-                    destinos de sucesso!</span>
+    <footer>
+        <div class="footer_container">
+            <div class="container slogan">
+                <h6><b>WISETOUR,</b><br>
+                    Transformando números em
+                    oportunidades E dados em
+                    destinos de sucesso!</h6>
             </div>
-            <div class="caixa-footer-container">
+
+            <div class="container menu">
                 <b>MENU</b> <br>
-                <span>HOME</span> <br>
-                <span>SOBRE NÓS</span> <br>
-                <span>SERVIÇOS</span> <br>
-                <span>ENTRE EM CONTATO</span> <br>
-                <span>CADASTRO</span> <br>
-                <span>LOGIN</span> <br>
+                <a class="opcao" href="index.html">HOME</a>
+                <a class="opcao" href="sobre.html">SOBRE NÓS</a>
+                <a class="opcao" href="servicos.html">SERVIÇOS</a>
+                <a class="opcao" href="contato.html">ENTRE EM CONTATO</a>
+                <a class="opcao" href="cadastro.html">CADASTRE_SE</a>
+                <a class="opcao" href="login.html">ENTRAR</a>
             </div>
-            <div class="caixa-footer-container">
+            <div class="container integrantes">
                 <b>TIME DA WISETOUR</b> <br>
                 <span>Ian Medeiros de Jesus Pimenta</span> <br>
                 <span>Kenner Eduardo Souza Lima</span> <br>
@@ -199,7 +170,7 @@
                 <span>Samara Martins Damacena</span> <br>
             </div>
         </div>
-        <span class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</span>
+        <b class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</b>
     </footer>
 </body>
 
