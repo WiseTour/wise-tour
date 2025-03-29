@@ -55,7 +55,6 @@ p {
 
 body {
   position: relative;
-
   overflow-x: hidden;
 }
 
@@ -299,7 +298,7 @@ footer .container .menu a:hover {
 }
 
 footer .container b {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* /FOOTER */
@@ -419,7 +418,7 @@ footer .container b {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: fit-content;
@@ -515,7 +514,7 @@ footer .container b {
   height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100vh 100vh;
+  grid-template-rows: 650px 650px;
   gap: 5vw;
 }
 
@@ -530,12 +529,24 @@ footer .container b {
   gap: 0;
 }
 
-#sobre_nos_body .section_4 .container .container .container .passagem {
-  height: 100%;
+#sobre_nos_body .section_4 .container .container .container .passagem_superior {
+  height: fit-content;
   width: 90%;
   background-color: var(--cinza_claro);
   border-radius: 25px;
-  padding: 20px 30px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:
+    "img h3"
+    "img h4";
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  text-align: right;
+  position: relative;
+  box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.381);
 }
 
 #sobre_nos_body
@@ -543,19 +554,60 @@ footer .container b {
   .container
   .container
   .container
-  .passagem__superior {
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "img h3"
-    "img h4";
-  gap: 15px;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  text-align: right;
+  .passagem_superior
+  img {
+  grid-area: img;
+  height: auto;
+  width: 80%;
+  border-radius: 100%;
+  border: solid 5px var(--cor_base);
+}
+
+#sobre_nos_body
+  .section_4
+  .container
+  .container
+  .container
+  .passagem_superior
+  h3 {
+  grid-area: h3;
+  font-size: 1.2rem;
+}
+
+#sobre_nos_body
+  .section_4
+  .container
+  .container
+  .container
+  .passagem_superior
+  h4 {
+  grid-area: h4;
+  font-size: 1rem;
+  font-family: var(--font_family_padrao);
+}
+
+#sobre_nos_body .section_4 .container .container .container .container {
+  height: 100%;
+  width: 100%;
   position: relative;
+  display: grid;
+  grid-template-rows: 100%;
+}
+
+#sobre_nos_body
+  .section_4
+  .container
+  .container
+  .container
+  .container
+  .passagem_inferior {
+  z-index: 1;
+  box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.381);
+  height: 100%;
+  width: 90%;
+  background-color: var(--cinza_claro);
+  border-radius: 25px;
+  padding: 20px;
 }
 
 #sobre_nos_body .section_4 .container .container .container .linha_tracejada {
@@ -568,6 +620,7 @@ footer .container b {
   bottom: -3%;
   transform: translateY(-50%);
   padding-inline: 40px;
+  z-index: 2;
 }
 
 #sobre_nos_body
@@ -582,45 +635,8 @@ footer .container b {
   background: var(--cinza_medio);
 }
 
-#sobre_nos_body
-  .section_4
-  .container
-  .container
-  .container
-  .passagem__superior
-  img {
-  grid-area: img;
-  height: auto;
-  width: 130px;
-  border-radius: 100%;
-  border: solid 5px var(--cor_base);
-}
-
-#sobre_nos_body
-  .section_4
-  .container
-  .container
-  .container
-  .passagem__superior
-  h3 {
-  grid-area: h3;
-  font-size: 1.2rem;
-}
-
-#sobre_nos_body
-  .section_4
-  .container
-  .container
-  .container
-  .passagem__superior
-  h4 {
-  grid-area: h4;
-  font-size: 1rem;
-  font-family: var(--font_family_padrao);
-}
-
 #sobre_nos_body .section_4 .container .container .container .passaporte {
-  height: 65%;
+  height: 90%;
   width: 100%;
   background-color: var(--cor_base);
   border-radius: 0 25px 25px 0;
@@ -633,6 +649,8 @@ footer .container b {
   justify-content: space-between;
   padding: 50px;
   text-align: center;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.468);
+  z-index: 2;
 }
 
 #sobre_nos_body .section_4 .container .container .container .passaporte img {
@@ -706,34 +724,33 @@ footer .container b {
   align-items: end;
 }
 
-
 #sobre_nos_body .section_5 .container .container_valores .container {
   height: 100%;
   gap: 5px;
   display: flex;
   flex-direction: column;
   padding: 0;
-  
 }
 
-
-
-#sobre_nos_body .section_5 .container .container_valores img{
+#sobre_nos_body .section_5 .container .container_valores img {
   height: auto;
   width: 100%;
- 
 }
 
-#sobre_nos_body .section_5 .container .container_valores .container_esquerda{
+#sobre_nos_body .section_5 .container .container_valores .container_esquerda {
   align-items: baseline;
-  
 }
 
-#sobre_nos_body .section_5 .container .container_valores .container_esquerda *{
+#sobre_nos_body .section_5 .container .container_valores .container_esquerda * {
   text-align: left;
 }
 
-#sobre_nos_body .section_5 .container .container_valores .container_esquerda h2{
+#sobre_nos_body
+  .section_5
+  .container
+  .container_valores
+  .container_esquerda
+  h2 {
   padding-bottom: 20px;
 }
 
@@ -767,6 +784,15 @@ footer .container b {
   h5,
   h6 {
     font-size: 4rem;
+  }
+
+  b {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 3rem;
   }
 
   header {
@@ -830,7 +856,35 @@ footer .container b {
 
   main {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 10vw 15vw;
+  }
+
+  .section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .section .container * {
+    text-align: center;
+  }
+
+  .section .container img {
+    width: 100%;
+    height: fit-content;
   }
 
   footer {
@@ -864,7 +918,7 @@ footer .container b {
 
   /* SECTION 1 */
 
-  #index_body .section {
+  #index_body .section_1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -873,7 +927,7 @@ footer .container b {
     padding: 10vw 15vw;
   }
 
-  #index_body .section .container {
+  #index_body .section_1 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -881,15 +935,6 @@ footer .container b {
     gap: 15vw;
     height: fit-content;
     padding: 0;
-  }
-
-  #index_body .section .container * {
-    text-align: center;
-  }
-
-  #index_body .section .container img {
-    width: 100%;
-    height: fit-content;
   }
 
   #index_body .section_1 .barra_lateral {
@@ -900,31 +945,182 @@ footer .container b {
 
   /* SECTION 2 */
 
-  #index_body .section_2 .container b {
-    font-size: 5rem;
-    font-weight: 400;
+  #index_body .section_2 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+    height: fit-content;
+    padding: 0;
   }
 
-  /* /SECTION 2 */
-
-  /* SECTION 3 */
-
-  #index_body .section_3 .container p {
-    font-size: 3rem;
-  }
-
-  /* /SECTION 3 */
+  /* /SECTION 2*/
 
   /* /SECTION 4 */
 
+  #index_body .section_4 img {
+    width: 40%;
+  }
+
   #index_body .section_4 #arara_direita {
-    right: -12%;
+    right: -15%;
   }
 
   #index_body .section_4 #arara_esquerda {
-    left: -12%;
+    left: -15%;
     /* /SECTION 4 */
   }
 
   /* /INDEX */
+
+  /* SOBRE NÓS */
+
+  /* SECTION 2 */
+
+  #sobre_nos_body .section_2 * {
+    text-align: center;
+  }
+
+  /* /SECTION 2 */
+
+  /* SECTION 4 */
+
+  #sobre_nos_body .section_4 .container .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1200px);
+  }
+
+  #sobre_nos_body
+    .section_4
+    .container
+    .container
+    .container
+    .passagem_superior {
+    gap: 20px;
+    padding: 40px;
+
+  }
+
+  #sobre_nos_body
+    .section_4
+    .container
+    .container
+    .container
+    .passagem_superior
+    img {
+    height: 100%;
+    width: auto;
+  }
+
+  #sobre_nos_body
+    .section_4
+    .container
+    .container
+    .container
+    .passagem_superior
+    h3 {
+    font-size: 2.5rem;
+    text-align: right;
+  }
+
+  #sobre_nos_body
+    .section_4
+    .container
+    .container
+    .container
+    .passagem_superior
+    h4 {
+    font-size: 2rem;
+    text-align: right;
+  }
+
+  #sobre_nos_body .section_4 .container .container .container .passaporte {
+    
+    padding: 70px;
+    
+  }
+
+  #sobre_nos_body .section_4 .container .container .container .passaporte img {
+    height: 50%;
+  }
+  
+  #sobre_nos_body .section_4 .container .container .container .passaporte h4 {
+    font-size: 2.5rem;
+
+  }
+  
+  #sobre_nos_body .section_4 .container .container .container .passaporte p {
+    font-size: 2.2rem;
+
+  }
+
+  /* /SECTION 4 */
+
+  /* SECTION 5 */
+
+#sobre_nos_body .section_5 {
+  background: var(--cinza_claro);
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  text-align: center;
+}
+
+
+#sobre_nos_body .section_5 .container .container {
+  display: flex;
+  padding: 70px;
+  gap: 100px;
+}
+
+#sobre_nos_body .section_5 .container .container * {
+  font-size: 2.5rem;
+}
+
+#sobre_nos_body .section_5 .container .container img {
+  width: 50%;
+  order: 2;
+
+}
+
+#sobre_nos_body .section_5 .container .container h2 {
+  font-size: 2.5rem;
+  order: -1;
+}
+
+#sobre_nos_body .section_5 .container .container h2 br{
+  display: none;
+}
+
+#sobre_nos_body .section_5 .container .container p {
+  order: 3;
+}
+
+
+
+#sobre_nos_body .section_5 .container .container_valores {
+  display: flex;
+  row-gap: 100px;
+  align-items: center;
+}
+
+#sobre_nos_body .section_5 .container .container_valores .container {
+  gap: 100px;
+  align-items: center;
+}
+
+#sobre_nos_body .section_5 .container .container_valores img {
+  width: 50%;
+}
+
+
+#sobre_nos_body .section_5 .container .container_valores .container * {
+  text-align: center;
+}
+
+
+/* /SECTION 5 */
+
+  /* /SOBRE NÓS */
 }
