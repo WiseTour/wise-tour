@@ -55,6 +55,15 @@ p {
   font-size: 1.5rem;
 }
 
+button{
+  all: unset;
+  cursor: pointer;
+}
+
+input{
+  all: unset;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
