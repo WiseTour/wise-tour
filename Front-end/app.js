@@ -29,7 +29,7 @@ app.get("/", (req, res) =>{
 }); // Definição de rota para o arquivo home html quando iniciar a API
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/common", express.static(path.join(__dirname, "common")));
-
+app.use("/auth", express.static(path.join(__dirname, "auth")));
 app.use(cors());
 
 app.use("/", indexRouter);

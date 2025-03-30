@@ -9,6 +9,8 @@
   --cinza_claro: #e7e6e6;
   --font_family_padrao: "Roboto", sans-serif;
   --font_family_2: "Anton SC", serif;
+  --padding_inline: 8vw;
+  --padding_block: 70px;
 }
 
 html {

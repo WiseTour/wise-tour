@@ -23,7 +23,7 @@ header .container {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 8vw 92vw;
+  grid-template-columns: var(--padding_inline) 92vw;
 }
 
 header .container .barra_lateral {
@@ -151,8 +151,8 @@ main {
   justify-items: flex-end;
   align-items: center;
   column-gap: 10vw;
-  padding-inline: 8vw;
-  padding-block: 70px;
+  padding-inline: var(--padding_inline);
+  padding-block: var(--padding_block);
 }
 
 .section .container {
@@ -264,7 +264,7 @@ footer {
   justify-content: center;
   align-items: flex_start;
   gap: 50px;
-  padding: 70px 8vw;
+  padding: var(--padding_block) var(--padding_inline);
 }
 
 footer * {
@@ -334,7 +334,7 @@ footer .container b {
   background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-columns: 8vw 92vw;
+  grid-template-columns: var(--padding_inline) 92vw;
   grid-template-rows: 100%;
   padding: 0;
   column-gap: 0;
@@ -348,7 +348,7 @@ footer .container b {
 #index_body .section_1 .container {
   height: 100%;
   width: 100%;
-  padding: 0 8vw;
+  padding: 0 var(--padding_inline);
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
@@ -902,7 +902,7 @@ footer .container b {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 30px 8vw;
+    padding: 30px var(--padding_inline);
   }
 
   header .container_mobile .navbar {
@@ -918,7 +918,7 @@ footer .container b {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 50px 8vw;
+    padding: 50px var(--padding_inline);
     gap: 35px;
     height: fit-content;
   }

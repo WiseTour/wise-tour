@@ -1,0 +1,32 @@
+@import url(/common/css/style.css);
+
+/* BG */
+
+.forma {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
+
+#forma_esquerda {
+  left: -5%;
+}
+
+#forma_direita {
+  transform: scale(-1);
+  right: -5%;
+}
+
+/* /BG */
+
+/* MAIN */
+
+main {
+  height: fit-content;
+  width: 100vw;
+  padding-inline: var(--padding_inline);
+  padding-block: var(--padding_block);
+}
+
+/* /MAIN */
