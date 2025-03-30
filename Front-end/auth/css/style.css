@@ -100,6 +100,7 @@ p {
   justify-content: space-between;
   height: 100%;
   gap: 20px;
+  width: 100%;
 }
 
 .form b {
@@ -206,6 +207,7 @@ p {
   background: none;
   border-radius: 0;
   overflow: unset;
+  padding: 10%;
 }
 
 .passaporte_passagem .passagem_inferior {
@@ -217,18 +219,21 @@ p {
   border-radius: 25px;
   padding: 20px;
   justify-self: center;
+  position: absolute;
+  top: -1%;
 }
 
 .passaporte_passagem .passaporte {
+  
   height: 90%;
   width: 100%;
   background-color: var(--cor_base);
   border-radius: 0 25px 25px 0;
   position: absolute;
-  bottom: 5%;
+  top: 5%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   justify-content: space-evenly;
 
@@ -262,12 +267,18 @@ header {
 /* /PASSAPORTE E PASSAGEM */
 
 /* /MAIN */
+@media screen and (max-width: 1250px) {
+  .passaporte_passagem .passaporte {
+    padding: 30px;
+  }
+}
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 950px) {
   body {
     flex-direction: column;
     padding: 0;
-    overflow-x: hidden;
+    align-items: center;
+   
     height: fit-content;
   }
 
@@ -302,7 +313,7 @@ header {
     align-items: center;
     justify-content: space-between;
    
-    padding: 30px var(--padding_inline);
+    padding: 20px var(--padding_inline);
   }
 
   header .container_mobile .navbar {
@@ -334,11 +345,15 @@ header {
   }
 
   #logo {
-    height: 200px;
+    height: 70px;
   }
 
   #botao_nav_bar, .seta i {
     font-size: 2rem;
+  }
+
+  .seta{
+    align-self: center;
   }
 
 
@@ -347,8 +362,10 @@ header {
   }
 
   main {
-    width: 100%;
-    padding: 50px;
+    
+    max-width: 400px;
+    min-width: 300px;
+    padding-block: 50px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -361,4 +378,18 @@ header {
   .form {
     padding: 20px;
   }
+
+  .passaporte_passagem .container {
+    height: 70vh;
+    
+  }
+  
+ 
 }
+
+@media screen and (max-height: 627px) {
+  body{
+    height: auto;
+  }
+}
+

@@ -87,6 +87,7 @@ header .container .navbar .left_container .entrar {
   background-color: var(--cor_base);
 
   padding: 10px;
+  padding-right: 30px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   display: flex;
@@ -127,7 +128,7 @@ header .container .navbar .opcao:hover {
 }
 
 header .container .navbar .left_container .entrar:hover {
-  width: 40%;
+  padding-right: 70px;
 }
 
 /* /EFEITOS */
