@@ -28,6 +28,7 @@ app.get("/", (req, res) =>{
     res.sendFile(path.join(__dirname, "public", "index.html"))
 }); // Definição de rota para o arquivo home html quando iniciar a API
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/common", express.static(path.join(__dirname, "common")));
 
 app.use(cors());
 

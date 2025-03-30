@@ -6,28 +6,20 @@
     <meta name="viewport" content="width=device_width, initial_scale=1.0">
     <title>WiseTour</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
+    
     <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
-    <script src="js/home.js"></script>
+    <script src="/common/js/nav-bar.js"></script>
 </head>
 
 <body id="index_body">
     <header id="header" class="header">
         <div id="header_container" class="container">
             <div class="barra_lateral">
-                <img class="logo" src="./assets/icon/logo/logo_cinza_escuro.svg" alt="">
+                <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
             </div>
 
-            <div class="navbar">
+            <nav class="navbar">
                 <div class="right_container">
                     <a class="opcao active" href="index.html">HOME</a>
                     <a class="opcao" href="sobre-nos.html">SOBRE NÓS</a>
@@ -41,11 +33,11 @@
                         <span>ENTRAR</span>
                     </a>
                 </div>
-            </div>
+            </nav>
         </div>
 
         <div class="container_mobile mobile">
-            <div id="header_container_mobile" class="navbar">
+            <nav id="header_container_mobile" class="navbar">
                 <div class="container">
                     <a class="opcao" href="index.html">HOME</a>
                     <a class="opcao" href="sobre-nos.html">SOBRE NÓS</a>
@@ -54,10 +46,10 @@
                     <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
                     <a class="opcao" href="login.html">ENTRAR</a>
                 </div>
-            </div>
+            </nav>
 
-            <img src="assets/logo/logo_cinza_escuro.svg" id="logo">
-            <i id="botao_nav_bar" onclick="mobileNav()" class="fa-solid fa-bars"></i>
+            <img src="/common/assets/logo/logo_cinza_escuro.svg" id="logo">
+            <i id="botao_nav_bar" onclick="habilitarNavBarMobile()" class="fa-solid fa-bars"></i>
         </div>
 
     </header>
@@ -66,7 +58,7 @@
         <section class="section section_1">
             <div class="barra_lateral"></div>
             <div class="container">
-                <img src="assets/icon/logo/logo_padrao.svg">
+                <img src="/common/assets/logo/logo_padrao.svg">
                 <div class="slogan">
                     <h2 class="frase_branca">Sua bússola estratégica:</h2>
                     <h2 class="frase_amarela">transformando dados em destinos de sucesso!</h2>
@@ -75,13 +67,13 @@
         </section>
 
         <section class="section section_2 ">
-            <img class="desktop" src="assets/img/sobre_nos/turistas.svg">
+            <img class="desktop" src="assets/img/sobre-nos/turistas.svg">
             <div class="container">
                 <h3><b>WISETOUR,</b><br>
                     TRANSFORMANDO NÚMEROS
                     EM OPORTUNIDADES E DADOS
                     EM DESTINOS DE SUCESSO!</h3>
-                <img class="mobile" src="assets/img/sobre_nos/turistas.svg">
+                <img class="mobile" src="assets/img/sobre-nos/turistas.svg">
                 <a class="botao_saiba_mais btn" href="./servicos.html">SAIBA MAIS</a>
             </div>
         </section>
@@ -93,7 +85,7 @@
                     ESTRANGEIRO NO BRASIL, EM UM SÓ
                     LUGAR!
                 </h3>
-                <img class="mobile" src="assets/img/home/grafico.svg">
+                <img class="mobile" src="assets/img/servicos/grafico.svg">
                 <p>
                     Análise de dados de temporadas
                     nacionalidades, destinos e muito mais!
@@ -101,11 +93,11 @@
 
                 <a class="botao_descubra_mais btn" href="./servicos.html">DESCOBRIR MAIS</a>
             </div>
-            <img class="desktop" src="assets/img/home/grafico.svg">
+            <img class="desktop" src="assets/img/servicos/grafico.svg">
         </section>
 
-        <section class="section section_4 ">
-            <img id="arara_direita" src="assets/img/home/arara.svg">
+        <section class="section section_entre_em_contato ">
+            <img id="arara_direita" src="assets/img/entre-em-contato/arara.svg">
             <div class="container">
                 <h3>ENTRE EM CONTATO COM A GENTE</h3>
                 <div class="icones_contato">
@@ -115,7 +107,7 @@
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
-            <img id="arara_esquerda" src="assets/img/home/arara.svg">
+            <img id="arara_esquerda" src="assets/img/entre-em-contato/arara.svg">
         </section>
     </main>
 
@@ -134,7 +126,7 @@
                 <a class="opcao" href="sobre.html">SOBRE NÓS</a>
                 <a class="opcao" href="servicos.html">SERVIÇOS</a>
                 <a class="opcao" href="contato.html">ENTRE EM CONTATO</a>
-                <a class="opcao" href="cadastro.html">CADASTRE_SE</a>
+                <a class="opcao" href="cadastro.html">CADASTRE-SE</a>
                 <a class="opcao" href="login.html">ENTRAR</a>
             </div>
             <div class="container integrantes">
