@@ -1,5 +1,5 @@
 function habilitarNavBarMobile() {
-    var x = document.getElementById("header_container_mobile");
+    var x = document.getElementById("nav_bar_mobile");
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {

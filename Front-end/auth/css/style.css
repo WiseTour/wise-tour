@@ -6,6 +6,7 @@
 
 * {
   text-align: center;
+  
 }
 
 /* BG */
@@ -17,7 +18,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-  
 }
 
 .seta {
@@ -67,8 +67,6 @@ main {
   align-items: center;
 }
 
-
-
 h2 {
   background: var(--cor_base);
   width: 100%;
@@ -76,7 +74,7 @@ h2 {
   font-size: 1.5rem;
 }
 
-p{
+p {
   font-size: 1rem;
 }
 
@@ -102,7 +100,6 @@ p{
   justify-content: space-between;
   height: 100%;
   gap: 20px;
-  
 }
 
 .form b {
@@ -142,7 +139,7 @@ p{
   grid-template-rows: min-content auto;
   justify-items: center;
   gap: 0;
-  overflow:unset;
+  overflow: unset;
 }
 
 .passaporte_passagem .passagem_superior {
@@ -159,7 +156,6 @@ p{
   box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.381);
   gap: 10px;
   padding-bottom: 15px;
-  
 }
 
 .passaporte_passagem .passagem_superior a {
@@ -195,14 +191,11 @@ p{
   z-index: 2;
 }
 
-.passagem_superior
-  .linha_tracejada
-  div {
+.passagem_superior .linha_tracejada div {
   width: 100%;
   height: 5px;
   background: var(--cinza_medio);
 }
-
 
 .passaporte_passagem .container {
   height: 100%;
@@ -213,11 +206,9 @@ p{
   background: none;
   border-radius: 0;
   overflow: unset;
-  
 }
 
-.passaporte_passagem
-  .passagem_inferior {
+.passaporte_passagem .passagem_inferior {
   z-index: 1;
   box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.381);
   height: 100%;
@@ -240,7 +231,7 @@ p{
   gap: 20px;
   align-items: center;
   justify-content: space-evenly;
-  
+
   text-align: center;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.468);
   z-index: 2;
@@ -264,12 +255,110 @@ p{
   width: 80%;
 }
 
-
+header {
+  display: none;
+}
 
 /* /PASSAPORTE E PASSAGEM */
 
-
-
 /* /MAIN */
 
+@media screen and (max-width: 1080px) {
+  body {
+    flex-direction: column;
+    padding: 0;
+    overflow-x: hidden;
+    height: fit-content;
+  }
 
+  .desktop {
+    display: none;
+  }
+
+  header {
+    background-color: var(--cor_base);
+
+    width: 100vw;
+    height: fit-content;
+    position: sticky;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header .container {
+    display: none;
+  }
+
+  header .container_mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding: 30px var(--padding_inline);
+  }
+
+  header .container_mobile .navbar {
+    background-color: var(--cor_base);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: none;
+    width: fit-content;
+  }
+
+  header .container_mobile .navbar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 50px var(--padding_inline);
+    gap: 35px;
+    height: fit-content;
+  }
+
+  header .container_mobile .navbar .container .opcao {
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  header .container_mobile .navbar .container .opcao:is(:active, :focus) {
+    background-color: var(--cinza_claro);
+  }
+
+  #logo {
+    height: 200px;
+  }
+
+  #botao_nav_bar, .seta i {
+    font-size: 2rem;
+  }
+
+
+  .forma {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .container_form {
+    width: 100%;
+  }
+
+  .form {
+    padding: 20px;
+  }
+}
