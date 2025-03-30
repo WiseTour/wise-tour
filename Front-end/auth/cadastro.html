@@ -13,6 +13,33 @@
   <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
   <script src="/common/js/nav-bar.js"></script>
 
+  <script defer>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.style.visibility = 'hidden';
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.01s ease-out';
+
+      fetch('http://localhost:3000/estado')
+        .then(response => response.json())
+        .then(data => {
+          const estadoElement = document.getElementById('estado');
+          estadoElement.textContent = data.estado || 'Não encontrado';
+
+          document.body.style.visibility = 'visible';
+          document.body.style.opacity = '1';
+
+        })
+        .catch(error => {
+          console.error('Erro ao buscar estado:', error);
+          document.body.style.visibility = 'visible';
+          document.body.style.opacity = '1';
+        });
+    });
+
+
+  </script>
+
 </head>
 
 
@@ -25,17 +52,18 @@
 
   <!-- MAIN -->
 
+  <a class="seta" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+
+
+  <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
+
   <main>
 
-    <!-- CAMPO INPUT -- CADASTRO  -->
-
-   
-      <a class="seta" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <!-- FORM -->
+    <div class="container_form">
+      <h2>CADASTRAR</h2>
       <form class="form">
-        <h2>CADASTRAR</h2>
         <p>Quer fazer parte do <b>WiseTour?</b></p>
-        <p>Nossa equipe entrará em contato com você para entender suas necessidades e guiar os próximos passos.
-        </p>
         <div class="container">
           <i class="fa-solid fa-user"></i>
           <input type="text" placeholder="| Digite seu nome">
@@ -48,44 +76,52 @@
           <i class="fa-solid fa-phone"></i>
           <input type="text" placeholder="| Digite seu telefone">
         </div>
-        <button type="submit">ENVIAR</button>
+        <p>Nossa equipe entrará em contato com você para entender suas necessidades e guiar os próximos passos.
+        </p>
+        <button class="btn" type="submit">ENVIAR</button>
       </form>
+    </div>
+    <!-- /FORM -->
 
 
-      <!-- CAMPO TROCAR -- LOGIN  -->
+    <!-- PASSAPORTE E PASSAGEM  -->
 
-      <div class="container">
-        <div class="passagem passagem_superior">
+    <div class="container passaporte_passagem">
+      <div class="passagem passagem_superior">
+        <a href="/login.html">
           <h2>ENTRAR</h2>
+        </a>
 
-          <h4>DE: <b>ESTADO</b></h4>
-          <h4>PARA: <b>WISETOUR</b></h4>
+        <span>DE: <b id="estado">BRAZIL</b></span>
+        <span>PARA: <b>WISETOUR</b></span>
 
-          <div class="linha_tracejada">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-
+        <div class="linha_tracejada">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div class="container">
-          <div class="passagem passagem_inferior"></div>
-          <div class="passaporte">
-            <h4>PASSAPORTE DE ENTRADA</h4>
-            <img src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
-            <p><b>WiseTour,</b> transformando dados em destinos de sucesso</p>
-          </div>
+
+      </div>
+      <div class="container">
+        <div class="passagem passagem_inferior"></div>
+        <div class="passaporte">
+          <h4>PASSAPORTE DE ENTRADA</h4>
+          <img src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
+          <p>transformando dados em destinos de sucesso</p>
         </div>
       </div>
+    </div>
 
-      <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
+    <!-- /PASSAPORTE E PASSAGEM  -->
+
 
   </main>
 
   <!-- /MAIN -->
+
 
 
 </body>

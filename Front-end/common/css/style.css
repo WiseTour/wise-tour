@@ -70,3 +70,19 @@ body {
   background-color: var(--cinza_claro);
 }
 
+.btn {
+  transition: 0.5s ease;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 25px;
+  color: var(--cinza_escuro);
+  background-color: var(--cor_base);
+  padding: 15px 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: var(--cinza_claro);
+  background-color: var(--cinza_escuro);
+}
