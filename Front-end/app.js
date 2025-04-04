@@ -28,7 +28,7 @@ app.get("/estado", async (req, res) => {
         const locationResponse = await axios.get(`http://ip-api.com/json/${ip}`);
         console.log('Resposta da API:', locationResponse.data);
     
-        res.json({ estado: locationResponse.data.regionName || 'BRAZIL' });
+        res.json({ estado: locationResponse.data.regionName || 'BRASIL' });
       } catch (error) {
         console.error('Erro ao obter localização:', error);
         res.status(500).json({ erro: 'Erro ao obter localização' });
