@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --cor_base: #f8ca26;
+  --cinza: #3b3b3b;
+  --cinza_escuro: #1e1e1e;
+  --cinza_medio: #d6d1d1;
+  --cinza_claro: #e7e6e6;
+  --font_family_padrao: "Roboto", sans-serif;
+  --font_family_2: "Anton SC", serif;
+  --padding_inline: 8vw;
+  --padding_block: 70px;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  font-family: var(--font_family_padrao);
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: var(--cinza_escuro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_family_2);
+  letter-spacing: 3px;
+  font-size: 2rem;
+  color: var(--cinza);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+b {
+  font-family: var(--font_family_2);
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--cor_base);
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+}
+
+input{
+  all: unset;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--cinza_claro);
+}
+
+.btn {
+  transition: 0.5s ease;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 25px;
+  color: var(--cinza_escuro);
+  background-color: var(--cor_base);
+  padding: 15px 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: var(--cinza_claro);
+  background-color: var(--cinza_escuro);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WiseTour</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
+  <script src="/common/js/nav-bar.js"></script>
+
+  <script defer src="/auth/js/geotrack.js"></script>
+
+</head>
+
+
+<body id="cadastro_body">
+
+
+
+  <img id="forma_esquerda" class="forma" src="assets/img/forma_bg.svg" alt="">
+  <img id="forma_direita" class="forma" src="assets/img/forma_bg.svg" alt="">
+
+  <header id="header" class="header">
+
+    <div class="container_mobile mobile">
+      <nav id="nav_bar_mobile" class="navbar">
+        <div class="container">
+          <a class="opcao" href="/auth/cadastro.html">CADASTRE-SE</a>
+          <a class="opcao" href="/auth/login.html">ENTRAR</a>
+        </div>
+      </nav>
+      <a class="seta" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <img src="/common/assets/logo/logo_cinza_escuro.svg" id="logo">
+      <i id="botao_nav_bar" onclick="habilitarNavBarMobile()" class="fa-solid fa-bars"></i>
+    </div>
+
+  </header>
+
+
+
+
+  <a class="seta desktop" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+
+
+  <img class="logo desktop" src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- FORM -->
+    <div class="container_form">
+      <h2>ENTRAR</h2>
+      <form class="form">
+       <img src="/common/assets/icon/turista_icon.svg" alt="">
+        
+        <div class="container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" placeholder="| e-mail:">
+        </div>
+
+        <div class="container">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="| senha:">
+        </div>
+      
+        <button class="btn" type="submit">ENVIAR</button>
+      </form>
+    </div>
+    <!-- /FORM -->
+
+
+    <!-- PASSAPORTE E PASSAGEM  -->
+
+    <div class="container passaporte_passagem">
+      <div class="passagem passagem_superior">
+        <a href="/auth/cadastro.html">
+          <h2>CADASTRAR</h2>
+        </a>
+
+        <span>DE: <b id="estado">BRAZIL</b></span>
+        <span>PARA: <b>WISETOUR</b></span>
+
+        <div class="linha_tracejada">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="passagem passagem_inferior"></div>
+        <div class="passaporte">
+          <h4>PASSAPORTE DE CADASTRO</h4>
+          <img src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
+          <p>transformando dados em destinos de sucesso</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- /PASSAPORTE E PASSAGEM  -->
+
+
+  </main>
+
+  <!-- /MAIN -->
+
+
+
+</body>
+
+</html>
