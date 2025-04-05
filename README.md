@@ -1,5 +1,4 @@
-# 🌐 WiseTour
-
+# 🌐 WiseTour ✈️
 ---
 
 ## 📖 Visão Geral
@@ -76,13 +75,10 @@ O desenvolvimento foi conduzido com base em metodologias ágeis, organizadas em 
 
 ---
 
----
-
 ## 📄 Licença
 
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos, como parte do **Projeto Integrador** da SPTECH School.  
 Todos os direitos reservados aos autores e à instituição.
 
----
 > **WiseTour — Transformando dados em decisões inteligentes no turismo internacional.**
 
