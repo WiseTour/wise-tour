@@ -13,21 +13,15 @@
 
   <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
   <script src="/common/js/nav-bar.js"></script>
-
   <script defer src="/auth/js/geotrack.js"></script>
-
 </head>
 
-
 <body id="cadastro_body">
-
-
 
   <img id="forma_esquerda" class="forma" src="assets/img/forma_bg.svg" alt="">
   <img id="forma_direita" class="forma" src="assets/img/forma_bg.svg" alt="">
 
   <header id="header" class="header">
-
     <div class="container_mobile mobile">
       <nav id="nav_bar_mobile" class="navbar">
         <div class="container">
@@ -39,45 +33,39 @@
       <img src="/common/assets/logo/logo_cinza_escuro.svg" id="logo">
       <i id="botao_nav_bar" onclick="habilitarNavBarMobile()" class="fa-solid fa-bars"></i>
     </div>
-
   </header>
 
-
-
-
   <a class="seta desktop" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-
-
   <img class="logo desktop" src="/common/assets/logo/logo_cinza_escuro.svg" alt="">
 
   <!-- MAIN -->
-
   <main>
+    <div id="cardErro" style="display: none; color: red;">
+      <span id="mensagem_erro"></span>
+    </div>    
 
     <!-- FORM -->
     <div class="container_form">
       <h2>ENTRAR</h2>
       <form class="form">
-       <img src="/common/assets/icon/turista_icon.svg" alt="">
-        
+        <img src="/common/assets/icon/turista_icon.svg" alt="">
+
         <div class="container">
           <i class="fa-solid fa-envelope"></i>
-          <input type="text" placeholder="| e-mail:">
+          <input id="email_input" type="text" placeholder="| e-mail:">
         </div>
 
         <div class="container">
           <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="| senha:">
+          <input id="senha_input" type="text" placeholder="| senha:">
         </div>
       
-        <button class="btn" type="submit">ENVIAR</button>
+        <button class="btn" onclick="entrar()" type="button">ENVIAR</button>
       </form>
     </div>
     <!-- /FORM -->
 
-
     <!-- PASSAPORTE E PASSAGEM  -->
-
     <div class="container passaporte_passagem">
       <div class="passagem passagem_superior">
         <a href="/auth/cadastro.html">
@@ -88,15 +76,10 @@
         <span>PARA: <b>WISETOUR</b></span>
 
         <div class="linha_tracejada">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div></div><div></div><div></div><div></div><div></div><div></div>
         </div>
-
       </div>
+
       <div class="container">
         <div class="passagem passagem_inferior"></div>
         <div class="passaporte">
@@ -106,16 +89,67 @@
         </div>
       </div>
     </div>
-
     <!-- /PASSAPORTE E PASSAGEM  -->
-
-
   </main>
-
   <!-- /MAIN -->
 
+  <script>
+    function entrar() {
+      var emailVar = document.getElementById('email_input').value;
+      var senhaVar = document.getElementById('senha_input').value;
 
+      if (emailVar == "" || senhaVar == "") {
+        document.getElementById('cardErro').style.display = "block";
+        document.getElementById('mensagem_erro').innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        return false;
+      } else {
+        setInterval(sumirMensagem, 5000);
+      }
+
+      console.log("FORM LOGIN: ", emailVar);
+      console.log("FORM SENHA: ", senhaVar);
+
+      fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          emailServer: emailVar,
+          senhaServer: senhaVar
+        })
+      }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          resposta.json().then(json => {
+            console.log(json);
+
+            sessionStorage.setItem("EMAIL_USUARIO", json.email);
+            sessionStorage.setItem("ID_USUARIO", json.idLogin);
+
+            setTimeout(function () {
+              window.location = "./dashboard.html";
+            }, 1000);
+          });
+        } else {
+          console.log("Houve um erro ao tentar realizar o login!");
+          resposta.text().then(texto => {
+            console.error(texto);
+          });
+        }
+
+      }).catch(function (erro) {
+        console.log(erro);
+      });
+
+      return false;
+    }
+
+    function sumirMensagem() {
+      document.getElementById('cardErro').style.display = "none";
+    }
+  </script>
 
 </body>
-
 </html>
