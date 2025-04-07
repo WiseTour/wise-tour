@@ -9,22 +9,22 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String nomeArquivo = "../../database/dados-originais/uf-regioes-brasil.xlsx";
+        String fileName = "../../database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx";
 
         // Carregando o arquivo excel
-        Path caminho = Path.of(nomeArquivo);
-        InputStream arquivo = Files.newInputStream(caminho);
+        Path caminho = Path.of(fileName);
+        InputStream file = Files.newInputStream(caminho);
 
         // Extraindo os livros do arquivo
-        LeitorExcel leitorExcel = new LeitorExcel();
-        List<Livro> livrosExtraidos = leitorExcel.extrarLivros(nomeArquivo, arquivo);
+        ETL etl = new ETL();
+        List<Object> data = etl.extract(fileName, file, 1, 3, List.of("String", "String", "String") );
 
         // Fechando o arquivo após a extração
-        arquivo.close();
+        file.close();
 
-        System.out.println("Livros extraídos:");
-        for (Livro livro : livrosExtraidos) {
-            System.out.println(livro);
+        System.out.println("Dados extraídos:");
+        for (Object datum : data) {
+            System.out.println(datum);
         }
     }
 }
