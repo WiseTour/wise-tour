@@ -1,4 +1,4 @@
-package school.sptech;
+package tour.wise;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;

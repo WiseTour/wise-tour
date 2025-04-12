@@ -1,4 +1,10 @@
 package tour.wise;
+import tour.wise.ConexaoBanco;
+import tour.wise.Cadastro;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import java.util.List;
+
 
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
@@ -10,123 +16,122 @@ public class Main {
         JdbcTemplate connection = conexaoBanco.getConnection();
 
         connection.execute("""
-                CREATE TABLE filme (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    nome VARCHAR(255) NOT NULL,
-                    ano INT NOT NULL,
-                    genero VARCHAR(255) NOT NULL,
-                    diretor VARCHAR(255) NOT NULL
-                )
+                DROP TABLE IF EXISTS cadastro; 
                 """);
 
-        // Inserindo alguns filmes
+        connection.execute("""
+                CREATE TABLE cadastro (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    nome VARCHAR(45) NOT NULL,
+                    dataNascimento DATE NOT NULL,
+                    cpf CHAR(11) NOT NULL,
+                    idade INT NOT NULL
+                ); 
+                """);
 
-        connection.update("INSERT INTO filme (nome, ano, genero, diretor) VALUES (?, ?, ?, ?)",
-                "Matrix", 1999, "Ficção Científica", "Lana Wachowski, Lilly Wachowski");
+        // Inserindo alguns cadastros
 
-        connection.update("INSERT INTO filme (nome, ano, genero, diretor) VALUES (?, ?, ?, ?)",
-                "O Poderoso Chefão", 1972, "Drama", "Francis Ford Coppola");
+        connection.update("INSERT INTO cadastro (nome, dataNascimento, cpf, idade) VALUES (?, ?, ?, ?)",
+                "Priscila Almeida Campos", "1999-09-21", "12345678901", 25);
 
-        connection.update("INSERT INTO filme (nome, ano, genero, diretor) VALUES (?, ?, ?, ?)",
-                "O Senhor dos Anéis: O Retorno do Rei", 2003, "Fantasia", "Peter Jackson");
+        connection.update("INSERT INTO cadastro (nome, dataNascimento, cpf, idade) VALUES (?, ?, ?, ?)",
+                "João Pedro Brito", "1984-03-23", "09876543211", 41);
 
-        connection.update("INSERT INTO filme (nome, ano, genero, diretor) VALUES (?, ?, ?, ?)",
-                "Forrest Gump", 1994, "Drama", "Robert Zemeckis");
 
-        // Listando todos os filmes
+        // Listando todas as pessoas cadastradas
 
-        List<Filme> filmesDoBanco = connection.query("SELECT * FROM filme", new BeanPropertyRowMapper<>(Filme.class));
+        List<Cadastro> pessoasCadastradas = connection.query("SELECT * FROM cadastro", new BeanPropertyRowMapper<>(Cadastro.class));
 
-        System.out.println("Filmes no banco de dados:");
+        System.out.println("Pessoas cadastradas no site:");
 
-        for (Filme filme : filmesDoBanco) {
-            System.out.println(filme);
+        for (Cadastro cadastro : pessoasCadastradas) {
+            System.out.println(cadastro);
         }
 
-        // Inserindo um novo filme a partir de um objeto
+        // Inserindo uma nova pessoa a partir de um objeto
 
-        Filme novoFilme = new Filme(null, "Vingadores: Ultimato", 2019, "Ação", "Anthony Russo, Joe Russo");
+        Cadastro novoCadastro = new Cadastro(null, "Pâmela Jacinto Pereira", "2001-08-19", "11223344556", 24);
 
-        connection.update("INSERT INTO filme (nome, ano, genero, diretor) VALUES (?, ?, ?, ?)",
-                novoFilme.getNome(), novoFilme.getAno(), novoFilme.getGenero(), novoFilme.getDiretor());
+        connection.update("INSERT INTO cadastro (nome, dataNascimento, cpf, idade) VALUES (?, ?, ?, ?)",
+                novoCadastro.getNome(), novoCadastro.getDataNascimento(), novoCadastro.getCpf(), novoCadastro.getIdade());
 
-        System.out.println("\nFilmes no banco de dados após inserção de novo filme:");
+        System.out.println("\nPessoas no banco de dados após inserção de novo cadastro:");
 
-        filmesDoBanco = connection.query("SELECT * FROM filme", new BeanPropertyRowMapper<>(Filme.class));
+        pessoasCadastradas = connection.query("SELECT * FROM cadastro", new BeanPropertyRowMapper<>(Cadastro.class));
 
-        for (Filme filme : filmesDoBanco) {
-            System.out.println(filme);
+        for (Cadastro cadastro : pessoasCadastradas) {
+            System.out.println(cadastro);
         }
 
-        // Atualizando um filme
+        // Atualizando um cadastro
 
-        connection.update("UPDATE filme SET nome = ?, ano = ?, genero = ?, diretor = ? WHERE id = ?",
-                "Shrek", 2001, "Animação", "Andrew Adamson, Vicky Jenson", 5);
+        connection.update("UPDATE cadastro SET nome = ?, dataNascimento = ?, cpf = ?, idade = ? WHERE id = ?",
+                "Lucas Gomes Mendes", "2001-12-03", "10293847565", 23, 5);
 
-        System.out.println("\nFilmes no banco de dados após atualização de filme:");
+        System.out.println("\nPessoas no banco de dados após atualização de cadastro:");
 
-        filmesDoBanco = connection.query("SELECT * FROM filme", new BeanPropertyRowMapper<>(Filme.class));
+        pessoasCadastradas = connection.query("SELECT * FROM cadastro", new BeanPropertyRowMapper<>(Cadastro.class));
 
-        for (Filme filme : filmesDoBanco) {
-            System.out.println(filme);
+        for (Cadastro cadastro : pessoasCadastradas) {
+            System.out.println(cadastro);
         }
 
-        // Deletando um filme
+        // Deletando um cadastro
 
-        connection.update("DELETE FROM filme WHERE id = ?", 5);
+        connection.update("DELETE FROM cadastro WHERE id = ?", 5);
 
-        System.out.println("\nFilmes no banco de dados após exclusão de filme:");
+        System.out.println("\nPessoas no banco de dados após exclusão de cadastro:");
 
-        filmesDoBanco = connection.query("SELECT * FROM filme", new BeanPropertyRowMapper<>(Filme.class));
+        pessoasCadastradas = connection.query("SELECT * FROM cadastro", new BeanPropertyRowMapper<>(Cadastro.class));
 
-        for (Filme filme : filmesDoBanco) {
-            System.out.println(filme);
+        for (Cadastro cadastro : pessoasCadastradas) {
+            System.out.println(cadastro);
         }
 
         // Busca personalizada
 
-        System.out.println("\nFilmes de drama no banco de dados:");
+        System.out.println("\nCadastro de pessoas menores de 24 anos no banco de dados:");
 
-        filmesDoBanco = connection.query("SELECT * FROM filme WHERE genero = ?", new BeanPropertyRowMapper<>(Filme.class), "Drama");
+        pessoasCadastradas = connection.query("SELECT * FROM cadastro WHERE idade = ?", new BeanPropertyRowMapper<>(Cadastro.class), 24);
 
-        for (Filme filme : filmesDoBanco) {
-            System.out.println(filme);
+        for (Cadastro cadastro : pessoasCadastradas) {
+            System.out.println(cadastro);
         }
 
-        // Buscar um filme pelo ID
+        // Buscar um cadastro pelo ID
 
-        Filme filmeEncontrado = connection.queryForObject("SELECT * FROM filme WHERE id = ?", new BeanPropertyRowMapper<>(Filme.class), 1);
-        System.out.println("\nFilme com ID 1: " + filmeEncontrado);
+        Cadastro cadastroEncontrado = connection.queryForObject("SELECT * FROM cadastro WHERE id = ?", new BeanPropertyRowMapper<>(Cadastro.class), 1);
+        System.out.println("\nCadastro com ID 1: " + cadastroEncontrado);
 
         // Obs: se sua query retornar nenhum ou mais de um item, ao executar, uma exceção será lançada.
 
         // throws InterruptedException - é uma exceção verificada (checked exception) que ocorre
         // quando uma thread dormindo, esperando ou bloqueada é interrompida antes de terminar a sua espera.
 
-        Log log = new Log();
-        Random random = new Random();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-
-        log.showLog("Iniciando o processo ETL...", "INFO", formatter);
-        Thread.sleep((random.nextInt(5) + 1) * 1000L);
-
-        log.showLog("Extraindo dados...", "INFO", formatter);
-        Thread.sleep((random.nextInt(5) + 1) * 1000L);
-
-        log.showLog("Transformando dados...", "INFO", formatter);
-        Thread.sleep((random.nextInt(5) + 1) * 1000L);
-
-        // Simulação de um WARNING
-        log.showLog("Poucos dados extraídos, alguns dados podem estar faltando. Verifique a origem.", "WARNING", formatter);
-        Thread.sleep((random.nextInt(5) + 1) * 1000L);
-
-        log.showLog("Carregando dados no banco...", "INFO", formatter);
-        Thread.sleep((random.nextInt(5) + 1) * 1000L);
-
-        // Simulação de um ERRO
-        log.showLog("Falha ao carregar os dados. Banco de dados não encontrado.", "ERROR", formatter);
-
-        log.showLog("Processo ETL encerrado!", "INFO", formatter);
+//        Log log = new Log();
+//        Random random = new Random();
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+//
+//        log.showLog("Iniciando o processo ETL...", "INFO", formatter);
+//        Thread.sleep((random.nextInt(5) + 1) * 1000L);
+//
+//        log.showLog("Extraindo dados...", "INFO", formatter);
+//        Thread.sleep((random.nextInt(5) + 1) * 1000L);
+//
+//        log.showLog("Transformando dados...", "INFO", formatter);
+//        Thread.sleep((random.nextInt(5) + 1) * 1000L);
+//
+//        // Simulação de um WARNING
+//        log.showLog("Poucos dados extraídos, alguns dados podem estar faltando. Verifique a origem.", "WARNING", formatter);
+//        Thread.sleep((random.nextInt(5) + 1) * 1000L);
+//
+//        log.showLog("Carregando dados no banco...", "INFO", formatter);
+//        Thread.sleep((random.nextInt(5) + 1) * 1000L);
+//
+//        // Simulação de um ERRO
+//        log.showLog("Falha ao carregar os dados. Banco de dados não encontrado.", "ERROR", formatter);
+//
+//        log.showLog("Processo ETL encerrado!", "INFO", formatter);
     }
 
 

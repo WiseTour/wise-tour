@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="" />
+    <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tour/wise/Cadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tour/wise/ConexaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tour/wise/ConexaoBanco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tour/wise/Filme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tour/wise/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tour/wise/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tour/wise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tour/wise/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tour/wise/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tour/wise/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tour/wise/Main.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2urL7WkjqAkd1H76S0PlolWeYFz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,13 +36,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Maven.ETL [clean].executor": "Run",
     "Maven.ETL [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "conexao-banco",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/phelipe-bruione/Desktop/ProjetoPi/2sem/WiseTour/Back-end/ETL"
+    "last_opened_file_path": "C:/Users/smrma/OneDrive/Documents/2º Semestre/Pesquisa e Inovação II/WiseTour/Back-end/ETL"
   }
 }]]></component>
   <component name="RunManager">
