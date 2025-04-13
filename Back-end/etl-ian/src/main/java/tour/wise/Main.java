@@ -10,48 +10,56 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String fileName = "../../database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx";
+        // Diretório base onde estão os arquivos
+        String baseDirectory = "../../database/dados-originais/chegada_turistas_ministerio_turismo/";
 
-        // Carregando o arquivo excel
-        Path caminho = Path.of(fileName);
-        InputStream file1 = Files.newInputStream(caminho);
-        InputStream file2 = Files.newInputStream(caminho);
+        // Lista para armazenar todos os dados
+        List<Chegadas_Turistas_Internacionais_Brasil> todasAsChegadas = new ArrayList<>();
 
-        // Extraindo dos dados do arquivo
         ETL etl = new ETL();
-        List<List<Object>> data_uf = etl.extract(fileName, file1, 1, 0, 3, List.of("String", "String", "String") );
-        List<List<Object>> data_regioes = etl.extract(fileName, file2, 0, 0, 2, List.of("String", "String") );
 
-        List<Unidade_Federativa_Brasil> Unidades_Federativa_Brasil = new ArrayList<>();
+        // Loop através dos anos de 1989 a 2024
+        for (int ano = 2021; ano <= 2024; ano++) {
+            String fileName = baseDirectory + "chegadas_" + ano + ".xlsx";
 
-        for (List<Object> line : data_uf) {
-            String nome = line.get(0).toString();
-            String sigla_uf = line.get(1).toString();
-            String sigla_regiao = line.get(2).toString();
-            String regiao = "";
+            // Processa o arquivo do ano atual e adiciona os dados à lista principal
+            List<Chegadas_Turistas_Internacionais_Brasil> chegadasAno = processaArquivo(fileName, etl, ano);
+            todasAsChegadas.addAll(chegadasAno);
+        }
 
-            for (List<Object> dataRegiao : data_regioes) {
-                if(dataRegiao.get(1).equals(sigla_regiao)){
-                    regiao = (String) dataRegiao.get(0);
+        // Exibe todos os dados processados
+        System.out.println("Dados extraídos de 1989 a 2024:");
+        todasAsChegadas.forEach(System.out::println);
+    }
+
+    public static List<Chegadas_Turistas_Internacionais_Brasil> processaArquivo(String fileName, ETL etl, Integer edicao) {
+        List<Chegadas_Turistas_Internacionais_Brasil> chegadas = new ArrayList<>();
+
+        try {
+            Path caminho = Path.of(fileName);
+            try (InputStream file = Files.newInputStream(caminho)) {
+                List<List<Object>> dataChegadaTuristas = etl.extract(fileName, file, 0, 0, 12,
+                        List.of("String", "Numeric", "String", "Numeric", "String", "Numeric", "String", "Numeric", "Numeric", "String", "Numeric", "Numeric"));
+
+                for (List<Object> line : dataChegadaTuristas) {
+                    String pais = line.get(2).toString();
+                    String uf = line.get(4).toString();
+                    String via = line.get(6).toString();
+                    Integer ano = Double.valueOf(line.get(8).toString()).intValue();
+                    Integer mes = Double.valueOf(line.get(10).toString()).intValue();
+                    Integer chegadasNum = Double.valueOf(line.get(11).toString()).intValue();
+                    String fonte = "Ministério do Turismo";
+
+                    Chegadas_Turistas_Internacionais_Brasil chegada = new Chegadas_Turistas_Internacionais_Brasil(
+                            uf, pais, via, mes, ano, chegadasNum, fonte, edicao);
+
+                    chegadas.add(chegada);
                 }
             }
-
-            Unidade_Federativa_Brasil uf = new Unidade_Federativa_Brasil();
-            uf.setUnidade_federativa(nome);
-            uf.setSigla_uf(sigla_uf);
-            uf.setRegiao(regiao);
-            uf.setSigla(sigla_regiao);
-
-            Unidades_Federativa_Brasil.add(uf);
+        } catch (IOException e) {
+            System.err.println("Erro ao processar o arquivo: " + fileName + " - " + e.getMessage());
         }
 
-        // Fechando o arquivo após a extração
-        file1.close();
-        file2.close();
-
-        System.out.println("Dados extraídos:");
-        for (Unidade_Federativa_Brasil Unidade_Federativa_Brasil : Unidades_Federativa_Brasil) {
-            System.out.println(Unidade_Federativa_Brasil);
-        }
+        return chegadas;
     }
 }
