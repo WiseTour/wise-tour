@@ -1,4 +1,4 @@
-package tour.wise;
+package tour.wise.unidades_federativa_regioes;
 
 public class Regiao_Brasil {
     private String sigla;

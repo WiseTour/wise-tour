@@ -1,5 +1,7 @@
 package tour.wise;
 
+import tour.wise.unidades_federativa_regioes.Unidade_Federativa_Brasil;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;

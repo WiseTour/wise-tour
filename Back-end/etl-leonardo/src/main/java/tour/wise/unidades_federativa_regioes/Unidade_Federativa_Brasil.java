@@ -1,4 +1,4 @@
-package tour.wise;
+package tour.wise.unidades_federativa_regioes;
 
 public class Unidade_Federativa_Brasil extends  Regiao_Brasil{
    private String sigla;
