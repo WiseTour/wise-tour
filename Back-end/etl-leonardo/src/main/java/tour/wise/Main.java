@@ -1,5 +1,7 @@
 package tour.wise;
 
+import tour.wise.paises_continentes_idiomas.Continente;
+import tour.wise.unidades_federativa_regioes.Regiao_Brasil;
 import tour.wise.unidades_federativa_regioes.Unidade_Federativa_Brasil;
 
 import java.io.IOException;
@@ -12,48 +14,82 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String fileName = "../../database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx";
+        // Listando nomes dos arquivos
+        List<String> filesName = new ArrayList<>();
+        filesName.add("../../database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx");
+        filesName.add("../../database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx");
+        filesName.add("../../database/dados-originais/paises-continentes-codigos-idiomas/paises-codigo.xls");
+
+
+        // Listando os caminhos de cada arquivo
+        List<Path> paths = new ArrayList<>();
+        for (String fileName : filesName) {
+            paths.add(Path.of(fileName));
+        }
 
         // Carregando o arquivo excel
-        Path caminho = Path.of(fileName);
-        InputStream file1 = Files.newInputStream(caminho);
-        InputStream file2 = Files.newInputStream(caminho);
+        List<InputStream> files = new ArrayList<>();
+        for (Path path : paths) {
+            files.add(Files.newInputStream(path));
+        }
 
-        // Extraindo dos dados do arquivo
         ETL etl = new ETL();
-        List<List<Object>> data_uf = etl.extract(fileName, file1, 1, 0, 3, List.of("String", "String", "String") );
-        List<List<Object>> data_regioes = etl.extract(fileName, file2, 0, 0, 2, List.of("String", "String") );
+
+        // Extraindo dados dos arquivos
+        List<List<Object>> data_regioes = etl.extract(filesName.get(0), files.get(0), 0, 0, 2, List.of("String", "String"));
+        List<List<Object>> data_uf = etl.extract(filesName.get(1), files.get(1), 1, 0, 3, List.of("String", "String", "String"));
+        List<List<Object>> data_pais_contine = etl.extract(filesName.get(2), files.get(2), 0, 0, 2, List.of("String", "String"));
+
+        // Transformando dados
+        List<Regiao_Brasil> regioes_brasil = new ArrayList<>();
+
+        for (List<Object> line : data_regioes) {
+            regioes_brasil.add(new Regiao_Brasil(line.get(1).toString(), line.get(0).toString()));
+        }
 
         List<Unidade_Federativa_Brasil> Unidades_Federativa_Brasil = new ArrayList<>();
 
         for (List<Object> line : data_uf) {
-            String nome = line.get(0).toString();
-            String sigla_uf = line.get(1).toString();
+            String sigla = line.get(1).toString();
+            String uf = line.get(0).toString();
             String sigla_regiao = line.get(2).toString();
-            String regiao = "";
+            Regiao_Brasil regiao = new Regiao_Brasil();
 
-            for (List<Object> dataRegiao : data_regioes) {
-                if(dataRegiao.get(1).equals(sigla_regiao)){
-                    regiao = (String) dataRegiao.get(0);
+            for (Regiao_Brasil regiao_brasil : regioes_brasil) {
+                if (regiao_brasil.getSigla().equals(sigla_regiao)) {
+                    regiao = regiao_brasil;
                 }
             }
 
-            Unidade_Federativa_Brasil uf = new Unidade_Federativa_Brasil();
-            uf.setUnidade_federativa(nome);
-            uf.setSigla_uf(sigla_uf);
-            uf.setRegiao(regiao);
-            uf.setSigla(sigla_regiao);
-
-            Unidades_Federativa_Brasil.add(uf);
+            Unidades_Federativa_Brasil.add(new Unidade_Federativa_Brasil(sigla, uf, regiao));
         }
+
+        List<Continente> continentes = new ArrayList<>();
+
+
+
+
+
 
         // Fechando o arquivo após a extração
-        file1.close();
-        file2.close();
-
-        System.out.println("Dados extraídos:");
-        for (Unidade_Federativa_Brasil Unidade_Federativa_Brasil : Unidades_Federativa_Brasil) {
-            System.out.println(Unidade_Federativa_Brasil);
+        for (InputStream file : files) {
+            file.close();
         }
+
+        // Exibindo dados
+
+        System.out.println();
+        System.out.println("Dados transformados:");
+
+        System.out.println();
+        for (Regiao_Brasil regiao_brasil : regioes_brasil) {
+            System.out.println(regiao_brasil.toString());
+        }
+
+        System.out.println();
+        for (Unidade_Federativa_Brasil unidade_federativa_brasil : Unidades_Federativa_Brasil) {
+            System.out.println(unidade_federativa_brasil.toString());
+        }
+
     }
 }
