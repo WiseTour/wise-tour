@@ -1,8 +1,7 @@
 package tour.wise;
 
-import tour.wise.paises_continentes_idiomas.Continente;
-import tour.wise.unidades_federativa_regioes.Regiao_Brasil;
-import tour.wise.unidades_federativa_regioes.Unidade_Federativa_Brasil;
+import tour.wise.entity.base.data.Unidade_Federativa_Brasil;
+import tour.wise.etl.Extract;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,7 +32,7 @@ public class Main {
             files.add(Files.newInputStream(path));
         }
 
-        ETL etl = new ETL();
+        Extract etl = new Extract();
 
         // Extraindo dados dos arquivos
         List<List<Object>> data_regioes = etl.extract(filesName.get(0), files.get(0), 0, 0, 2, List.of("String", "String"));
@@ -60,6 +59,7 @@ public class Main {
                     regiao = regiao_brasil;
                 }
             }
+
 
             Unidades_Federativa_Brasil.add(new Unidade_Federativa_Brasil(sigla, uf, regiao));
         }

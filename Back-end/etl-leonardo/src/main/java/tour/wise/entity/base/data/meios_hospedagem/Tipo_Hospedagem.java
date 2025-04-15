@@ -1,4 +1,4 @@
-package tour.wise.meios_hospedagem;
+package tour.wise.entity.base.data.meios_hospedagem;
 
 public class Tipo_Hospedagem {
     private Integer id_tipo_hospedagem;

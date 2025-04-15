@@ -1,4 +1,4 @@
-package tour.wise.relatorio_turismo_brasil;
+package tour.wise.entity.base.data.relatorio_turismo_brasil;
 
 public class Motivo_Viagem {
     private Integer id_motivo_viagem;

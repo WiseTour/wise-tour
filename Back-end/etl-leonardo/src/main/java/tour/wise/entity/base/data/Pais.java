@@ -1,19 +1,19 @@
-package tour.wise.paises_continentes_idiomas;
+package tour.wise.entity.base.data;
 
 import java.util.List;
 
 public class Pais {
     private Integer id_pais;
-    private String nome;
-    private Continente continente;
+    private String pais;
+    private String continente;
     private List<Idioma> idiomas;
 
     public Pais() {
     }
 
-    public Pais(Integer id_pais, String nome, Continente continente, List<Idioma> idiomas) {
+    public Pais(Integer id_pais, String pais, String continente, List<Idioma> idiomas) {
         this.id_pais = id_pais;
-        this.nome = nome;
+        this.pais = pais;
         this.continente = continente;
         this.idiomas = idiomas;
     }
@@ -26,19 +26,19 @@ public class Pais {
         this.id_pais = id_pais;
     }
 
-    public String getNome() {
-        return nome;
+    public String getPais() {
+        return pais;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    public Continente getContinente() {
+    public String getContinente() {
         return continente;
     }
 
-    public void setContinente(Continente continente) {
+    public void setContinente(String continente) {
         this.continente = continente;
     }
 
@@ -54,8 +54,8 @@ public class Pais {
     public String toString() {
         return "Pais{" +
                 "id_pais=" + id_pais +
-                ", nome='" + nome + '\'' +
-                ", continente=" + continente +
+                ", pais='" + pais + '\'' +
+                ", continente='" + continente + '\'' +
                 ", idiomas=" + idiomas +
                 '}';
     }

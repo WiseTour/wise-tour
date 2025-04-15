@@ -1,4 +1,4 @@
-package tour.wise.relatorio_turismo_brasil;
+package tour.wise.entity.base.data.relatorio_turismo_brasil;
 
 public class Servico_Adquirido_Fora_Brasil {
     private Integer id_servico_adquirido_fora_brasil;

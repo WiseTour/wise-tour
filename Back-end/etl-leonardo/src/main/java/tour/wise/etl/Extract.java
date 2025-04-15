@@ -1,4 +1,4 @@
-package tour.wise;
+package tour.wise.etl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 
-public class ETL {
+public class Extract {
 
     public List<List<Object>> extract(String fileName, InputStream file, Integer sheetNumber, Integer header, Integer colluns, List<String> types) {
         try {

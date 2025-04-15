@@ -1,4 +1,4 @@
-package tour.wise.paises_continentes_idiomas;
+package tour.wise.entity.base.data;
 
 public class Idioma {
    private Integer id_idioma;
