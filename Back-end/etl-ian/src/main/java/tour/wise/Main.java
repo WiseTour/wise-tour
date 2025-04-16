@@ -10,25 +10,20 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        // Diretório base onde estão os arquivos
         String baseDirectory = "../../database/dados-originais/chegada_turistas_ministerio_turismo/";
 
-        // Lista para armazenar todos os dados
         List<Chegadas_Turistas_Internacionais_Brasil> todasAsChegadas = new ArrayList<>();
 
         ETL etl = new ETL();
 
-        // Loop através dos anos de 1989 a 2024
         for (int ano = 2021; ano <= 2024; ano++) {
             String fileName = baseDirectory + "chegadas_" + ano + ".xlsx";
 
-            // Processa o arquivo do ano atual e adiciona os dados à lista principal
             List<Chegadas_Turistas_Internacionais_Brasil> chegadasAno = processaArquivo(fileName, etl, ano);
             todasAsChegadas.addAll(chegadasAno);
         }
 
-        // Exibe todos os dados processados
-        System.out.println("Dados extraídos de 1989 a 2024:");
+        System.out.println("Dados extraídos dos arquivos:");
         todasAsChegadas.forEach(System.out::println);
     }
 
