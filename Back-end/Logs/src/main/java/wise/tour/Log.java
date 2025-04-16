@@ -10,7 +10,7 @@ public class Log {
    private final String url = "jdbc:mysql://localhost:3306/wisetour"; // Realizando conexão com o banco de dados wisetour, utilizando o JBDC
    private final String user = "phelipe"; // Usuário do banco
    private final String password = "Palmeiras220179."; // Senha do banco
-
+   
    public void showLog(String msg, String tipo, String etapa, DateTimeFormatter formatter)
    {
       String dataHora = LocalDateTime.now().format(formatter);
