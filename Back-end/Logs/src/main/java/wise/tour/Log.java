@@ -1,35 +1,33 @@
 package wise.tour;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Log {
-    private static final Logger logger = LoggerFactory.getLogger(Log.class);
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-    public void showLog(String msg, String msgType)
-    {
-        String dataHora = LocalDateTime.now().format(formatter);
-        String mensagemFormatada = dataHora + " - " + msg;
+   private final String url = "jdbc:mysql://localhost:3306/wisetour"; // Realizando conexão com o banco de dados wisetour, utilizando o JBDC
+   private final String user = "phelipe"; // Usuário do banco
+   private final String password = "Palmeiras220179."; // Senha do banco
 
-        switch (msgType.toUpperCase())
-        {
-            case "INFO":
-                logger.info(mensagemFormatada);
-                break;
-            case "WARNING":
-                logger.warn(mensagemFormatada);
-                break;
-            case "ERROR":
-                logger.error(mensagemFormatada);
-                break;
-            case "DEBUG":
-                logger.debug(mensagemFormatada);
-                break;
-            default:
-                logger.info(dataHora + "UNKNOWN: " + msg);
-                break;
-        }
-    }
+   public void showLog(String msg, String tipo, String etapa, DateTimeFormatter formatter)
+   {
+      String dataHora = LocalDateTime.now().format(formatter);
+      System.out.println(dataHora + " - " + tipo.toUpperCase() + " [" + etapa + "]: " + msg);
+
+      try (Connection conn = DriverManager.getConnection(url, user, password))
+      {
+         String sql = "INSERT INTO logs_etl (data_hora, tipo, etapa, mensagem) VALUES (?,?,?,?)";
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         stmt.setString(1, dataHora);
+         stmt.setString(2, tipo.toUpperCase());
+         stmt.setString(3, etapa);
+         stmt.setString(4, msg);
+         stmt.executeUpdate();
+      } catch (Exception e)
+      {
+         System.err.println("Erro ao salvar log no banco: " + e.getMessage());
+      }
+   }
 }

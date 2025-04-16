@@ -53,7 +53,10 @@
   <!-- MAIN -->
 
   <main>
-
+    
+    <div id="cardErro" style="display: none; color: red;">
+      <span id="mensagem_erro"></span>
+    </div>    
     <!-- FORM -->
     <div class="container_form">
       <h2>CADASTRAR</h2>
@@ -61,19 +64,19 @@
         <p>Quer fazer parte do <b>WiseTour?</b></p>
         <div class="container">
           <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="| Digite seu nome">
+          <input id="nome_completo_input" type="text" placeholder="| Digite seu nome">
         </div>
         <div class="container">
           <i class="fa-solid fa-envelope"></i>
-          <input type="text" placeholder="| Digite seu e-mail">
+          <input id="email_input" type="text" placeholder="| Digite seu e-mail">
         </div>
         <div class="container">
           <i class="fa-solid fa-phone"></i>
-          <input type="text" placeholder="| Digite seu telefone">
+          <input id="numero_usuario_input" type="text" placeholder="| Digite seu telefone">
         </div>
         <p>Nossa equipe entrará em contato com você para entender suas necessidades e guiar os próximos passos.
         </p>
-        <button class="btn" type="submit">ENVIAR</button>
+        <button class="btn" onclick="cadastrar()" type="button">ENVIAR</button>
       </form>
     </div>
     <!-- /FORM -->
@@ -122,3 +125,4 @@
 </body>
 
 </html>
+<script src="js/cadastro.js"></script>
