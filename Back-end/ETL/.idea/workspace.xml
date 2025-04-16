@@ -5,208 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../etl-ian/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-ian/src/main/java/tour/wise/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-ian/src/main/java/tour/wise/Regiao_Brasil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-ian/src/main/java/tour/wise/Unidade_Federativa_Brasil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/Fonte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/Idioma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/Pais.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/Unidade_Federativa_Brasil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/meios_hospedagem/Tipo_Hospedagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Avaliacao_Viagem_Setor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Indicador_Motivo_Viagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Motivo_Viagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Perfil_Estimado_Visitantes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Relatorio_Turismo_Brasil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/entity/base/data/relatorio_turismo_brasil/Servico_Adquirido_Fora_Brasil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/etl/Extract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/etl/Load.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../etl-leonardo/src/main/java/tour/wise/etl/Transform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/01. a 03. Chegadas de turistas internacionais ao Brasil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1989.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1990.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1991.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1992.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1993.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1994.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1995.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1996.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1997.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1998.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_1999.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2001.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2002.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2003.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2004.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2005.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2006.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2007.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2008.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2009.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2010.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2011.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2012.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2013.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2014.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2015.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2016.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2017.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2018.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2019.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2020.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2021.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2022.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2023.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/chegada_turistas_ministerio_turismo/chegadas_2024.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/01 - Ficha Síntese Brasil - 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/02 - Ficha Síntese Motivos 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/03 - Ficha Síntese Vias de Acesso 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/04 - Ficha Síntese Meios de Hospedagem 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/05 - Ficha Síntese Países 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/06 - Ficha Síntese UF 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3)/Fichas Sínteses - 2015-2019_DIVULGAÇÃO/07 - Ficha Síntese Destinos 2015-2019_DIVULGAÇÃO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (1).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (2).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (2).xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (3).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (3).xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (4).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (5).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem (6).xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem- (1).csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem- (1).xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem- (2).csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem-.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem-.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem-.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meio-de-hospedagem.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2006cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2007cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2008cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2009cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2010cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2011cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2012cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2013cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2014cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem2015cadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201601trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201602trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201603trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201604trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201701trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201702trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201703trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201704trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201801trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201802trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201803trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201804trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201901trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201902trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201903trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem201904trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202001trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202002trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202003trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202004trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202101trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202102trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/meios_hospedagem/meiodehospedagem202103trimestrecadasturpj.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Database/dados-originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/melhores-livros.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/melhores-livros.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/src/main/java/tour/wise/LeitorExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etl-ian/src/main/java/tour/wise/ETL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/src/main/java/tour/wise/Livro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leitura-arquivos-excel/src/main/java/tour/wise/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_Turismo_2015_2 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_Turismo_2015_2 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2012.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2012.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2013_Excel (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2013_Excel (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2014_Excel_1 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2014_Excel_1 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/1. a 3. Chegadas de turistas internacionais ao Brasil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/1. a 3. Chegadas de turistas internacionais ao Brasil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/10. Movimentação de passageiros em rodoviárias do Basil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/10. Movimentação de passageiros em rodoviárias do Basil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/11. Equip. e Prest. de serviços turísticos - Cadastur.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/11. Equip. e Prest. de serviços turísticos - Cadastur.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/12. Panorama econômico do turismo no Brasil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/12. Panorama econômico do turismo no Brasil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/13. Indicadores socioeconômicos - Brasil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/13. Indicadores socioeconômicos - Brasil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/14. Dados gerais do turismo mundial.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/14. Dados gerais do turismo mundial.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/4. Estudo da demanda turística internacional.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/4. Estudo da demanda turística internacional.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/5. Eventos internacionais realizados no Brasil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/5. Eventos internacionais realizados no Brasil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/6. a 9. Movimentação de passageiros em Aeroportos do Brasil.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_Estatistico_de_Turismo_2020_vol47_2ed__Plan_Excel (2)/6. a 9. Movimentação de passageiros em Aeroportos do Brasil.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/01. a 03. Chegadas de turistas internacionais ao Brasil__A2022-2021-V49-1ed.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/05. Eventos internacionais no Brasil__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/05. Eventos internacionais no Brasil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/06. a 09. Movimentação de passageiros em Aeroportos do Brasil__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/06. a 09. Movimentação de passageiros em Aeroportos do Brasil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/10. Movimentação de passageiros em rodoviárias do Basil__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/10. Movimentação de passageiros em rodoviárias do Basil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/11. Equip. e Prest. de serviços turísticos - Cadastur__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/11. Equip. e Prest. de serviços turísticos - Cadastur__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/12. Panorama econômico do turismo no Brasil__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/12. Panorama econômico do turismo no Brasil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/13. Indicadores socioeconômicos - Brasil__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/13. Indicadores socioeconômicos - Brasil__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/14. Dados gerais do turismo mundial__A2022-2021-V49-1ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/Anuario_estatistico_de_turismo_2022_vol49_1ed__plan_excel/14. Dados gerais do turismo mundial__A2022-2021-V49-1ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2005_1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2005_1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2006.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2006.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2008.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2008.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2009 (1).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2009 (1).pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2009.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2009.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2010.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2010.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2011.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2011.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2017 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2017 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2018-ano_base_2017_divulgalcao_internet-1 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2018-ano_base_2017_divulgalcao_internet-1 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2019_-_ano_base_2018_2-edicao-1 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2019_-_ano_base_2018_2-edicao-1 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/01. a 03. Chegadas de turistas internacionais ao Brasil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/01. a 03. Chegadas de turistas internacionais ao Brasil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/04. Estudo da demanda turística internacional__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/04. Estudo da demanda turística internacional__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/05. Eventos internacionais no Brasil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/05. Eventos internacionais no Brasil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/06. a 09. Movimentação de passageiros em Aeroportos do Brasil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/06. a 09. Movimentação de passageiros em Aeroportos do Brasil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/10. Movimentação de passageiros em rodoviárias do Basil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/10. Movimentação de passageiros em rodoviárias do Basil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/11. Equip. e Prest. de serviços turísticos - Cadastur__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/11. Equip. e Prest. de serviços turísticos - Cadastur__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/12. Panorama econômico do turismo no Brasil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/12. Panorama econômico do turismo no Brasil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/13. Indicadores socioeconômicos - Brasil__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/13. Indicadores socioeconômicos - Brasil__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/14. Dados gerais do turismo mundial__A2021-2020-V48-2ed.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_de_turismo_2021_vol48_2ed__plan_excel (2)/14. Dados gerais do turismo mundial__A2021-2020-V48-2ed.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/anuario-estatistico-turismo/anuario_estatistico_turismo_2016_2 (2).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/anuario-estatistico-turismo/anuario_estatistico_turismo_2016_2 (2).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional-fichas_sinteses_2010-2014.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional-fichas_sinteses_2010-2014.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional-fichas_sinteses_2013-2017.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional-fichas_sinteses_2013-2017.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2006-2012.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2006-2012.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2012-2016_versao_ampliada.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2012-2016_versao_ampliada.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_ufs_agregado_do_periodo_2012-2016.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_ufs_agregado_do_periodo_2012-2016.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_1994-1998.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_1994-1998.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_1995-1999.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_1995-1999.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_1996-2000.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_1996-2000.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_1997-2001.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_1997-2001.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_2000-2002.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_2000-2002.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2004-2010.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2004-2010.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2005-2011.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2005-2011.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2007_2013.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2007_2013.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2011_2015.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_fichas_sinteses_2011_2015.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/demandaturististicainternacional2003_29_06_06.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/demandaturististicainternacional2003_29_06_06.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/ficha_sintese_2014-2018_formato_excel_xlsx (1).zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/ficha_sintese_2014-2018_formato_excel_xlsx (1).zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3).zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/demanda-turistica-internacional/fichas_sinteses_-_2015-2019_divulgacao_1 (3).zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/fontes-base-dados.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/fontes-base-dados.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/paises-continentes-codigos-idiomas/paises-codigos.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/paises-continentes-codigos-idiomas/paises-continentes.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/paises-continentes-codigos-idiomas/paises-continentes.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/paises-continentes-codigos-idiomas/paises-idiomas.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/dados-originais/paises-continentes-codigos-idiomas/paises-idiomas.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/paises-continentes-codigos-idiomas/paises-idiomas.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/Dados Originais/uf-regioes-brasil/uf-regioes-brasil-siglas.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/MER/wisetour-mer.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/MER/wisetour-mer.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Database/MER/wisetour-mer.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../Database/MER/wisetour-mer.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Logs/src/main/java/wise/tour/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Logs/src/main/java/wise/tour/Log.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -231,17 +32,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.ETL [clean].executor": "Run",
-    "Maven.ETL [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging Back-end",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/leosa/OneDrive/Área de Trabalho/WiseTour/back-end/leitura-arquivos-excel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.ETL [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ETL [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Back-end&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/phelipe-bruione/Desktop/ProjetoPi/2sem/WiseTour/Back-end/ETL&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tour.wise.Main" />
