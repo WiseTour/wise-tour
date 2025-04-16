@@ -19,7 +19,7 @@ public class Perfil_Estimado_Visitantes {
     private String recomendaria_viagem_brasil;
     private Double nivel_satisfacao;
     private String servico_agencia_turismo;
-    private Motivo_Viagem motivo_viagem;
+    private String motivo_viagem;
     private Tipo_Hospedagem tipo_hospedagem;
     private Relatorio_Turismo_Brasil relatorio_turismo_brasil;
     private List<Avaliacao_Viagem_Setor> avaliacoes_viagem;
@@ -28,7 +28,7 @@ public class Perfil_Estimado_Visitantes {
     public Perfil_Estimado_Visitantes() {
     }
 
-    public Perfil_Estimado_Visitantes(Integer id_perfil_estimado_visistantes, Unidade_Federativa_Brasil unidade_federativa_brasil, String genero, Integer total_turistas, String faixa_etaria, String escolaridade, String composicao_grupo_familiar, String fonte_informacao_viagem, String frequencia_visitas, String intencao_retorno, String recomendaria_viagem_brasil, Double nivel_satisfacao, String servico_agencia_turismo, Motivo_Viagem motivo_viagem, Tipo_Hospedagem tipo_hospedagem, Relatorio_Turismo_Brasil relatorio_turismo_brasil, List<Avaliacao_Viagem_Setor> avaliacoes_viagem, List<Servico_Adquirido_Fora_Brasil> lista_servicos_adquiridos_fora_brasil) {
+    public Perfil_Estimado_Visitantes(Integer id_perfil_estimado_visistantes, Unidade_Federativa_Brasil unidade_federativa_brasil, String genero, Integer total_turistas, String faixa_etaria, String escolaridade, String composicao_grupo_familiar, String fonte_informacao_viagem, String frequencia_visitas, String intencao_retorno, String recomendaria_viagem_brasil, Double nivel_satisfacao, String servico_agencia_turismo, String motivo_viagem, Tipo_Hospedagem tipo_hospedagem, Relatorio_Turismo_Brasil relatorio_turismo_brasil, List<Avaliacao_Viagem_Setor> avaliacoes_viagem, List<Servico_Adquirido_Fora_Brasil> lista_servicos_adquiridos_fora_brasil) {
         this.id_perfil_estimado_visistantes = id_perfil_estimado_visistantes;
         this.unidade_federativa_brasil = unidade_federativa_brasil;
         this.genero = genero;
@@ -153,11 +153,11 @@ public class Perfil_Estimado_Visitantes {
         this.servico_agencia_turismo = servico_agencia_turismo;
     }
 
-    public Motivo_Viagem getMotivo_viagem() {
+    public String getMotivo_viagem() {
         return motivo_viagem;
     }
 
-    public void setMotivo_viagem(Motivo_Viagem motivo_viagem) {
+    public void setMotivo_viagem(String motivo_viagem) {
         this.motivo_viagem = motivo_viagem;
     }
 
@@ -185,12 +185,12 @@ public class Perfil_Estimado_Visitantes {
         this.avaliacoes_viagem = avaliacoes_viagem;
     }
 
-    public List<Servico_Adquirido_Fora_Brasil> getServicos_adquiridos_fora_brasil() {
+    public List<Servico_Adquirido_Fora_Brasil> getLista_servicos_adquiridos_fora_brasil() {
         return lista_servicos_adquiridos_fora_brasil;
     }
 
-    public void setServicos_adquiridos_fora_brasil(List<Servico_Adquirido_Fora_Brasil> servicos_adquiridos_fora_brasil) {
-        this.lista_servicos_adquiridos_fora_brasil = servicos_adquiridos_fora_brasil;
+    public void setLista_servicos_adquiridos_fora_brasil(List<Servico_Adquirido_Fora_Brasil> lista_servicos_adquiridos_fora_brasil) {
+        this.lista_servicos_adquiridos_fora_brasil = lista_servicos_adquiridos_fora_brasil;
     }
 
     @Override
@@ -209,11 +209,11 @@ public class Perfil_Estimado_Visitantes {
                 ", recomendaria_viagem_brasil='" + recomendaria_viagem_brasil + '\'' +
                 ", nivel_satisfacao=" + nivel_satisfacao +
                 ", servico_agencia_turismo='" + servico_agencia_turismo + '\'' +
-                ", motivo_viagem=" + motivo_viagem +
+                ", motivo_viagem='" + motivo_viagem + '\'' +
                 ", tipo_hospedagem=" + tipo_hospedagem +
                 ", relatorio_turismo_brasil=" + relatorio_turismo_brasil +
                 ", avaliacoes_viagem=" + avaliacoes_viagem +
-                ", servicos_adquiridos_fora_brasil=" + lista_servicos_adquiridos_fora_brasil +
+                ", lista_servicos_adquiridos_fora_brasil=" + lista_servicos_adquiridos_fora_brasil +
                 '}';
     }
 }
