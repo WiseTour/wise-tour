@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tour/wise/Extract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea/.idea.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Back-end.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Logs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Logs/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +38,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Back-end",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/leosa/OneDrive/Área de Trabalho/WiseTour/Back-end/leitura-arquivos-excel"
+    "last_opened_file_path": "/home/phelipe-bruione/Desktop/ProjetoPi/2sem/WiseTour/Back-end/ETL"
   }
 }]]></component>
   <component name="RunManager">
