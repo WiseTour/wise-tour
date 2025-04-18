@@ -1,5 +1,6 @@
 package tour.wise.etl;
 
+import tour.wise.dao.relatorio_turismo_brasil.Relatorio_Turismo_Brasil;
 import tour.wise.service.Service;
 import tour.wise.util.Util;
 
@@ -21,24 +22,36 @@ public class Relatorio_Turismo_Brasil_ETL {
 
         // Listando nomes dos arquivos
 
-        List<String> filesName = util.getAllFilesName("../../database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2015-2019/");
+        String fileName = "../../database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2015-2019/05 - Ficha Síntese Países 2015-2019_DIVULGAÇÃO.xlsx";
 
         // Listando os caminhos de cada arquivo
-        List<Path> paths = new ArrayList<>();
-        for (String fileName : filesName) {
-            paths.add(Path.of(fileName));
-        }
+
+        Path path = Path.of(fileName);
 
         // Carregando os arquivos excel
 
-        List<InputStream> excelFiles = new ArrayList<>();
+        InputStream excelFile = Files.newInputStream(path);
 
-        for (Path path : paths) {
-            excelFiles.add(Files.newInputStream(path));
-        }
+        List<Object> data_perfil = new ArrayList<>();
 
         // Extraindo dados dos arquivos
-        List<List<Object>> data_perfil = service.extract(filesName.get(4), excelFiles.get(4), 0, 0, 2, List.of("String", "String"));
+
+        data_perfil.add(service.extract(fileName, excelFile, 0, 0, 2, List.of("String", "String")));
+
+        List<Relatorio_Turismo_Brasil> pessoas = service.extractRange(
+                fileName,
+                excelFile,
+                0, // número da planilha
+                6, // começa da linha 2 (inclusive)
+                10, // vai até a linha 10 (inclusive)
+                List.of(1, 3, 4, 5, 6, 7), // colunas específicas: nome, idade, ativo (exemplo)
+                List.of("string", "numeric", "numeric", "numeric", "numeric", "numeric"),
+                linha -> new List<Object>((String) linha.get(0), (Double) linha.get(1), (Boolean) linha.get(2))
+        );
+
+
+
+
 
 
         // Fechando o arquivo após a extração
