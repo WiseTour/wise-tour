@@ -1,14 +1,11 @@
 
 function cadastrar() {
-  // aguardar();
 
-  //Recupere o valor da nova input pelo nome do id
-  // Agora vá para o método fetch logo abaixo
   var nomeCompletoVar = nome_completo_input.value;
   var emailVar = email_input.value;
   var numeroUsuarioVar = numero_usuario_input.value;
 
-  // Verificando se há algum campo em branco
+
   if (nomeCompletoVar == "" || emailVar == "" || numeroUsuarioVar == "") {
     cardErro.style.display = "block";
     mensagem.innerHTML =
@@ -43,8 +40,7 @@ function cadastrar() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
+
       nomeServer: nomeCompletoVar,
       emailServer: emailVar,
       numeroUsuarioServer: numeroUsuarioVar,
@@ -57,7 +53,7 @@ function cadastrar() {
         const popup = document.getElementById("popUpCadastro");
         const overlay = document.getElementById("overlay");
         
-        // Adiciona classe ao body para prevenir scroll
+
         document.body.classList.add('popup-active');
         
         popup.style.display = "block";
