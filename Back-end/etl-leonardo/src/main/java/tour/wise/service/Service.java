@@ -135,8 +135,6 @@ public class Service {
     }
 
 
-
-
     public  <T> List<T> extractRange(
             Workbook workbook,
             Integer sheetNumber,
@@ -277,7 +275,7 @@ public class Service {
 
 
 
-    private static Integer parseToInteger(Object obj) {
+    public Integer parseToInteger(Object obj) {
         if (obj == null) return 0;
         try {
             return (int) Double.parseDouble(obj.toString());
