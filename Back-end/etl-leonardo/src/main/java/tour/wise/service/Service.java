@@ -1,7 +1,10 @@
 package tour.wise.service;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -83,10 +86,59 @@ public class Service {
             throw new RuntimeException(e);
         }
     }
+    public <T> List<T> extractRangeFromAllSheets(
+            String fileName,
+            int startRow,
+            int endRow,
+            List<Integer> columns,
+            List<String> types,
+            Function<List<Object>, T> mapper
+    ) {
+        List<T> data = new ArrayList<>();
+
+        try (Workbook workbook = loadWorkbook(fileName)) {
+
+            int totalSheets = workbook.getNumberOfSheets();
+            System.out.println("\nIniciando leitura de " + totalSheets + " planilhas...\n");
+
+            for (int sheetIndex = 0; sheetIndex < totalSheets; sheetIndex++) {
+                Sheet sheet = workbook.getSheetAt(sheetIndex);
+                String sheetName = workbook.getSheetName(sheetIndex);
+                System.out.println("Lendo planilha: " + sheetName);
+
+                for (Row row : sheet) {
+                    int rowNum = row.getRowNum();
+
+                    if (rowNum < startRow || rowNum > endRow) {
+                        continue;
+                    }
+
+                    List<Object> linha = new ArrayList<>();
+
+                    for (int i = 0; i < columns.size(); i++) {
+                        int colIndex = columns.get(i);
+                        String type = types.get(i);
+
+                        linha.add(transformTypeCell(row.getCell(colIndex), type));
+                    }
+
+                    data.add(mapper.apply(linha));
+                }
+            }
+
+            System.out.println("\nLeitura de todas as planilhas finalizada\n");
+            return data;
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
 
     public  <T> List<T> extractRange(
-            String fileName,
-            InputStream file,
+            Workbook workbook,
             Integer sheetNumber,
             int startRow,
             int endRow,
@@ -94,12 +146,7 @@ public class Service {
             List<String> types, // Tipos das colunas (na mesma ordem de columns)
             Function<List<Object>, T> mapper
     ) {
-        try {
-            System.out.println("\nIniciando leitura do arquivo %s\n".formatted(fileName));
-
-            Workbook workbook = fileName.endsWith(".xlsx") ?
-                    new XSSFWorkbook(file) :
-                    new HSSFWorkbook(file);
+        try (workbook){
 
             Sheet sheet = workbook.getSheetAt(sheetNumber);
             List<T> data = new ArrayList<>();
@@ -125,7 +172,8 @@ public class Service {
             }
 
             workbook.close();
-            System.out.println("\nLeitura do arquivo finalizada\n");
+
+            System.out.println("\nLeitura finalizada\n");
 
             return data;
 
@@ -134,6 +182,59 @@ public class Service {
         }
     }
 
+
+    public static Workbook loadWorkbook(String fileName) {
+        try {
+            Path path = Path.of(fileName);
+            InputStream excelFile = Files.newInputStream(path);
+
+            System.out.println("\nIniciando leitura do arquivo %s\n".formatted(fileName));
+
+            return fileName.endsWith(".xlsx") ?
+                    new XSSFWorkbook(excelFile) :
+                    new HSSFWorkbook(excelFile);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public String getSheetName(String fileName, int sheetNumber) {
+
+        try(Workbook workbook = loadWorkbook(fileName)) {
+
+            int numeroDePlanilhas = workbook.getNumberOfSheets();
+
+            if (sheetNumber >= 0 && sheetNumber < numeroDePlanilhas) {
+                return workbook.getSheetName(sheetNumber);
+            } else {
+                System.err.println("Índice fora do intervalo. Total de planilhas: " + numeroDePlanilhas);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public Integer getSheetNumber(String fileName) {
+
+        try(Workbook workbook = loadWorkbook(fileName)) {
+
+            Integer sheetNumber = workbook.getNumberOfSheets();
+
+
+                return sheetNumber;
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
     private static Object transformTypeCell(Cell cell, String tipo) {
         if (cell == null) {
@@ -174,48 +275,7 @@ public class Service {
         }
     }
 
-    public List<Meio_Hospedagem> transformMeioHospedagem(List<List<Object>> data_hospedagem){
 
-        List<Meio_Hospedagem> meios_hospedagem = new ArrayList<>();
-
-        for (List<Object> line : data_hospedagem) {
-            meios_hospedagem.add(new Meio_Hospedagem(line.get(1).toString(), null, transformDate(line.get(8).toString()) , null,parseToInteger(line.get(16)), parseToInteger(line.get(17)), parseToInteger(line.get(18)), parseToInteger(line.get(19)), line.get(15).toString(), line.get(6).toString(), "Ministério do Turismo"));
-        }
-
-        return meios_hospedagem;
-    }
-
-    private static LocalDate transformDate(Object dateObject) {
-        if (dateObject == null) return null;
-
-        Date date = null;
-
-        if (dateObject instanceof Date) {
-            date = (Date) dateObject;
-        } else if (dateObject instanceof String) {
-            String str = ((String) dateObject).trim();
-
-            // Tenta primeiro no formato padrão "dd/MM/yyyy"
-            try {
-                SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
-                date = sdf1.parse(str);
-            } catch (ParseException | java.text.ParseException e1) {
-                // Tenta o formato do toString(): "Tue Mar 18 00:00:00 BRT 1958"
-                try {
-                    SimpleDateFormat sdf2 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
-                    date = sdf2.parse(str);
-                } catch (ParseException | java.text.ParseException e2) {
-                    throw new RuntimeException(e2);
-                }
-            }
-        }
-
-        if (date != null) {
-            return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        }
-
-        return null;
-    }
 
     private static Integer parseToInteger(Object obj) {
         if (obj == null) return 0;
