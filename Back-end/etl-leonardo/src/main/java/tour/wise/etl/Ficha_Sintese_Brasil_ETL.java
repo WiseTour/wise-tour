@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static tour.wise.service.Service.loadWorkbook;
 
@@ -128,224 +129,112 @@ public class Ficha_Sintese_Brasil_ETL {
         return data;
     }
 
-    private Ficha_Sintese_Brasil transform(List<List<List<Object>>> data){
-
-
-
-        Ficha_Sintese_Brasil ficha_sintese_brasil = new Ficha_Sintese_Brasil(
-                service.parseToInteger(data.get(1).get(0).get(1).toString()),
-                List.of(
-                        new Motivo_Viagem(
-                                data.get(2).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(2).get(0).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(2).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(2).get(1).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(2).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(2).get(2).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(3).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(3).get(0).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(3).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(3).get(1).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(3).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(3).get(2).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(3).get(3).get(0).toString(),
-                                Double.parseDouble(data.get(3).get(3).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                data.get(3).get(4).get(0).toString(),
-                                Double.parseDouble(data.get(3).get(4).get(1).toString())
-                        ),
-                        new Motivo_Viagem(
-                                "Diversão Noturna",
-                                Double.parseDouble(data.get(3).get(5).get(1).toString())
-                        )
-                ),
-                List.of(
-                        new Composicao_Grupo_Viagem(
-                                data.get(4).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(4).get(0).get(1).toString())
-                        ),
-                        new Composicao_Grupo_Viagem(
-                                data.get(4).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(4).get(1).get(1).toString())
-                        ),
-                        new Composicao_Grupo_Viagem(
-                                data.get(4).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(4).get(2).get(1).toString())
-                        ),new Composicao_Grupo_Viagem(
-                                data.get(4).get(4).get(0).toString(),
-                                Double.parseDouble(data.get(4).get(1).get(1).toString())
-                        ),
-                        new Composicao_Grupo_Viagem(
-                                data.get(4).get(4).get(0).toString(),
-                                Double.parseDouble(data.get(4).get(4).get(1).toString())
-                        )
-                ),
-
-                List.of(
-                        new Gasto_Medio_Per_Capita_Brasil_Motivo(
-                                data.get(5).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(5).get(0).get(1).toString())
-                        ),
-                        new Gasto_Medio_Per_Capita_Brasil_Motivo(
-                                data.get(5).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(5).get(1).get(1).toString())
-                        ),
-                        new Gasto_Medio_Per_Capita_Brasil_Motivo(
-                                data.get(5).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(5).get(2).get(1).toString())
-                        )
-                ),
-
-                List.of(
-                        new Destinos_Mais_Visistados_Por_Motivo(
-                                "Lazer",
-                                List.of(
-                                        new Destino_Mais_Visistado(
-                                                data.get(6).get(0).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(6).get(0).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(6).get(1).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(6).get(1).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(6).get(2).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(6).get(2).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(6).get(3).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(6).get(3).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(6).get(4).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(6).get(4).get(1).toString())
-                                        )
-                                )
-
-                        ),
-                        new Destinos_Mais_Visistados_Por_Motivo(
-                                "Negócios, eventos e convenções",
-                                List.of(
-                                        new Destino_Mais_Visistado(
-                                                data.get(7).get(0).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(7).get(0).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(7).get(1).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(7).get(1).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(7).get(2).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(7).get(2).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(7).get(3).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(7).get(3).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(7).get(4).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(7).get(4).get(1).toString())
-                                        )
-                                )
-
-                        ),
-                        new Destinos_Mais_Visistados_Por_Motivo(
-                                "Outros motivos",
-                                List.of(
-                                        new Destino_Mais_Visistado(
-                                                data.get(8).get(0).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(8).get(0).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(8).get(1).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(8).get(1).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(8).get(2).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(8).get(2).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(8).get(3).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(8).get(3).get(1).toString())
-                                        ),
-                                        new Destino_Mais_Visistado(
-                                                data.get(8).get(4).get(0).toString().split(" - ")[1],
-                                                Double.parseDouble(data.get(8).get(4).get(1).toString())
-                                        )
-                                )
-
-                        )
-
-                ),
-                List.of(
-                        new Fonte_Informacao(
-                                data.get(9).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(0).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(1).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(2).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(3).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(3).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(4).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(4).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(5).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(5).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(6).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(6).get(1).toString())
-                        ),
-                        new Fonte_Informacao(
-                                data.get(9).get(7).get(0).toString(),
-                                Double.parseDouble(data.get(9).get(7).get(1).toString())
-                        )
-
-                ),
-                List.of(
-                        new Utilizacao_Agencia_Viagem(
-                                data.get(10).get(0).get(0).toString(),
-                                Double.parseDouble(data.get(10).get(0).get(1).toString())
-                        ),
-                        new Utilizacao_Agencia_Viagem(
-                                data.get(10).get(1).get(0).toString(),
-                                Double.parseDouble(data.get(10).get(1).get(1).toString())
-                        ),
-                        new Utilizacao_Agencia_Viagem(
-                                data.get(10).get(2).get(0).toString(),
-                                Double.parseDouble(data.get(10).get(2).get(1).toString())
-                        )
-
-
-                )
-
+    private Ficha_Sintese_Brasil transform(List<List<List<Object>>> data) {
+        return new Ficha_Sintese_Brasil(
+                extractAnoPesquisa(data),
+                extractMotivosViagem(data),
+                extractComposicaoGrupo(data),
+                extractGastoMedioMotivo(data),
+                extractDestinosMaisVisitados(data),
+                extractFontesInformacao(data),
+                extractUsoAgenciaViagem(data)
         );
+    }
 
-        return ficha_sintese_brasil;
-    };
+    private Integer extractAnoPesquisa(List<List<List<Object>>> data) {
+        return service.parseToInteger(data.get(1).get(0).get(1).toString());
+    }
+
+    private List<Motivo_Viagem> extractMotivosViagem(List<List<List<Object>>> data) {
+        List<Motivo_Viagem> motivos = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            motivos.add(createMotivoViagem(data.get(2).get(i)));
+        }
+        for (int i = 0; i < 5; i++) {
+            motivos.add(createMotivoViagem(data.get(3).get(i)));
+        }
+        motivos.add(new Motivo_Viagem(
+                "Diversão Noturna",
+                Double.parseDouble(data.get(3).get(5).get(1).toString())
+        ));
+        return motivos;
+    }
+
+    private Motivo_Viagem createMotivoViagem(List<Object> values) {
+        return new Motivo_Viagem(
+                values.get(0).toString(),
+                Double.parseDouble(values.get(1).toString())
+        );
+    }
+
+    private List<Composicao_Grupo_Viagem> extractComposicaoGrupo(List<List<List<Object>>> data) {
+        return data.get(4).stream()
+                .map(this::createComposicaoGrupo)
+                .collect(Collectors.toList());
+    }
+
+    private Composicao_Grupo_Viagem createComposicaoGrupo(List<Object> values) {
+        return new Composicao_Grupo_Viagem(
+                values.get(0).toString(),
+                Double.parseDouble(values.get(1).toString())
+        );
+    }
+
+    private List<Gasto_Medio_Per_Capita_Brasil_Motivo> extractGastoMedioMotivo(List<List<List<Object>>> data) {
+        return data.get(5).stream()
+                .map(entry -> new Gasto_Medio_Per_Capita_Brasil_Motivo(
+                        entry.get(0).toString(),
+                        Double.parseDouble(entry.get(1).toString())))
+                .collect(Collectors.toList());
+    }
+
+    private List<Destinos_Mais_Visistados_Por_Motivo> extractDestinosMaisVisitados(List<List<List<Object>>> data) {
+        String[] motivos = {
+                "Lazer",
+                "Negócios, eventos e convenções",
+                "Outros motivos"
+        };
+
+        List<Destinos_Mais_Visistados_Por_Motivo> destinosPorMotivo = new ArrayList<>();
+
+        for (int i = 0; i < motivos.length; i++) {
+            destinosPorMotivo.add(
+                    new Destinos_Mais_Visistados_Por_Motivo(
+                            motivos[i],
+                            createDestinos(data.get(6 + i))
+                    )
+            );
+        }
+
+        return destinosPorMotivo;
+    }
+
+    private List<Destino_Mais_Visistado> createDestinos(List<List<Object>> destinoData) {
+        return destinoData.stream()
+                .map(entry -> new Destino_Mais_Visistado(
+                        entry.get(0).toString().split(" - ")[1],
+                        Double.parseDouble(entry.get(1).toString())
+                ))
+                .collect(Collectors.toList());
+    }
+
+    private List<Fonte_Informacao> extractFontesInformacao(List<List<List<Object>>> data) {
+        return data.get(9).stream()
+                .map(entry -> new Fonte_Informacao(
+                        entry.get(0).toString(),
+                        Double.parseDouble(entry.get(1).toString())))
+                .collect(Collectors.toList());
+    }
+
+    private List<Utilizacao_Agencia_Viagem> extractUsoAgenciaViagem(List<List<List<Object>>> data) {
+        return data.get(10).stream()
+                .map(entry -> new Utilizacao_Agencia_Viagem(
+                        entry.get(0).toString(),
+                        Double.parseDouble(entry.get(1).toString())))
+                .collect(Collectors.toList());
+    }
+
+
 
 
 }
