@@ -5,6 +5,7 @@ import java.util.List;
 public class Ficha_Sintese_Brasil {
     private Integer ano;
     private List<Motivo_Viagem> motivos;
+    private List<Motivacao_Viagem_Lazer> motivacoes_viagem_lazer;
     private List<Composicao_Grupo_Viagem> composicao_grupos_viagem;
     private List<Gasto_Medio_Per_Capita_Brasil_Motivo> gastos_medio_per_capita_brasil_motivo;
     private List<Destinos_Mais_Visistados_Por_Motivo> destinos_mais_visistados_por_motivo;
@@ -14,9 +15,10 @@ public class Ficha_Sintese_Brasil {
     public Ficha_Sintese_Brasil() {
     }
 
-    public Ficha_Sintese_Brasil(Integer ano, List<Motivo_Viagem> motivos, List<Composicao_Grupo_Viagem> composicao_grupos_viagem, List<Gasto_Medio_Per_Capita_Brasil_Motivo> gastos_medio_per_capita_brasil_motivo, List<Destinos_Mais_Visistados_Por_Motivo> destinos_mais_visistados_por_motivo, List<Fonte_Informacao> fontes_informacao, List<Utilizacao_Agencia_Viagem> utilizacao_agencia_viagem) {
+    public Ficha_Sintese_Brasil(Integer ano, List<Motivo_Viagem> motivos, List<Motivacao_Viagem_Lazer> motivacao_viagem_lazers, List<Composicao_Grupo_Viagem> composicao_grupos_viagem, List<Gasto_Medio_Per_Capita_Brasil_Motivo> gastos_medio_per_capita_brasil_motivo, List<Destinos_Mais_Visistados_Por_Motivo> destinos_mais_visistados_por_motivo, List<Fonte_Informacao> fontes_informacao, List<Utilizacao_Agencia_Viagem> utilizacao_agencia_viagem) {
         this.ano = ano;
         this.motivos = motivos;
+        this.motivacoes_viagem_lazer = motivacao_viagem_lazers;
         this.composicao_grupos_viagem = composicao_grupos_viagem;
         this.gastos_medio_per_capita_brasil_motivo = gastos_medio_per_capita_brasil_motivo;
         this.destinos_mais_visistados_por_motivo = destinos_mais_visistados_por_motivo;
@@ -38,6 +40,14 @@ public class Ficha_Sintese_Brasil {
 
     public void setMotivos(List<Motivo_Viagem> motivos) {
         this.motivos = motivos;
+    }
+
+    public List<Motivacao_Viagem_Lazer> getMotivacoes_viagem_lazer() {
+        return motivacoes_viagem_lazer;
+    }
+
+    public void setMotivacoes_viagem_lazer(List<Motivacao_Viagem_Lazer> motivacao_viagem_lazers) {
+        this.motivacoes_viagem_lazer = motivacao_viagem_lazers;
     }
 
     public List<Composicao_Grupo_Viagem> getComposicao_grupos_viagem() {
@@ -85,6 +95,7 @@ public class Ficha_Sintese_Brasil {
         return "Ficha_Sintese_Brasil{" +
                 "ano=" + ano +
                 ", motivos=" + motivos +
+                ", motivacao_viagem_lazers=" + motivacoes_viagem_lazer +
                 ", composicao_grupos_viagem=" + composicao_grupos_viagem +
                 ", gastos_medio_per_capita_brasil_motivo=" + gastos_medio_per_capita_brasil_motivo +
                 ", destinos_mais_visistados_por_motivo=" + destinos_mais_visistados_por_motivo +

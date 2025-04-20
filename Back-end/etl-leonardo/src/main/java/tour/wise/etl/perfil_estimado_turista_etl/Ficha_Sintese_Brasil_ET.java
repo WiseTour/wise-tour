@@ -126,6 +126,7 @@ public class Ficha_Sintese_Brasil_ET {
         return new Ficha_Sintese_Brasil(
                 transformAno(data, 1),
                 transformMotivosViagem(data, 2),
+                transformMotivacaoViagemLazer(data, 3),
                 transformComposicoesGrupo(data, 4),
                 transformGastosMedioMotivo(data, 5),
                 transformDestinosMaisVisitadosPorMotivo(data, 6),
@@ -141,32 +142,40 @@ public class Ficha_Sintese_Brasil_ET {
     protected List<Motivo_Viagem> transformMotivosViagem(List<List<List<Object>>> data, Integer index) {
         List<Motivo_Viagem> motivos = new ArrayList<>();
 
-        // Adiciona 3 itens de data[2]
+
         for (int i = 0; i < 3; i++) {
-            motivos.add(createMotivoViagem(data.get(index).get(i)));
+            motivos.add(
+                    new Motivo_Viagem(
+                            data.get(index).get(i).get(0).toString(),
+                            Double.parseDouble(data.get(index).get(i).get(1).toString()
+                            )
+                    )
+            );
+
         }
 
-        // Adiciona 5 itens de data[3]
-        for (int i = 0; i < 5; i++) {
-            motivos.add(createMotivoViagem(data.get(index+1).get(i)));
-        }
-
-        // Adiciona manualmente "Diversão Noturna"
-        motivos.add(new Motivo_Viagem(
-                "Outros motivos lazer",
-                Double.parseDouble(data.get(index+1).get(5).get(1).toString())
-        ));
 
         return motivos;
     }
 
 
-    protected Motivo_Viagem createMotivoViagem(List<Object> values) {
-        return new Motivo_Viagem(
-                values.get(0).toString(),
-                Double.parseDouble(values.get(1).toString())
-        );
+
+    protected List<Motivacao_Viagem_Lazer> transformMotivacaoViagemLazer(List<List<List<Object>>> data, Integer index) {
+        List<Motivacao_Viagem_Lazer> motivacoes_viagem_lazer = new ArrayList<>();
+
+        for (int i = 0; i <= 5; i++) {
+            motivacoes_viagem_lazer.add(
+                    new Motivacao_Viagem_Lazer(
+                            data.get(index).get(i).get(0).toString(),
+                            Double.parseDouble(data.get(index).get(i).get(1).toString())
+                    )
+
+            );
+        }
+
+        return motivacoes_viagem_lazer;
     }
+
 
     protected List<Composicao_Grupo_Viagem> transformComposicoesGrupo(List<List<List<Object>>> data, Integer index) {
         return data.get(index).stream()

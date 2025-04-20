@@ -139,6 +139,7 @@ public class Ficha_Sintese_Pais_ET extends Ficha_Sintese_Brasil_ET {
                 extractNomePais(data, 0),
                 transformAno(data, 1),
                 transformMotivosViagem(data, 2),
+                transformMotivacaoViagemLazer(data, 3),
                 transformComposicoesGrupo(data, 4),
                 transformGastosMedioMotivo(data, 5),
                 transformDestinosMaisVisitadosPorMotivo(data, 6),

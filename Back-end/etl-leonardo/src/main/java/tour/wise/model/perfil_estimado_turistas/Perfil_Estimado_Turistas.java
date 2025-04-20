@@ -15,13 +15,14 @@ public class Perfil_Estimado_Turistas {
     private String fonte_informacao_viagem;
     private String servico_agencia_turismo;
     private String motivo_viagem;
+    private String motivacao_viagem_lazer;
 
 
 
     public Perfil_Estimado_Turistas() {
     }
 
-    public Perfil_Estimado_Turistas(String fonte_perfil, String fonte_chegadas, Integer total_chegadas, Integer ano, String unidade_federativa_destino, String pais_origem, String genero, String faixa_etaria, String composicao_grupo_familiar, String fonte_informacao_viagem, String servico_agencia_turismo, String motivo_viagem) {
+    public Perfil_Estimado_Turistas(String fonte_perfil, String fonte_chegadas, Integer total_chegadas, Integer ano, String unidade_federativa_destino, String pais_origem, String genero, String faixa_etaria, String composicao_grupo_familiar, String fonte_informacao_viagem, String servico_agencia_turismo, String motivo_viagem, String motivacao_viagem_lazer) {
         this.fonte_perfil = fonte_perfil;
         this.fonte_chegadas = fonte_chegadas;
         this.total_chegadas = total_chegadas;
@@ -34,6 +35,7 @@ public class Perfil_Estimado_Turistas {
         this.fonte_informacao_viagem = fonte_informacao_viagem;
         this.servico_agencia_turismo = servico_agencia_turismo;
         this.motivo_viagem = motivo_viagem;
+        this.motivacao_viagem_lazer = motivacao_viagem_lazer;
     }
 
     public Integer getId_perfil_estimado_visistantes() {
@@ -140,9 +142,17 @@ public class Perfil_Estimado_Turistas {
         this.motivo_viagem = motivo_viagem;
     }
 
+    public String getMotivacao_viagem_lazer() {
+        return motivacao_viagem_lazer;
+    }
+
+    public void setMotivacao_viagem_lazer(String motivacao_viagem_lazer) {
+        this.motivacao_viagem_lazer = motivacao_viagem_lazer;
+    }
+
     @Override
     public String toString() {
-        return "Perfil_Estimado_Visitantes{" +
+        return "Perfil_Estimado_Turistas{" +
                 "id_perfil_estimado_visistantes=" + id_perfil_estimado_visistantes +
                 ", fonte_perfil='" + fonte_perfil + '\'' +
                 ", fonte_chegadas='" + fonte_chegadas + '\'' +
@@ -156,6 +166,7 @@ public class Perfil_Estimado_Turistas {
                 ", fonte_informacao_viagem='" + fonte_informacao_viagem + '\'' +
                 ", servico_agencia_turismo='" + servico_agencia_turismo + '\'' +
                 ", motivo_viagem='" + motivo_viagem + '\'' +
+                ", motivacao_viagem_lazer='" + motivacao_viagem_lazer + '\'' +
                 '}';
     }
 }

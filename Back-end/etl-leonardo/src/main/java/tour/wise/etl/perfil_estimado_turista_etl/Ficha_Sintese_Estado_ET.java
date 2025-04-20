@@ -140,6 +140,7 @@ public class Ficha_Sintese_Estado_ET extends Ficha_Sintese_Brasil_ET {
                 transformAno(data, 1),
                 trasnformPaisesOrigem(data, 2),
                 transformMotivosViagem(data, 3),
+                transformMotivacaoViagemLazer(data, 4),
                 transformComposicoesGrupo(data, 5),
                 transformGastosMedioMotivo(data, 6),
                 transformFontesInformacao(data, 8),
