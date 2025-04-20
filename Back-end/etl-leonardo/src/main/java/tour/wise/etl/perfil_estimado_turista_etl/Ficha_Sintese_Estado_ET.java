@@ -23,8 +23,9 @@ public class Ficha_Sintese_Estado_ET extends Ficha_Sintese_Brasil_ET {
     Workbook workbook;
 
 
-    @Override
-    public void extractTransform(String fileName) throws IOException {
+
+
+    public List<Ficha_Sintese_Estado> extractTransformFicha_Sintese_Estado(String fileName, Integer startCollun, Integer endCollun) throws IOException {
 
         // EXTRACT
 
@@ -32,7 +33,7 @@ public class Ficha_Sintese_Estado_ET extends Ficha_Sintese_Brasil_ET {
 
         List<List<List<List<Object>>>> data = new ArrayList<>();
         for(Integer i = 1; i < service.getSheetNumber(fileName); i++ ){
-            for(Integer j = 0; j <= 4; j++){
+            for(Integer j = startCollun; j <= endCollun; j++){
                 data.add(extract(
                         workbook,
                         fileName,
@@ -55,14 +56,8 @@ public class Ficha_Sintese_Estado_ET extends Ficha_Sintese_Brasil_ET {
             fichas_sintese_por_estado.add(transform(datum));
         }
 
-        System.out.println();
-        System.out.println("Ficha Sintese por Estado");
 
-        for (Ficha_Sintese_Brasil ficha_sintese_estado : fichas_sintese_por_estado) {
-            System.out.println(ficha_sintese_estado);
-        }
-
-
+    return fichas_sintese_por_estado;
 
     }
 

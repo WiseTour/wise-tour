@@ -20,13 +20,13 @@ public class Ficha_Sintese_Brasil_ET {
     Service service = new Service();
     Workbook workbook;
 
-    public void extractTransform( String fileName) throws IOException {
+    public List<Ficha_Sintese_Brasil> extractTransform( String fileName, Integer startCollun, Integer endCollun) throws IOException {
         ZipSecureFile.setMinInflateRatio(0.0001);
 
         workbook = loadWorkbook(fileName);
 
         List<List<List<List<Object>>>> data = new ArrayList<>();
-        for(Integer j = 0; j <= 4; j++){
+        for(Integer j = startCollun; j <= endCollun; j++){
             data.add(extract(
                     workbook,
                     1,
@@ -47,12 +47,7 @@ public class Ficha_Sintese_Brasil_ET {
             System.out.println(datum);
         }
 
-        System.out.println();
-        System.out.println("Ficha Sintese Brasil");
-
-        for (Ficha_Sintese_Brasil ficha_sintese_brasil : fichas_sintese_brasil) {
-            System.out.println(ficha_sintese_brasil);
-        }
+        return fichas_sintese_brasil;
 
     }
 

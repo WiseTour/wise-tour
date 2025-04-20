@@ -26,17 +26,12 @@ import org.apache.xmlbeans.impl.regex.ParseException;
 
 public class Service {
 
-    public List<List<Object>> extract(String fileName, InputStream file, Integer sheetNumber, Integer header, Integer colluns, List<String> types) {
+    public List<List<Object>> extract(String fileName, Integer sheetNumber, Integer header, Integer colluns, List<String> types) {
         try {
             System.out.printf("\nIniciando leitura do arquivo %s\n%n", fileName);
 
             // Criando um objeto Workbook a partir do arquivo recebido,
-            Workbook workbook;
-            if (fileName.endsWith(".xlsx")) {
-                workbook = new XSSFWorkbook(file); //.XLSX
-            } else {
-                workbook = new HSSFWorkbook(file); //.XLS
-            }
+            Workbook workbook = loadWorkbook(fileName);
 
             // Pegando a planilha referenciada em "sheetNumber" do arquivo
             Sheet sheet = workbook.getSheetAt(sheetNumber);
@@ -86,6 +81,8 @@ public class Service {
             throw new RuntimeException(e);
         }
     }
+
+
     public <T> List<T> extractRangeFromAllSheets(
             String fileName,
             int startRow,

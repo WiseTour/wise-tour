@@ -11,6 +11,10 @@ public class Pais {
     public Pais() {
     }
 
+    public Pais(String pais) {
+        this.pais = pais;
+    }
+
     public Pais(Integer id_pais, String pais, String continente, List<Idioma> idiomas) {
         this.id_pais = id_pais;
         this.pais = pais;

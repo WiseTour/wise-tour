@@ -17,6 +17,17 @@ public class Chegada_Turistas_Internacionais_Brasil {
     public Chegada_Turistas_Internacionais_Brasil() {
     }
 
+    public Chegada_Turistas_Internacionais_Brasil(Unidade_Federativa_Brasil destino, Pais pais_origem, String via_acesso, Integer mes, Integer ano, Integer chegadas, String fonte, Integer edicao) {
+        this.destino = destino;
+        this.pais_origem = pais_origem;
+        this.via_acesso = via_acesso;
+        this.mes = mes;
+        this.ano = ano;
+        this.chegadas = chegadas;
+        this.fonte = fonte;
+        this.edicao = edicao;
+    }
+
     public Unidade_Federativa_Brasil getDestino() {
         return destino;
     }

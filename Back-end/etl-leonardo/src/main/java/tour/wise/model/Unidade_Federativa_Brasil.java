@@ -8,6 +8,10 @@ public class Unidade_Federativa_Brasil{
     public Unidade_Federativa_Brasil() {
     }
 
+    public Unidade_Federativa_Brasil(String unidade_federativa) {
+        this.unidade_federativa = unidade_federativa;
+    }
+
     public Unidade_Federativa_Brasil(String sigla, String unidade_federativa, String regiao_brasil) {
         this.sigla = sigla;
         this.unidade_federativa = unidade_federativa;

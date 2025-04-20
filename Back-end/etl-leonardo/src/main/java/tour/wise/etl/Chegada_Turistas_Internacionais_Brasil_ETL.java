@@ -1,59 +1,78 @@
-//package tour.wise.etl;
-//
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.nio.file.Files;
-//import java.nio.file.Path;
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class Chegada_Turistas_Internacionais_Brasil_ETL {
-//    String baseDirectory = "../../database/dados-originais/chegada_turistas_ministerio_turismo/";
-//
-//    List<Chegadas_Turistas_Internacionais_Brasil> todasAsChegadas = new ArrayList<>();
-//
-//    ETL etl = new ETL();
-//
-//        for (int ano = 2021; ano <= 2024; ano++) {
-//        String fileName = baseDirectory + "chegadas_" + ano + ".xlsx";
-//
-//        List<Chegadas_Turistas_Internacionais_Brasil> chegadasAno = processaArquivo(fileName, etl, ano);
-//        todasAsChegadas.addAll(chegadasAno);
-//    }
-//
-//        System.out.println("Dados extraídos dos arquivos:");
-//        todasAsChegadas.forEach(System.out::println);
-//
-//    public static List<Chegadas_Turistas_Internacionais_Brasil> processaArquivo(String fileName, ETL etl, Integer edicao) {
-//        List<Chegadas_Turistas_Internacionais_Brasil> chegadas = new ArrayList<>();
-//
-//        try {
-//            Path caminho = Path.of(fileName);
-//            try (InputStream file = Files.newInputStream(caminho)) {
-//                List<List<Object>> dataChegadaTuristas = etl.extract(fileName, file, 0, 0, 12,
-//                        List.of("String", "Numeric", "String", "Numeric", "String", "Numeric", "String", "Numeric", "Numeric", "String", "Numeric", "Numeric"));
-//
-//                for (List<Object> line : dataChegadaTuristas) {
-//                    String pais = line.get(2).toString();
-//                    String uf = line.get(4).toString();
-//                    String via = line.get(6).toString();
-//                    Integer ano = Double.valueOf(line.get(8).toString()).intValue();
-//                    Integer mes = Double.valueOf(line.get(10).toString()).intValue();
-//                    Integer chegadasNum = Double.valueOf(line.get(11).toString()).intValue();
-//                    String fonte = "Ministério do Turismo";
-//
-//                    Chegadas_Turistas_Internacionais_Brasil chegada = new Chegadas_Turistas_Internacionais_Brasil(
-//                            uf, pais, via, mes, ano, chegadasNum, fonte, edicao);
-//
-//                    chegadas.add(chegada);
-//                }
-//            }
-//        } catch (IOException e) {
-//            System.err.println("Erro ao processar o arquivo: " + fileName + " - " + e.getMessage());
-//        }
-//
-//        return chegadas;
-//    }
-//}
-//
-//
+package tour.wise.etl;
+
+import org.apache.poi.openxml4j.util.ZipSecureFile;
+import org.apache.poi.ss.usermodel.Workbook;
+import tour.wise.model.Pais;
+import tour.wise.model.Unidade_Federativa_Brasil;
+import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Brasil;
+import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil.Ficha_Sintese_Brasil;
+import tour.wise.service.Service;
+import tour.wise.util.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+import static tour.wise.service.Service.loadWorkbook;
+
+public class Chegada_Turistas_Internacionais_Brasil_ETL {
+
+    Service service = new Service();
+
+    public List<Chegada_Turistas_Internacionais_Brasil> extractTransform(String fileName, Integer sheetNumber, Integer header, Integer colluns, List<String> types, String fonte, Integer edicao) throws IOException {
+
+        // EXTRACT
+        List<List<Object>> data = extract(fileName, sheetNumber, header, colluns, types);
+
+        // TRANSFORM
+
+        List<Chegada_Turistas_Internacionais_Brasil> chegadas_turistas_internacionais_brasil = transform(data, fonte, edicao);
+
+        System.out.println();
+        System.out.println("Chegadas");
+
+        for (Chegada_Turistas_Internacionais_Brasil chegada_turistas_internacionais_brasil : chegadas_turistas_internacionais_brasil) {
+            System.out.println(chegada_turistas_internacionais_brasil);
+        }
+
+        return chegadas_turistas_internacionais_brasil;
+
+    }
+
+    public List<List<Object>> extract(String fileName, Integer sheetNumber, Integer header, Integer colluns, List<String> types) {
+
+        List<List<Object>> data = service.extract(fileName, sheetNumber, header, colluns, types);
+
+        System.out.println("\nETL finalizado com sucesso.");
+        return data;
+
+    }
+
+    public List<Chegada_Turistas_Internacionais_Brasil> transform( List<List<Object>> data, String fonte, Integer edicao) {
+
+        List<Chegada_Turistas_Internacionais_Brasil> chegadas_turistas_internacionais_brasil = new ArrayList<>();
+
+        for (List<Object> datum : data) {
+            Pais pais_origem = new Pais(datum.get(2).toString());
+            Unidade_Federativa_Brasil destino = new Unidade_Federativa_Brasil(datum.get(4).toString());
+            String via = datum.get(6).toString();
+            Integer ano = Double.valueOf(datum.get(8).toString()).intValue();
+            Integer mes = Double.valueOf(datum.get(10).toString()).intValue();
+            Integer chegadasNum = Double.valueOf(datum.get(11).toString()).intValue();
+            chegadas_turistas_internacionais_brasil.add(new Chegada_Turistas_Internacionais_Brasil(destino, pais_origem, via, ano, mes, chegadasNum, fonte, edicao));
+        }
+
+
+        return chegadas_turistas_internacionais_brasil;
+    }
+
+
+
+
+}
+
+

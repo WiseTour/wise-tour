@@ -21,8 +21,8 @@ public class Ficha_Sintese_Pais_ET extends Ficha_Sintese_Brasil_ET {
 
     Workbook workbook;
 
-    @Override
-    public void extractTransform(String fileName) throws IOException {
+
+    public List<Ficha_Sintese_Pais> extractTransformFicha_Sintese_Pais(String fileName, Integer startCollun, Integer endCollun) throws IOException {
 
         // EXTRACT
 
@@ -30,7 +30,7 @@ public class Ficha_Sintese_Pais_ET extends Ficha_Sintese_Brasil_ET {
 
         List<List<List<List<Object>>>> data = new ArrayList<>();
         for(Integer i = 1; i < service.getSheetNumber(fileName); i++ ){
-            for(Integer j = 0; j <= 4; j++){
+            for(Integer j = startCollun; j <= endCollun; j++){
                 data.add(extract(
                         workbook,
                         fileName,
@@ -47,20 +47,14 @@ public class Ficha_Sintese_Pais_ET extends Ficha_Sintese_Brasil_ET {
 
         // TRANSFORM
 
-        List<Ficha_Sintese_Brasil> fichas_sintese_por_pais = new ArrayList<>();
+        List<Ficha_Sintese_Pais> fichas_sintese_por_pais = new ArrayList<>();
 
         for (List<List<List<Object>>> datum : data) {
             fichas_sintese_por_pais.add(transform(datum));
         }
 
-        System.out.println();
-        System.out.println("Ficha Sintese por Pais");
 
-        for (Ficha_Sintese_Brasil ficha_sintese_pais : fichas_sintese_por_pais) {
-            System.out.println(ficha_sintese_pais);
-        }
-
-
+    return fichas_sintese_por_pais;
 
     }
 
