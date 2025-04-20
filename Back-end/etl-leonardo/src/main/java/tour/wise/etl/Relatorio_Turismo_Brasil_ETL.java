@@ -4,6 +4,7 @@ import org.apache.poi.openxml4j.util.ZipSecureFile;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil.*;
+import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_estado.Ficha_Sintese_Estado;
 import tour.wise.service.Service;
 import tour.wise.util.Util;
 
@@ -112,158 +113,25 @@ public class Relatorio_Turismo_Brasil_ETL {
 //
 //    // TRANSFORM
 
-        Ficha_Sintese_Brasil_ETL ficha_sintese_brasil_etl = new Ficha_Sintese_Brasil_ETL();
+//        Ficha_Sintese_Brasil_ETL ficha_sintese_brasil_etl = new Ficha_Sintese_Brasil_ETL();
+//
+//        ficha_sintese_brasil_etl.exe(fileNameFichaSinteseBrasil);
+//
+//        Ficha_Sintese_Pais_ETL ficha_sintese_pais_etl = new Ficha_Sintese_Pais_ETL();
+//
+//        ficha_sintese_pais_etl.exe(fileNameFichaSintesePais);
 
-        ficha_sintese_brasil_etl.exe();
+        Ficha_Sintese_Estado_ETL ficha_sintese_estado_etl = new Ficha_Sintese_Estado_ETL();
+
+        ficha_sintese_estado_etl.exe(fileNameFichaSinteseEstado);
+
 
     }
 
 
 
-    private List<List<List<Object>>> extractFichaSintesePais(Workbook workbook, String fileName, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
-
-        String sheetName = service.getSheetName(fileName, sheetNumber);
-        String pais = sheetName.split("\\s+", 2)[1]; // divide no primeiro espaço
-
-        // Parâmetros das seções a serem lidas
-        List<int[]> ranges = List.of(
-                new int[]{5, 5},
-                new int[]{7, 9},
-                new int[]{11, 17},
-                new int[]{29, 33},
-                new int[]{35, 37},
-                new int[]{46, 50},
-                new int[]{52, 56},
-                new int[]{58, 62},
-                new int[]{69, 76}
-        );
-
-        // Lista para consolidar todos os blocos de dados
-        List<List<List<Object>>> data = new ArrayList<>();
-        data.add(List.of(List.of(pais)));
-
-        // Leitura dos dados e consolidação
-        for (int[] range : ranges) {
-
-            data.add(
-                    service.extractRange(
-                            workbook,
-                            sheetNumber,
-                        range[0],
-                        range[1],
-                            leftColluns,
-                            collunsType,
-                        Function.identity()
-                    )
-            );
-
-        }
-
-        // Parâmetros das seções a serem lidas
-        ranges = List.of(
-                new int[]{7, 9},
-                new int[]{27, 28},
-                new int[]{30, 36}
-        );
-
-        // Leitura dos dados e consolidação
-        for (int[] range : ranges) {
-
-            data.add(
-                    service.extractRange(
-                            workbook,
-                            sheetNumber,
-                            range[0],
-                            range[1],
-                            rightColluns,
-                            collunsType,
-                            Function.identity()
-                    )
-            );
-
-        }
 
 
-        for (List<List<Object>> datum : data) {
-            System.out.println(datum);
-        }
-
-        System.out.println("\nETL finalizado com sucesso.");
-
-        return data;
-    }
-
-    private List<List<List<Object>>> extractFichaSinteseBrasil(Workbook workbook, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
-
-        // Parâmetros das seções a serem lidas
-        List<int[]> ranges = List.of(
-                new int[]{5, 5},
-                new int[]{7, 9},
-                new int[]{11, 16},
-                new int[]{28, 32},
-                new int[]{34, 36},
-                new int[]{45, 49},
-                new int[]{51, 55},
-                new int[]{57, 61},
-                new int[]{64, 71},
-                new int[]{73, 75}
-        );
-
-        // Lista para consolidar todos os blocos de dados
-        List<List<List<Object>>> data = new ArrayList<>();
-        data.add(List.of(List.of("Brasil")));
-
-        // Leitura dos dados e consolidação
-        for (int[] range : ranges) {
-
-            data.add(
-                    service.extractRange(
-                            workbook,
-                            sheetNumber,
-                            range[0],
-                            range[1],
-                            leftColluns,
-                            collunsType,
-                            Function.identity()
-                    )
-            );
-
-        }
-
-        // Parâmetros das seções a serem lidas
-        ranges = List.of(
-                new int[]{23, 24},
-                new int[]{26, 31}
-        );
-
-        // Leitura dos dados e consolidação
-        for (int[] range : ranges) {
-
-            data.add(
-                    service.extractRange(
-                            workbook,
-                            sheetNumber,
-                            range[0],
-                            range[1],
-                            rightColluns,
-                            collunsType,
-                            Function.identity()
-                    )
-            );
-
-        }
-
-
-        for (List<List<Object>> datum : data) {
-            System.out.println(datum);
-        }
-
-        System.out.println("\nETL finalizado com sucesso.");
-
-        return data;
-    }
-
-    private Ficha_Sintese_Brasil ficha_sintese_brasil;
 
     private List<List<List<Object>>> extractFichaSinteseEstado(Workbook workbook, String fileName, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
 

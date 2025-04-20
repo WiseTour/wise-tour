@@ -2,6 +2,7 @@ package tour.wise.etl;
 
 import org.apache.poi.openxml4j.util.ZipSecureFile;
 import org.apache.poi.ss.usermodel.Workbook;
+import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.Ficha_Sintese_Pais;
 import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil.*;
 import tour.wise.service.Service;
 import tour.wise.util.Util;
@@ -13,27 +14,31 @@ import java.util.function.Function;
 
 import static tour.wise.service.Service.loadWorkbook;
 
-public class Ficha_Sintese_Brasil_ETL {
+public class Ficha_Sintese_Pais_ETL {
 
     Util util = new Util();
     Service service = new Service();
 
-
     Workbook workbook;
 
-    public void exe( String fileName) throws IOException {
-        ZipSecureFile.setMinInflateRatio(0.0001);
+    public void exe(String fileName) throws IOException {
+
+        // EXTRACT
 
         workbook = loadWorkbook(fileName);
 
         List<List<List<List<Object>>>> data = new ArrayList<>();
-        for(Integer j = 0; j <= 4; j++){
-            data.add(extract(
-                    workbook,
-                    1,
-                    List.of(1, 3+j),
-                    List.of(10, 12+j),
-                    List.of("string", "numeric")));
+        for(Integer i = 1; i < service.getSheetNumber(fileName); i++ ){
+            for(Integer j = 0; j <= 4; j++){
+                data.add(extract(
+                        workbook,
+                        fileName,
+                        i,
+                        List.of(1, 3+j),
+                        List.of(10, 12+j),
+                        List.of("string", "numeric")));
+
+            }
 
         }
 
@@ -41,42 +46,48 @@ public class Ficha_Sintese_Brasil_ETL {
 
         // TRANSFORM
 
-        List<Ficha_Sintese_Brasil> fichas_sintese_brasil = new ArrayList<>();
+        List<Ficha_Sintese_Brasil> fichas_sintese_por_pais = new ArrayList<>();
 
         for (List<List<List<Object>>> datum : data) {
-            fichas_sintese_brasil.add(transform(datum));
-            System.out.println(datum);
+            fichas_sintese_por_pais.add(transform(datum));
         }
 
         System.out.println();
-        System.out.println("Ficha Sintese Brasil");
+        System.out.println("Ficha Sintese por Pais");
 
-        for (Ficha_Sintese_Brasil ficha_sintese_brasil : fichas_sintese_brasil) {
-            System.out.println(ficha_sintese_brasil);
+        for (Ficha_Sintese_Brasil ficha_sintese_pais : fichas_sintese_por_pais) {
+            System.out.println(ficha_sintese_pais);
         }
+
+
 
     }
 
 
-    private List<List<List<Object>>> extract(Workbook workbook, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
+
+
+
+    private List<List<List<Object>>> extract(Workbook workbook, String fileName, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException  {
+
+        String sheetName = service.getSheetName(fileName, sheetNumber);
+        String pais = sheetName.split("\\s+", 2)[1]; // divide no primeiro espaço
 
         // Parâmetros das seções a serem lidas
         List<int[]> ranges = List.of(
                 new int[]{5, 5},
                 new int[]{7, 9},
-                new int[]{11, 16},
-                new int[]{28, 32},
-                new int[]{34, 36},
-                new int[]{45, 49},
-                new int[]{51, 55},
-                new int[]{57, 61},
-                new int[]{64, 71},
-                new int[]{73, 75}
+                new int[]{11, 17},
+                new int[]{29, 33},
+                new int[]{35, 37},
+                new int[]{46, 50},
+                new int[]{52, 56},
+                new int[]{58, 62},
+                new int[]{69, 76}
         );
 
         // Lista para consolidar todos os blocos de dados
         List<List<List<Object>>> data = new ArrayList<>();
-        data.add(List.of(List.of("Brasil")));
+        data.add(List.of(List.of(pais)));
 
         // Leitura dos dados e consolidação
         for (int[] range : ranges) {
@@ -97,8 +108,9 @@ public class Ficha_Sintese_Brasil_ETL {
 
         // Parâmetros das seções a serem lidas
         ranges = List.of(
-                new int[]{23, 24},
-                new int[]{26, 31}
+                new int[]{7, 9},
+                new int[]{27, 28},
+                new int[]{30, 36}
         );
 
         // Leitura dos dados e consolidação
@@ -128,11 +140,13 @@ public class Ficha_Sintese_Brasil_ETL {
         return data;
     }
 
-    private Ficha_Sintese_Brasil transform(List<List<List<Object>>> data){
 
 
+    private Ficha_Sintese_Pais transform(List<List<List<Object>>> data){
 
-        Ficha_Sintese_Brasil ficha_sintese_brasil = new Ficha_Sintese_Brasil(
+
+        Ficha_Sintese_Pais ficha_sintese_pais = new Ficha_Sintese_Pais(
+                data.get(0).get(0).get(0).toString(),
                 service.parseToInteger(data.get(1).get(0).get(1).toString()),
                 List.of(
                         new Motivo_Viagem(
@@ -343,8 +357,8 @@ public class Ficha_Sintese_Brasil_ETL {
                 )
 
         );
-
-        return ficha_sintese_brasil;
+        
+        return ficha_sintese_pais;
     };
 
 
