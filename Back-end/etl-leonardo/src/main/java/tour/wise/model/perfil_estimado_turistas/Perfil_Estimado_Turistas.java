@@ -2,6 +2,7 @@ package tour.wise.model.perfil_estimado_turistas;
 
 
 public class Perfil_Estimado_Turistas {
+
     private Integer id_perfil_estimado_visistantes;
     private String fonte_perfil;
     private String fonte_chegadas;
