@@ -1,0 +1,97 @@
+package tour.wise.model.chegada_turistas_internacionais_brasil;
+
+import tour.wise.model.Pais;
+import tour.wise.model.Unidade_Federativa_Brasil;
+
+public class Chegada_Turistas_Internacionais_Brasil {
+    private Unidade_Federativa_Brasil destino;
+    private Pais pais_origem;
+    private String via_acesso;
+    private Integer mes;
+    private Integer ano;
+    private Integer chegadas;
+    private String fonte;
+    private Integer edicao;
+
+
+    public Chegada_Turistas_Internacionais_Brasil() {
+    }
+
+    public Unidade_Federativa_Brasil getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Unidade_Federativa_Brasil destino) {
+        this.destino = destino;
+    }
+
+    public Pais getPais_origem() {
+        return pais_origem;
+    }
+
+    public void setPais_origem(Pais pais_origem) {
+        this.pais_origem = pais_origem;
+    }
+
+    public String getVia_acesso() {
+        return via_acesso;
+    }
+
+    public void setVia_acesso(String via_acesso) {
+        this.via_acesso = via_acesso;
+    }
+
+    public Integer getMes() {
+        return mes;
+    }
+
+    public void setMes(Integer mes) {
+        this.mes = mes;
+    }
+
+    public Integer getAno() {
+        return ano;
+    }
+
+    public void setAno(Integer ano) {
+        this.ano = ano;
+    }
+
+    public Integer getChegadas() {
+        return chegadas;
+    }
+
+    public void setChegadas(Integer chegadas) {
+        this.chegadas = chegadas;
+    }
+
+    public String getFonte() {
+        return fonte;
+    }
+
+    public void setFonte(String fonte) {
+        this.fonte = fonte;
+    }
+
+    public Integer getEdicao() {
+        return edicao;
+    }
+
+    public void setEdicao(Integer edicao) {
+        this.edicao = edicao;
+    }
+
+    @Override
+    public String toString() {
+        return "Chegadas_Turistas_Internacionais_Brasil{" +
+                "destino=" + destino +
+                ", pais_origem=" + pais_origem +
+                ", via_acesso='" + via_acesso + '\'' +
+                ", mes=" + mes +
+                ", ano=" + ano +
+                ", chegadas=" + chegadas +
+                ", fonte='" + fonte + '\'' +
+                ", edicao=" + edicao +
+                '}';
+    }
+}

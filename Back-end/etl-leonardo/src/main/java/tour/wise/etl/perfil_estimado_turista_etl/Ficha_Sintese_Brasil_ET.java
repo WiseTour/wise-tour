@@ -1,8 +1,8 @@
-package tour.wise.etl;
+package tour.wise.etl.perfil_estimado_turista_etl;
 
 import org.apache.poi.openxml4j.util.ZipSecureFile;
 import org.apache.poi.ss.usermodel.Workbook;
-import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil.*;
+import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil.*;
 import tour.wise.service.Service;
 import tour.wise.util.Util;
 
@@ -14,15 +14,13 @@ import java.util.stream.Collectors;
 
 import static tour.wise.service.Service.loadWorkbook;
 
-public class Ficha_Sintese_Brasil_ETL {
+public class Ficha_Sintese_Brasil_ET {
 
     Util util = new Util();
     Service service = new Service();
-
-
     Workbook workbook;
 
-    public void exe( String fileName) throws IOException {
+    public void extractTransform( String fileName) throws IOException {
         ZipSecureFile.setMinInflateRatio(0.0001);
 
         workbook = loadWorkbook(fileName);
@@ -59,7 +57,7 @@ public class Ficha_Sintese_Brasil_ETL {
     }
 
 
-    private List<List<List<Object>>> extract(Workbook workbook, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
+    public List<List<List<Object>>> extract(Workbook workbook, Integer sheetNumber, List<Integer> leftColluns, List<Integer> rightColluns, List<String> collunsType) throws IOException {
 
         // Parâmetros das seções a serem lidas
         List<int[]> ranges = List.of(
@@ -129,66 +127,77 @@ public class Ficha_Sintese_Brasil_ETL {
         return data;
     }
 
-    private Ficha_Sintese_Brasil transform(List<List<List<Object>>> data) {
+    public Ficha_Sintese_Brasil transform(List<List<List<Object>>> data) {
         return new Ficha_Sintese_Brasil(
-                extractAnoPesquisa(data),
-                extractMotivosViagem(data),
-                extractComposicaoGrupo(data),
-                extractGastoMedioMotivo(data),
-                extractDestinosMaisVisitados(data),
-                extractFontesInformacao(data),
-                extractUsoAgenciaViagem(data)
+                transformAno(data, 1),
+                transformMotivosViagem(data, 2),
+                transformComposicoesGrupo(data, 4),
+                transformGastosMedioMotivo(data, 5),
+                transformDestinosMaisVisitadosPorMotivo(data, 6),
+                transformFontesInformacao(data, 9),
+                transformUsosAgenciaViagem(data, 10)
         );
     }
 
-    private Integer extractAnoPesquisa(List<List<List<Object>>> data) {
-        return service.parseToInteger(data.get(1).get(0).get(1).toString());
+    protected Integer transformAno(List<List<List<Object>>> data, Integer index) {
+        return service.parseToInteger(data.get(index).getFirst().get(1).toString());
     }
 
-    private List<Motivo_Viagem> extractMotivosViagem(List<List<List<Object>>> data) {
+    protected List<Motivo_Viagem> transformMotivosViagem(List<List<List<Object>>> data, Integer index) {
         List<Motivo_Viagem> motivos = new ArrayList<>();
+
+        // Adiciona 3 itens de data[2]
         for (int i = 0; i < 3; i++) {
-            motivos.add(createMotivoViagem(data.get(2).get(i)));
+            motivos.add(createMotivoViagem(data.get(index).get(i)));
         }
+
+        // Adiciona 5 itens de data[3]
         for (int i = 0; i < 5; i++) {
-            motivos.add(createMotivoViagem(data.get(3).get(i)));
+            motivos.add(createMotivoViagem(data.get(index+1).get(i)));
         }
+
+        // Adiciona manualmente "Diversão Noturna"
         motivos.add(new Motivo_Viagem(
-                "Diversão Noturna",
-                Double.parseDouble(data.get(3).get(5).get(1).toString())
+                "Outros motivos lazer",
+                Double.parseDouble(data.get(index+1).get(5).get(1).toString())
         ));
+
         return motivos;
     }
 
-    private Motivo_Viagem createMotivoViagem(List<Object> values) {
+
+    protected Motivo_Viagem createMotivoViagem(List<Object> values) {
         return new Motivo_Viagem(
                 values.get(0).toString(),
                 Double.parseDouble(values.get(1).toString())
         );
     }
 
-    private List<Composicao_Grupo_Viagem> extractComposicaoGrupo(List<List<List<Object>>> data) {
-        return data.get(4).stream()
+    protected List<Composicao_Grupo_Viagem> transformComposicoesGrupo(List<List<List<Object>>> data, Integer index) {
+        return data.get(index).stream()
                 .map(this::createComposicaoGrupo)
                 .collect(Collectors.toList());
     }
 
-    private Composicao_Grupo_Viagem createComposicaoGrupo(List<Object> values) {
+    protected Composicao_Grupo_Viagem createComposicaoGrupo(List<Object> values) {
         return new Composicao_Grupo_Viagem(
                 values.get(0).toString(),
                 Double.parseDouble(values.get(1).toString())
         );
     }
 
-    private List<Gasto_Medio_Per_Capita_Brasil_Motivo> extractGastoMedioMotivo(List<List<List<Object>>> data) {
-        return data.get(5).stream()
+    protected List<Gasto_Medio_Per_Capita_Brasil_Motivo> transformGastosMedioMotivo(
+            List<List<List<Object>>> data,
+            Integer index
+    ) {
+        return data.get(index).stream()
                 .map(entry -> new Gasto_Medio_Per_Capita_Brasil_Motivo(
                         entry.get(0).toString(),
                         Double.parseDouble(entry.get(1).toString())))
                 .collect(Collectors.toList());
     }
 
-    private List<Destinos_Mais_Visistados_Por_Motivo> extractDestinosMaisVisitados(List<List<List<Object>>> data) {
+    protected List<Destinos_Mais_Visistados_Por_Motivo> transformDestinosMaisVisitadosPorMotivo(List<List<List<Object>>> data,Integer index) {
         String[] motivos = {
                 "Lazer",
                 "Negócios, eventos e convenções",
@@ -201,7 +210,7 @@ public class Ficha_Sintese_Brasil_ETL {
             destinosPorMotivo.add(
                     new Destinos_Mais_Visistados_Por_Motivo(
                             motivos[i],
-                            createDestinos(data.get(6 + i))
+                            createDestinos(data.get(index + i))
                     )
             );
         }
@@ -209,7 +218,7 @@ public class Ficha_Sintese_Brasil_ETL {
         return destinosPorMotivo;
     }
 
-    private List<Destino_Mais_Visistado> createDestinos(List<List<Object>> destinoData) {
+    protected List<Destino_Mais_Visistado> createDestinos(List<List<Object>> destinoData) {
         return destinoData.stream()
                 .map(entry -> new Destino_Mais_Visistado(
                         entry.get(0).toString().split(" - ")[1],
@@ -218,16 +227,17 @@ public class Ficha_Sintese_Brasil_ETL {
                 .collect(Collectors.toList());
     }
 
-    private List<Fonte_Informacao> extractFontesInformacao(List<List<List<Object>>> data) {
-        return data.get(9).stream()
+
+    protected List<Fonte_Informacao> transformFontesInformacao(List<List<List<Object>>> data, int index) {
+        return data.get(index).stream()
                 .map(entry -> new Fonte_Informacao(
                         entry.get(0).toString(),
                         Double.parseDouble(entry.get(1).toString())))
                 .collect(Collectors.toList());
     }
 
-    private List<Utilizacao_Agencia_Viagem> extractUsoAgenciaViagem(List<List<List<Object>>> data) {
-        return data.get(10).stream()
+    protected List<Utilizacao_Agencia_Viagem> transformUsosAgenciaViagem(List<List<List<Object>>> data, int index) {
+        return data.get(index).stream()
                 .map(entry -> new Utilizacao_Agencia_Viagem(
                         entry.get(0).toString(),
                         Double.parseDouble(entry.get(1).toString())))

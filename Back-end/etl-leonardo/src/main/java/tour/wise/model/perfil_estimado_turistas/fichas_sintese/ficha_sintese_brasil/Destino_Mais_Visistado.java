@@ -1,4 +1,4 @@
-package tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil;
+package tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil;
 
 public class Destino_Mais_Visistado {
     private String destino;

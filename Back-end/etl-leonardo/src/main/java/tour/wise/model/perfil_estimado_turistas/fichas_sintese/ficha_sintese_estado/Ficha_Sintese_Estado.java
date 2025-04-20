@@ -1,6 +1,6 @@
-package tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_estado;
+package tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_estado;
 
-import tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil.*;
+import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil.*;
 
 import java.util.List;
 

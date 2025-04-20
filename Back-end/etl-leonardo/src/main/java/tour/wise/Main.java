@@ -1,13 +1,9 @@
 package tour.wise;
 
 
-import tour.wise.etl.Meio_Hospedagem_ETL;
-import tour.wise.etl.Relatorio_Turismo_Brasil_ETL;
-import tour.wise.util.Util;
+import tour.wise.etl.perfil_estimado_turista_etl.Perfil_Estimado_Turistas_ETL;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 
 public class Main {
@@ -15,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        Relatorio_Turismo_Brasil_ETL relatorioTurismoBrasilEtl = new Relatorio_Turismo_Brasil_ETL();
+        Perfil_Estimado_Turistas_ETL relatorioTurismoBrasilEtl = new Perfil_Estimado_Turistas_ETL();
 
         relatorioTurismoBrasilEtl.exe();
 

@@ -21,7 +21,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.xmlbeans.impl.regex.ParseException;
-import tour.wise.model.meio_hospedagem.Meio_Hospedagem;
+
 
 
 public class Service {

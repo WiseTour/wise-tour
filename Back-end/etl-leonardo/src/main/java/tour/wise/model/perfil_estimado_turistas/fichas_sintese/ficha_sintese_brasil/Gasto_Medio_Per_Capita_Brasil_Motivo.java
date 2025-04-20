@@ -1,4 +1,4 @@
-package tour.wise.model.perfil_estimado_turista.relatorio_turismo_brasil.ficha_sintese_brasil;
+package tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil;
 
 public class Gasto_Medio_Per_Capita_Brasil_Motivo {
     private String motivo;
