@@ -60,8 +60,8 @@ public class Chegada_Turistas_Internacionais_Brasil_ETL {
             Pais pais_origem = new Pais(datum.get(2).toString());
             Unidade_Federativa_Brasil destino = new Unidade_Federativa_Brasil(datum.get(4).toString());
             String via = datum.get(6).toString();
-            Integer ano = Double.valueOf(datum.get(8).toString()).intValue();
-            Integer mes = Double.valueOf(datum.get(10).toString()).intValue();
+            Integer ano = Double.valueOf(datum.get(10).toString()).intValue();
+            Integer mes = Double.valueOf(datum.get(8).toString()).intValue();
             Integer chegadasNum = Double.valueOf(datum.get(11).toString()).intValue();
             chegadas_turistas_internacionais_brasil.add(new Chegada_Turistas_Internacionais_Brasil(destino, pais_origem, via, ano, mes, chegadasNum, fonte, edicao));
         }

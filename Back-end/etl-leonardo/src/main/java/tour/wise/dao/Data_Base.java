@@ -23,7 +23,7 @@ public class Data_Base {
         String tempUsername = "";
         String tempPassword = "";
 
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("src/main/.properties")) {
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
             if (input == null) {
                 throw new IOException("Arquivo config.properties não encontrado no classpath.");
             }
