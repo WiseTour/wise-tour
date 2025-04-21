@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Logs/src/main/java/wise/tour/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Logs/src/main/java/wise/tour/Log.java" afterDir="false" />
@@ -12,6 +13,13 @@
 =======
     <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="" />
 >>>>>>> d1a01a72a3a8d32d1c85474f2da11207a4beaf6a
+=======
+    <list default="true" id="6581d24e-72c3-4cfe-b375-b2d0b5ee5133" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> 807c909d699c56352ed7bc4273d6770951611b51
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,14 +57,26 @@
 =======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Maven.ETL [clean].executor": "Run",
+    "Maven.ETL [install].executor": "Run",
     "Maven.ETL [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "ETL-IAN",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/Codificação/WiseTour/Back-end/ETL"
 >>>>>>> d1a01a72a3a8d32d1c85474f2da11207a4beaf6a
+=======
+    "git-widget-placeholder": "conexao-banco",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/smrma/OneDrive/Documents/ESTUDO/reforco-logicao-de-programacao-sahdamacena",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+>>>>>>> 807c909d699c56352ed7bc4273d6770951611b51
   }
 }</component>
   <component name="RunManager">
@@ -89,5 +109,16 @@
       <updated>1743001579458</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -15,14 +15,11 @@ import java.util.List;
 
 public class Perfil_Estimado_Turistas_ETL {
 
-    Util util = new Util();
-    Service service = new Service();
 
     String fileNameFichaSintesePais = "../../database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2015-2019/05 - Ficha Síntese Países 2015-2019_DIVULGAÇÃO.xlsx";
     String fileNameFichaSinteseBrasil = "../../database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2015-2019/01 - Ficha Síntese Brasil - 2015-2019_DIVULGAÇÃO.xlsx";
     String fileNameFichaSinteseEstado = "../../database/dados-originais/demanda-turistica-internacional/demanda_turistica_internacional_-_fichas_sinteses_2015-2019/06 - Ficha Síntese UF 2015-2019_DIVULGAÇÃO.xlsx";
 
-    Workbook workbook;
 
     public List<Perfil_Estimado_Turistas> extractTransform(String fonte_perfil, String fonte_chegadas) throws IOException {
 
@@ -38,7 +35,6 @@ public class Perfil_Estimado_Turistas_ETL {
 
         List<Ficha_Sintese_Estado> fichas_sintese_por_estado =  ficha_sintese_estado_etl.extractTransformFicha_Sintese_Estado(fileNameFichaSinteseEstado, 0, 0);
 
-        Chegada_Turistas_Internacionais_Brasil_ETL chegadaTuristasInternacionaisBrasilEtl = new Chegada_Turistas_Internacionais_Brasil_ETL();
 
         System.out.println();
         System.out.println("Ficha Sintese Brasil");
@@ -60,7 +56,6 @@ public class Perfil_Estimado_Turistas_ETL {
         for (Ficha_Sintese_Brasil ficha_sintese_pais : fichas_sintese_por_pais) {
             System.out.println(ficha_sintese_pais);
         }
-
 
 
         // TRANSFORM
