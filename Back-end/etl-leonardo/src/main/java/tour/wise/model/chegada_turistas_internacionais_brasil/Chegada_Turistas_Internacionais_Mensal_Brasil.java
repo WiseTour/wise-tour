@@ -3,7 +3,7 @@ package tour.wise.model.chegada_turistas_internacionais_brasil;
 import tour.wise.model.Pais;
 import tour.wise.model.Unidade_Federativa_Brasil;
 
-public class Chegada_Turistas_Internacionais_Brasil {
+public class Chegada_Turistas_Internacionais_Mensal_Brasil {
     private Unidade_Federativa_Brasil destino;
     private Pais pais_origem;
     private String via_acesso;
@@ -11,13 +11,13 @@ public class Chegada_Turistas_Internacionais_Brasil {
     private Integer ano;
     private Integer chegadas;
     private String fonte;
-    private Integer edicao;
+    private String edicao;
 
 
-    public Chegada_Turistas_Internacionais_Brasil() {
+    public Chegada_Turistas_Internacionais_Mensal_Brasil() {
     }
 
-    public Chegada_Turistas_Internacionais_Brasil(Unidade_Federativa_Brasil destino, Pais pais_origem, String via_acesso, Integer mes, Integer ano, Integer chegadas, String fonte, Integer edicao) {
+    public Chegada_Turistas_Internacionais_Mensal_Brasil(Unidade_Federativa_Brasil destino, Pais pais_origem, String via_acesso, Integer mes, Integer ano, Integer chegadas, String fonte, String edicao) {
         this.destino = destino;
         this.pais_origem = pais_origem;
         this.via_acesso = via_acesso;
@@ -84,11 +84,11 @@ public class Chegada_Turistas_Internacionais_Brasil {
         this.fonte = fonte;
     }
 
-    public Integer getEdicao() {
+    public String getEdicao() {
         return edicao;
     }
 
-    public void setEdicao(Integer edicao) {
+    public void setEdicao(String edicao) {
         this.edicao = edicao;
     }
 

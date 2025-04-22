@@ -1,13 +1,9 @@
 package tour.wise.etl.perfil_estimado_turista_etl;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import tour.wise.etl.Chegada_Turistas_Internacionais_Brasil_ETL;
 import tour.wise.model.perfil_estimado_turistas.Perfil_Estimado_Turistas;
 import tour.wise.model.perfil_estimado_turistas.fichas_sintese.Ficha_Sintese_Pais;
 import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil.*;
 import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_estado.Ficha_Sintese_Estado;
-import tour.wise.service.Service;
-import tour.wise.util.Util;
 
 import java.io.IOException;
 import java.util.ArrayList;
