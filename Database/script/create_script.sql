@@ -16,7 +16,7 @@ CONSTRAINT chk_categoria CHECK (categoria IN('Erro', 'Aviso', 'Sucesso'))
 
 CREATE TABLE Fonte (
 id_fonte INT PRIMARY KEY AUTO_INCREMENT,
-titulo_arquivo_fonte VARCHAR(255) UNIQUE,
+titulo_edicao VARCHAR(255) UNIQUE,
 edicao VARCHAR(45),
 orgao_emissor VARCHAR(45),
 url_origem TEXT,
@@ -116,7 +116,6 @@ composicao_grupo_familiar VARCHAR(45),
 fonte_informacao_viagem VARCHAR(45),
 servico_agencia_turismo INT,
 motivo_viagem VARCHAR(45),
-permanencia_media DOUBLE,
 gasto_media_percapita_em_reais DOUBLE,
 ano INT,
 fk_total_chegadas_turistas_internacionais_brasil_mensal INT,

@@ -1,7 +1,7 @@
 package tour.wise.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Mensal_Brasil;
+import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Brasil_Mensal;
 
 public class Chegada_Turistas_Internacionais_Brasil_MensalDAO {
     private JdbcTemplate connection; // Conexão com o banco
@@ -13,7 +13,7 @@ public class Chegada_Turistas_Internacionais_Brasil_MensalDAO {
 
 
     // Método para verificar se a chegada já existe no banco
-    public boolean isChegadaExistente(Chegada_Turistas_Internacionais_Mensal_Brasil chegada, Integer paisId) {
+    public boolean isChegadaExistente(Chegada_Turistas_Internacionais_Brasil_Mensal chegada, Integer paisId) {
         String sqlVerificaExistencia = "SELECT COUNT(*) FROM Chegadas_Turistas_Internacionais_Brasil_Mensal " +
                 "WHERE mes = ? AND ano = ? AND fk_uf_sigla = ? AND fk_pais = ?";
 
@@ -24,7 +24,7 @@ public class Chegada_Turistas_Internacionais_Brasil_MensalDAO {
     }
 
     // Método para inserir a chegada no banco
-    public void insertChegada(Chegada_Turistas_Internacionais_Mensal_Brasil chegada, Integer fonte_id, Integer pais_id, String unidade_federativa_sigla) {
+    public void insertChegada(Chegada_Turistas_Internacionais_Brasil_Mensal chegada, Integer fonte_id, Integer pais_id, String unidade_federativa_sigla) {
         String sqlInsertChegada = "INSERT INTO Chegadas_Turistas_Internacionais_Brasil_Mensal " +
                 "(mes, ano, chegadas, via_acesso, fk_uf_sigla, fk_fonte, fk_pais) VALUES (?, ?, ?, ?, ?, ?, ?)";
 

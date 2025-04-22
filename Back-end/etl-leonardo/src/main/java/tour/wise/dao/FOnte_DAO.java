@@ -28,9 +28,9 @@ public class Fonte_DAO {
         }
     }
 
-    public Integer getFonteId(String titulo_fonte) {
-        String sqlFonte = "SELECT id_fonte FROM Fonte WHERE titulo_arquivo_fonte = ?";
-        Integer fonte_id = connection.queryForObject(sqlFonte, Integer.class, titulo_fonte);
+    public Integer getFonteId(String titulo_edicao) {
+        String sqlFonte = "SELECT id_fonte FROM Fonte WHERE titulo_edicao = ?";
+        Integer fonte_id = connection.queryForObject(sqlFonte, Integer.class, titulo_edicao);
 
         if (fonte_id == null) {
             System.out.println("Erro: Fonte não encontrada.");

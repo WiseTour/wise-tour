@@ -1,5 +1,11 @@
 package tour.wise.etl.perfil_estimado_turista_etl;
 
+import org.springframework.jdbc.core.JdbcTemplate;
+import tour.wise.dao.Fonte_DAO;
+import tour.wise.dao.Pais_DAO;
+import tour.wise.dao.Perfil_Estimado_Turistas_DAO;
+import tour.wise.dao.Unidade_Federativa_Brasil_DAO;
+import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Brasil_Mensal;
 import tour.wise.model.perfil_estimado_turistas.Perfil_Estimado_Turistas;
 import tour.wise.model.perfil_estimado_turistas.fichas_sintese.Ficha_Sintese_Pais;
 import tour.wise.model.perfil_estimado_turistas.fichas_sintese.ficha_sintese_brasil.*;
@@ -283,4 +289,37 @@ public class Perfil_Estimado_Turistas_ETL {
         return perfis_estimado_turistas;
     }
 
+    public void load(
+            JdbcTemplate connection,
+            String orgao_emissor,
+            String edicao,
+            String titulo_edicao,
+            String url_fonte,
+            List<Perfil_Estimado_Turistas> perfis
+            ){
+
+        Perfil_Estimado_Turistas_DAO perfil_estimado_turistas_dao = new Perfil_Estimado_Turistas_DAO(connection);
+
+        Pais_DAO pais_dao = new Pais_DAO(connection);
+        Fonte_DAO fonte_dao = new Fonte_DAO(connection);
+        Unidade_Federativa_Brasil_DAO unidade_federativa_brasil_dao = new Unidade_Federativa_Brasil_DAO(connection);
+
+
+        for (Perfil_Estimado_Turistas perfil : perfis) {
+            Integer fkFonte = fonte_dao.getFonteId(titulo_edicao);
+            String composicaoGrupoFamiliar = perfil.getComposicao_grupo_familiar();
+            String fonteInformacaoViagem = perfil.getFonte_informacao_viagem();
+            Integer servicoAgenciaTurismo = perfil.getServico_agencia_turismo();
+            String motivoViagem = perfil.getMotivo_viagem();
+            Double gastoMedioPerCapita = perfil.get
+            Integer ano,
+            Integer fkTotalChegadasMensal,
+            String ufDestino,
+            Integer fkFonteChegadasAnual,
+            Integer fkPaisOrigem
+
+
+        }
+
+    }
 }

@@ -1,4 +1,4 @@
-package tour.wise.dao.relatorio_turismo_brasil;
+package tour.wise.dao;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -5,10 +5,10 @@ import tour.wise.dao.Chegada_Turistas_Internacionais_Brasil_Anual_DAO;
 import tour.wise.dao.Chegada_Turistas_Internacionais_Brasil_MensalDAO;
 import tour.wise.dao.Fonte_DAO;
 import tour.wise.dao.Pais_DAO;
-import tour.wise.dao.relatorio_turismo_brasil.Unidade_Federativa_Brasil_DAO;
+import tour.wise.dao.Unidade_Federativa_Brasil_DAO;
 import tour.wise.model.Pais;
 import tour.wise.model.Unidade_Federativa_Brasil;
-import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Mensal_Brasil;
+import tour.wise.model.chegada_turistas_internacionais_brasil.Chegada_Turistas_Internacionais_Brasil_Mensal;
 
 import tour.wise.service.Service;
 
@@ -30,12 +30,12 @@ public class Chegada_Turistas_Internacionais_Brasil_Mensal_ETL {
 
         // TRANSFORM
 
-        List<Chegada_Turistas_Internacionais_Mensal_Brasil> chegadas_turistas_internacionais_brasil = transform(data, orgao_emissor, edicao);
+        List<Chegada_Turistas_Internacionais_Brasil_Mensal> chegadas_turistas_internacionais_brasil = transform(data, orgao_emissor, edicao);
 
         System.out.println();
         System.out.println("Chegadas");
 
-        for (Chegada_Turistas_Internacionais_Mensal_Brasil chegada_turistas_internacionais_brasil : chegadas_turistas_internacionais_brasil) {
+        for (Chegada_Turistas_Internacionais_Brasil_Mensal chegada_turistas_internacionais_brasil : chegadas_turistas_internacionais_brasil) {
             System.out.println(chegada_turistas_internacionais_brasil);
         }
 
@@ -66,13 +66,13 @@ public class Chegada_Turistas_Internacionais_Brasil_Mensal_ETL {
     }
 
 
-    public List<Chegada_Turistas_Internacionais_Mensal_Brasil> transform(List<List<Object>> data, String fonte, String edicao) {
+    public List<Chegada_Turistas_Internacionais_Brasil_Mensal> transform(List<List<Object>> data, String fonte, String edicao) {
 
         System.out.println("[INÍCIO] Transformação dos dados iniciada.");
         System.out.println("[INFO] Fonte: " + fonte + ", Edição: " + edicao);
         System.out.println("[INFO] Total de registros brutos recebidos: " + (data != null ? data.size() : 0));
 
-        List<Chegada_Turistas_Internacionais_Mensal_Brasil> chegadas_turistas_internacionais_brasil = new ArrayList<>();
+        List<Chegada_Turistas_Internacionais_Brasil_Mensal> chegadas_turistas_internacionais_brasil = new ArrayList<>();
 
         int linha = 0;
         for (List<Object> datum : data) {
@@ -85,7 +85,7 @@ public class Chegada_Turistas_Internacionais_Brasil_Mensal_ETL {
                 Integer mes = Double.valueOf(datum.get(8).toString()).intValue();
                 Integer chegadasNum = Double.valueOf(datum.get(11).toString()).intValue();
 
-                Chegada_Turistas_Internacionais_Mensal_Brasil chegada = new Chegada_Turistas_Internacionais_Mensal_Brasil(
+                Chegada_Turistas_Internacionais_Brasil_Mensal chegada = new Chegada_Turistas_Internacionais_Brasil_Mensal(
                         destino, pais_origem, via, ano, mes, chegadasNum, fonte, edicao
                 );
 
@@ -104,7 +104,7 @@ public class Chegada_Turistas_Internacionais_Brasil_Mensal_ETL {
     }
 
 
-    public void load(JdbcTemplate connection, String orgao_emissor, String edicao, String titulo_edicao, String url_fonte, List<Chegada_Turistas_Internacionais_Mensal_Brasil> chegadas) {
+    public void load(JdbcTemplate connection, String orgao_emissor, String edicao, String titulo_edicao, String url_fonte, List<Chegada_Turistas_Internacionais_Brasil_Mensal> chegadas) {
 
         System.out.println("Iniciando carregamento de chegadas para a fonte: '" + titulo_edicao + "'...");
 
@@ -133,7 +133,7 @@ public class Chegada_Turistas_Internacionais_Brasil_Mensal_ETL {
         int inseridos = 0;
         int ignorados = 0;
 
-        for (Chegada_Turistas_Internacionais_Mensal_Brasil chegada : chegadas) {
+        for (Chegada_Turistas_Internacionais_Brasil_Mensal chegada : chegadas) {
             String nomePais = chegada.getPais_origem() != null ? chegada.getPais_origem().getPais() : null;
             String unidade_federativa_brasil = chegada.getDestino() != null ? chegada.getDestino().getUnidade_federativa() : null;
             Integer mes = chegada.getMes();

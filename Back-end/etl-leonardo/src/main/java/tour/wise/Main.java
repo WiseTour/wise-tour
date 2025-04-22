@@ -3,6 +3,9 @@ package tour.wise;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import tour.wise.dao.Data_Base;
+import tour.wise.dao.Fonte_DAO;
+import tour.wise.dao.Pais_DAO;
+import tour.wise.dao.Unidade_Federativa_Brasil_DAO;
 import tour.wise.etl.Chegada_Turistas_Internacionais_Brasil_Mensal_ETL;
 
 import java.io.IOException;
@@ -59,6 +62,8 @@ public class Main {
                 ,connection
 
         );
+
+
 
 
 
