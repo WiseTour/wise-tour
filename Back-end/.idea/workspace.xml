@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f05234-3bc5-41c5-81ce-084bd435a9e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Cadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/ConexaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/ConexaoBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Filme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/java/tour/wise/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

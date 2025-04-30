@@ -20,7 +20,6 @@ public class Main {
         connection.update("INSERT INTO Pais (pais) VALUES (?)",
                 "Portugal");
 
-
 //        Log log = new Log();
 //        Random random = new Random();
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
@@ -46,7 +45,4 @@ public class Main {
 //
 //        log.showLog("Processo ETL encerrado!", "INFO", formatter);
     }
-
-
-
 }

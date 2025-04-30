@@ -13,7 +13,7 @@ public class ConexaoBanco {
         BasicDataSource basicDataSource = new BasicDataSource();
         basicDataSource.setUrl("jdbc:mysql://localhost:3306/WiseTour");
         basicDataSource.setUsername("root");
-        basicDataSource.setPassword("Smr24@18.");
+        basicDataSource.setPassword("");
 
         this.dataSource = basicDataSource;
     }
