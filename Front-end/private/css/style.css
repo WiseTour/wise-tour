@@ -241,16 +241,17 @@ main .panorama_geral_linha_2 .panorama_geral_coluna_2 .chegadas_turistas_estrang
   display: flex;
   align-items: flex-start;
   border-radius: 20px;
-  overflow: hidden;
+  position: relative;
   height: 100%;
   width: 100%;
 }
 
 .icon-box {
-  background-color: #ffd400;
+  background-color: var(--cor_base);
   padding: 20px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+  position: absolute;
   display: flex;
   height: 70px;
   align-items: center;
@@ -265,7 +266,10 @@ main .panorama_geral_linha_2 .panorama_geral_coluna_2 .chegadas_turistas_estrang
 .info-box {
   border-radius: 20px;
   background-color: white;
-  padding: 16px 24px;
+  position: relative;
+  width: 76%;
+  left: 60px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
