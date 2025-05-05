@@ -48,6 +48,7 @@ app.get("/", (req, res) => {
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/common", express.static(path.join(__dirname, "common")));
 app.use("/auth", express.static(path.join(__dirname, "auth")));
+app.use('/private', express.static('private'));
 app.use(cors());
 
 app.use("/", indexRouter);
