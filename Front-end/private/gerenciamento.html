@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gerenciamento.css">
 </head>
 <body id="gerenciamento_body"> 
     <header id="header" class="header">
@@ -40,9 +40,30 @@
       <main>
         <section class="gerenciamento-main">
           <div class="titulo">GERENCIAMENTO</div>
-          
-          
-
+          <section class="gerenciamento">
+            <h2>GERENCIAMENTO DE USUÁRIOS</h2>
+            <button class="add-user">➕ Adicionar Novo Usuário</button>
+            <div class="user-list">
+              <!-- Exemplo de linha de usuário -->
+              <div class="user-row">
+                <input type="text" placeholder="Nome:" />
+                <input type="email" placeholder="E-mail:" />
+                <select>
+                  <option>Função</option>
+                </select>
+                <select>
+                  <option>Forma de notificação</option>
+                </select>
+                <div class="actions">
+                  <button>✏️</button>
+                  <button>🗑️</button>
+                </div>
+              </div>
+              <!-- Repita para outras linhas -->
+            </div>
+            <p class="pagination">1 de 2</p>
+          </section>
+    
         </section>
       </main>
 
