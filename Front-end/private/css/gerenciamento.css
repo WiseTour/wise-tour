@@ -1,0 +1,225 @@
+@import url("/common/css/style.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("/common/css/style.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: var(--cor_base);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  margin-inline: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_container .logo {
+  height: 70px;
+}
+
+.menu_container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu_container .opcao {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menu_container .opcao.active {
+  border: 2px solid black;
+  border-radius: 50px;
+  color: black;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon_container .entrar {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.icon_container .user_div {
+  background-color: var(--cinza_escuro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_container .user_div i {
+  padding: 12px;
+  color: var(--cinza_claro);
+}
+
+
+/* TELA GERENCIAMENTO */
+
+main {
+  background-color: #d6d1d1;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+main .gerenciamento-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 91%;
+}
+main .gerenciamento-main .titulo{
+  display: flex;
+  font-size: x-large;
+  font-weight: bolder;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+
+.container-gerenciamento {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  height: auto; 
+  padding-bottom: 20px;
+  width: 91%;
+  border-radius: 20px;
+}
+
+.cabecalho {
+  background-color: var(--cor_base); 
+  color: black;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%; /* <-- ESSENCIAL! */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.conteudo-usuarios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.titulo-lista {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.add-btn {
+  background-color: var(--cor_base);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 200px;
+}
+
+
+
+.filtros-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 20px; 
+  padding-left: 20px; 
+}
+
+.filtros-usuarios input,
+.filtros-usuarios select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  background-color: #eee;
+  color: #000;
+}
+
+.filtros-usuarios input
+{
+  width: 30vh;
+}
+
+.filtros-usuarios select 
+{
+  width: 43.5vh;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.actions button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container, .container-gerenciamento, .filtros-usuarios {
+  max-width: 100%;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.filtros-usuarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
