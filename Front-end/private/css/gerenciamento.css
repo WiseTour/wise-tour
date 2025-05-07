@@ -176,6 +176,10 @@ main .gerenciamento-main .titulo{
   width: 20px;
 }
 
+.add-btn:hover {
+  transform: scale(1.1);
+}
+
 
 
 .filtros-usuarios {
