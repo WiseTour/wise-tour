@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/usuarios.css">
+    <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
+    <script src="/common/js/nav-bar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div id="header_container" class="container">
+
+            <!-- Logo -->
+            <div class="logo_container">
+                <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="Logo WiseTour">
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu_container">
+                <a class="opcao active" href="index.html">Panorama Geral</a>
+                <a class="opcao" href="sobre-nos.html">Perfil do Turista</a>
+                <a class="opcao" href="servicos.html">Sazonalidade</a>
+            </nav>
+
+            <!-- Ícones à direita -->
+            <div class="icon_container">
+                <a class="opcao entrar" href="/auth/login.html">
+                    <div class="user_div"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+                </a>
+                <a class="opcao entrar" href="/auth/login.html">
+                    <div class="user_div"><i class="fa-solid fa-gear" aria-hidden="true"></i></div>
+                </a>
+                <a class="opcao entrar" href="/auth/login.html">
+                    <div class="user_div"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <h1>USUÁRIO</h1>
+        <div class="tela-usuarios">
+            <div class="container-usuarios">
+                <div class="colunas">
+                    <h2>INFORMAÇÕES PESSOAIS</h2>
+                    <h2>SENHA</h2>
+                </div>
+                <div class="container-informacoes">
+                    <div class="informacoes">
+                        <h2>Bem vindo!</h2>
+                        <div class="campo-info"> 
+                            <span>NOME:</span>
+                            <input type="text" value="Ian Pimenta">
+                        </div>
+                        <div class="campo-info">
+                            <span>E-MAIL:</span>
+                            <input type="text" value="ian@hotmail.com">
+                        </div>
+                        <div class="campo-info">
+                            <span>FUNÇÃO:</span>
+                            <select name="" id="">
+                                <option value="administrador" selected>ADIMINISTRADOR</option>
+                                <option value="marketing">MARKETING</option>
+                                <option value="vendedor">VENDEDOR</option>
+                            </select>
+                        </div>
+                        <div class="campo-info">
+                            <span>TELEFONE:</span>
+                            <input type="text" value="(11) 987654321">
+                        </div>
+                        <div class="campo-info">
+                            <span>PREFERÊNCIA DE VIZUALIZAÇÃO DE TELA:</span>
+                        </div>
+                        <div class="campo-preferencia" style="display: flex;">
+                            <label>
+                                <input type="checkbox">
+                                <span>PANORAMA GERAL</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>PERFIL DO TURISTA</span>
+                            </label>
+                        </div>
+                        <div class="campo-preferencia" style="display: flex;"">
+                            <label>
+                                <input type="checkbox">
+                                <span>SAZONALIDADE</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>GERENCIAMENTO</span>
+                            </label>
+                        </div>
+                        <div class="campo-info">
+                            <span>DATA DE NASCIMENTO:</span>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="passaporte">
+                        <div class="container-passaporte">
+                            <div class="passaporte-frente">
+                                <div class="cabeca">
+                                    <div></div>
+                                    <span>PASSAPORTE</span>
+                                </div>
+                                <div class="complemento"></div>
+                                <div class="frente">
+                                    <img src="../common/assets/logo/logo_cinza_escuro.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="passaporte-tras">
+                                <div class="informacoes-pessoais">
+                                    <div class="amarela"></div>
+                                    <img src="../common/assets/icon/user-icon.webp">
+                                    <div class="dados">
+                                        <div>
+                                            <span>N. PASSAPORTE: </span>
+                                            <span>0000</span>
+                                        </div>
+                                        <div>
+                                            <span>NOME: </span>
+                                            <span>Ian Pimenta</span>
+                                        </div>
+                                        <div>
+                                            <span>DATA NASCIMENTO: </span>
+                                            <span>01/01/2001</span>
+                                        </div>
+                                        <div>
+                                            <span>NACIONALIDADE: </span>
+                                            <span>Brasileiro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="campo-cinza"></div>
+                                <div class="campo-amarelo"></div>
+                            </div>
+                        </div>
+                        <button>Mudar logo de perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
