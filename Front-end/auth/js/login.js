@@ -34,7 +34,7 @@ function entrar() {
           sessionStorage.setItem("ID_USUARIO", json.idLogin);
 
           setTimeout(function () {
-            window.location = "../private/index.html";
+            window.location.href = "/private/index.html";
           }, 1000);
         });
       } else {
