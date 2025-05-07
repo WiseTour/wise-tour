@@ -1,3 +1,4 @@
+
 const coresUsadas = {
     amarelo: '#F8CA26',
     marrom: '#735900',
@@ -169,13 +170,13 @@ new Chart(ctxComposicao, {
                 position: 'right',
                 labels: {
                     ...estiloDoTextoDoGrafico,
-                    boxWidth: 70,
-                    boxHeight: 25,
+                    boxWidth: 35,
+                    boxHeight: 14,
                     borderRadius: 50,
-                    padding: 10,
+                    padding: 5,
                     font: {
                         ...estiloDoTextoDoGrafico.font,
-                        size: 25
+                        size: 14
                     }
                 }
             }
@@ -207,13 +208,13 @@ new Chart(ctxVias, {
                 position: 'right',
                 labels: {
                     ...estiloDoTextoDoGrafico,
-                    boxWidth: 70,
-                    boxHeight: 25,
+                    boxWidth: 35,
+                    boxHeight: 14,
                     borderRadius: 50,
-                    padding: 10,
+                    padding: 5,
                     font: {
                         ...estiloDoTextoDoGrafico.font,
-                        size: 25
+                        size: 14
                     }
                 }
             }
