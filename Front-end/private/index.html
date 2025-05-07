@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiseTour</title>
-
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
-    <script src="/common/js/nav-bar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
 </head>
 
 <body id="panorama_geral_body">
@@ -168,68 +162,4 @@
         <b class="direitos">WISETOUR © 2025. TODOS OS DIREITOS RESERVADOS</b>
     </footer>
 </body>
-
 </html>
-
-<script>
-    // Gráfico de países de origem
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Argentina', 'Chile', 'EUA', 'Paraguai', 'Uruguai'],
-            datasets: [{
-                label: '# of Votes',
-                data: [20, 15, 10, 5, 1],
-                borderWidth: 1,
-                backgroundColor: 'rgb(247, 202, 37)'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-    // Gráfico de presença de turistas por UF
-    const presencaCtx = document.getElementById('presencaTuristaChart');
-    new Chart(presencaCtx, {
-        type: 'bar',
-        data: {
-            labels: ['SP', 'RJ', 'MG', 'BA', 'RS'], // Estados
-            datasets: [{
-                label: 'Presença de turistas',
-                data: [5000, 3000, 2000, 1500, 1200], // Dados fictícios
-                backgroundColor: 'rgb(247, 202, 37)'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-    // Gráfico de chegadas de turistas estrangeiros
-    const chegadasCtx = document.getElementById('chegadasTuristasChart');
-
-    new Chart(chegadasCtx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], // Meses
-            datasets: [{
-                label: 'Turistas Estrangeiros',
-                data: [35000, 25000, 50000, 50000, 0, 80000, 35000, 70000, 51000, 20000, 20000, 53000], // Dados fictícios
-                borderColor: 'rgba(247, 202, 37, 1)',
-                fill: false
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-</script>
