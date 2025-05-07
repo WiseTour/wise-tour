@@ -5,9 +5,10 @@ const coresUsadas = {
     marromBege: '#C49F1B',
     amareloClaro: '#FFE483',
     avermelhado: '#A66D44',
-    esverdeado: '#938100',
-    verde: '#B9B453',
-    cinza: '#E0E0E0'
+    cimento: '#87826E',
+    acinzentado: '#DDD8C5',
+    cinza: '#E0E0E0',
+    marromForte: '#A98400'
 };
 
 
@@ -102,9 +103,9 @@ new Chart(ctxFontes, {
                 coresUsadas.marrom,
                 coresUsadas.marromBege,
                 coresUsadas.amareloClaro,
-                coresUsadas.avermelhado,
+                coresUsadas.marromForte,
                 coresUsadas.esverdeado,
-                coresUsadas.verde,
+                coresUsadas.acinzentado,
                 coresUsadas.cinza,
                 '#D9C7A7' 
             ],
@@ -136,7 +137,7 @@ new Chart(ctxFontes, {
                     ...estiloDoTextoDoGrafico,
                     font: {
                         ...estiloDoTextoDoGrafico.font,
-                        size: 12
+                        size: 9
                     },
                     maxRotation: 0, 
                     minRotation: 0  
@@ -194,8 +195,8 @@ new Chart(ctxVias, {
             data: [60, 30, 5, 5],
             backgroundColor: [
                 coresUsadas.avermelhado,
-                coresUsadas.esverdeado,
-                coresUsadas.verde,
+                coresUsadas.cimento,
+                coresUsadas.acinzentado,
                 coresUsadas.cinza
             ],
             borderWidth: 0
