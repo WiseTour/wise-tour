@@ -11,7 +11,7 @@ public class ConexaoBanco {
 
     public ConexaoBanco() {
         BasicDataSource basicDataSource = new BasicDataSource();
-        basicDataSource.setUrl("jdbc:mysql://localhost:3306/teste");
+        basicDataSource.setUrl("jdbc:mysql://localhost:3306/WiseTour");
         basicDataSource.setUsername("root");
         basicDataSource.setPassword("Smr24@18.");
 
