@@ -110,8 +110,7 @@ main .panorama_geral_linha_1{
 /* height: 400px;
 width: 200px; */
 
-main .panorama_geral_linha_1 .titulo,
-.gerenciamento-main .titulo{
+main .panorama_geral_linha_1 .titulo{
   /* background-color: red; */
   display: flex;
   font-size: x-large;
