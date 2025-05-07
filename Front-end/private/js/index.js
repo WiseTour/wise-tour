@@ -1,3 +1,10 @@
+const coresUsadas = {
+    amarelo: '#F8CA26',
+    marrom: '#735900',
+    marromBege: '#C49F1B',
+    amareloClaro: '#FFE483',
+    begeMedio: '#D09041'
+};
 
 const estiloDoTextoDoGrafico = {
     color: '#000000',
@@ -9,14 +16,20 @@ const estiloDoTextoDoGrafico = {
     }
 };
 
-
+// 1. Gráfico PRINCIPAIS PAÍSES DE ORIGEM (colorido com 5 cores)
 new Chart(document.getElementById('myChart'), {
     type: 'bar',
     data: {
         labels: ['Argentina', 'Chile', 'EUA', 'Paraguai', 'Uruguai'],
         datasets: [{
             data: [20, 15, 10, 5, 1],
-            backgroundColor: '#C49F1B'
+            backgroundColor: [
+                coresUsadas.amarelo,
+                coresUsadas.marromBege,
+                coresUsadas.marrom,
+                coresUsadas.amareloClaro,
+                coresUsadas.begeMedio
+            ],
         }]
     },
     options: {
@@ -26,7 +39,12 @@ new Chart(document.getElementById('myChart'), {
             legend: { display: false },
             tooltip: {
                 titleFont: estiloDoTextoDoGrafico.font,
-                bodyFont: estiloDoTextoDoGrafico.font
+                bodyFont: estiloDoTextoDoGrafico.font,
+                callbacks: {
+                    label: function(context) {
+                        return ` ${context.parsed.y}%`;
+                    }
+                }
             }
         },
         scales: {
@@ -34,8 +52,8 @@ new Chart(document.getElementById('myChart'), {
                 ticks: {
                     ...estiloDoTextoDoGrafico,
                     autoSkip: false,
-                    maxRotation: 0, // Garante texto sempre horizontal
-                    minRotation: 0  // Remove inclinação
+                    maxRotation: 0,
+                    minRotation: 0
                 }
             },
             y: {
@@ -46,14 +64,20 @@ new Chart(document.getElementById('myChart'), {
     }
 });
 
-// 2. Gráfico de presença por UF (Barras Verticais)
+// 2. Gráfico PRESENÇA DE TURISTAS POR UF (colorido com 5 cores)
 new Chart(document.getElementById('presencaTuristaChart'), {
     type: 'bar',
     data: {
         labels: ['SP', 'RJ', 'MG', 'BA', 'RS'],
         datasets: [{
             data: [5000, 3000, 2000, 1500, 1200],
-            backgroundColor: '#735900'
+            backgroundColor: [
+                coresUsadas.amarelo,
+                coresUsadas.marromBege,
+                coresUsadas.marrom,
+                coresUsadas.amareloClaro,
+                coresUsadas.begeMedio
+            ],
         }]
     },
     options: {
@@ -63,7 +87,12 @@ new Chart(document.getElementById('presencaTuristaChart'), {
             legend: { display: false },
             tooltip: {
                 titleFont: estiloDoTextoDoGrafico.font,
-                bodyFont: estiloDoTextoDoGrafico.font
+                bodyFont: estiloDoTextoDoGrafico.font,
+                callbacks: {
+                    label: function(context) {
+                        return ` ${context.parsed.y} turistas`;
+                    }
+                }
             }
         },
         scales: {
@@ -82,14 +111,14 @@ new Chart(document.getElementById('presencaTuristaChart'), {
     }
 });
 
-// 3. Gráfico de chegadas de turistas (Linha - Mantendo o estilo ondulado)
+// 3. Gráfico de CHEGADAS (mantido com linha amarela ondulada)
 new Chart(document.getElementById('chegadasTuristasChart'), {
     type: 'line',
     data: {
         labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [{
             data: [35000, 25000, 50000, 50000, 0, 80000, 35000, 70000, 51000, 20000, 20000, 53000],
-            borderColor: 'rgba(247, 202, 37, 1)',
+            borderColor: coresUsadas.amarelo,
             borderWidth: 2,
             tension: 0.4,
             fill: false
