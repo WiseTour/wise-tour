@@ -43,7 +43,7 @@ var usuarioRouter = require("./src/routes/usuarios");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "auth", "cadastro-usuario.html"));
 }); // Definição de rota para o arquivo home html quando iniciar a API
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/common", express.static(path.join(__dirname, "common")));
