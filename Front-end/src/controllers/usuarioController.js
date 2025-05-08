@@ -18,10 +18,9 @@ function autenticar(req, res) {
                     console.log(resultadoAutenticar);
 
                     res.json({
-                        id: resultadoAutenticar[0].idLogin,
-                        email: resultadoAutenticar[0].email
-                        // senha: resultadoAutenticar[0].senha ← evitar retornar
-                        // aquarios removido
+                        id: resultadoAutenticar[0].id_usuario,
+                        email: resultadoAutenticar[0].email,
+                        permissao: resultadoAutenticar[0].permissao
                     });                                       
 
                 } else if (resultadoAutenticar.length == 0) {
@@ -59,6 +58,7 @@ function cadastrar(req, res) {
             });
     }
 }
+
 
 module.exports = {
     autenticar,

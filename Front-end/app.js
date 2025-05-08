@@ -9,7 +9,7 @@ require("dotenv").config({ path: caminho_env });
 
 var express = require("express");
 var cors = require("cors");
-var path = require("path");cd
+var path = require("path");
 var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
 
@@ -39,6 +39,7 @@ app.get("/estado", async (req, res) => {
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var internalRoutes = require("./src/routes/internalRoutes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -49,10 +50,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/common", express.static(path.join(__dirname, "common")));
 app.use("/auth", express.static(path.join(__dirname, "auth")));
 app.use("/private", express.static(path.join(__dirname, "private")));
+app.use("/internal", express.static(path.join(__dirname, "internal")));
 app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/internalRoutes", internalRoutes);
 
 app.listen(PORTA_APP, function () {
   console.log(`
