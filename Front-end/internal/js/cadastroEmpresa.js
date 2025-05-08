@@ -1,7 +1,6 @@
 function cadastrarEmpresa() {
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
+   
     var cnpjVar = empresa_cnpj_input.value;
     var nomeFantasiaVar = empresa_nome_fantasia_input.value;
     var razaoSocialVar = empresa_razao_social_input.value;
@@ -35,7 +34,7 @@ function cadastrarEmpresa() {
       return false;
     }
   
-    fetch("/usuarios/cadastrarEmpresa", {
+    fetch("/internalRoutes/cadastrarEmpresa", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,11 +61,6 @@ function cadastrarEmpresa() {
   
         if (resposta.ok) {
           alert ("Cadastro Empresa realizado com sucesso!!!")
-  
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-  
           limparFormulario();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";

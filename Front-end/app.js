@@ -39,21 +39,23 @@ app.get("/estado", async (req, res) => {
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var internalRoutes = require("./src/routes/internalRoutes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "auth", "cadastro-usuario.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 }); // Definição de rota para o arquivo home html quando iniciar a API
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/common", express.static(path.join(__dirname, "common")));
 app.use("/auth", express.static(path.join(__dirname, "auth")));
 app.use("/private", express.static(path.join(__dirname, "private")));
-
+app.use("/internal", express.static(path.join(__dirname, "internal")));
 app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/internalRoutes", internalRoutes);
 
 app.listen(PORTA_APP, function () {
   console.log(`
@@ -65,7 +67,7 @@ app.listen(PORTA_APP, function () {
     ### ###  ##       ##  ##            ## ##    ##  ##     ##     ##  ##             ####      ##     ##      
     ##   ##  ######   #####             ####     ##  ##     ##     ##  ##              ##      ####    ######  
     \n\n\n                                                                                                 
-    Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar .: http://${HOST_APP}:${PORTA_APP} :. \n\n
+    Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar .: http://localhost:${PORTA_APP} :. \n\n
     Você está rodando sua aplicação em ambiente de .:${process.env.AMBIENTE_PROCESSO}:. \n\n
     \tSe .:desenvolvimento:. você está se conectando ao banco local. \n
     \tSe .:producao:. você está se conectando ao banco remoto. \n\n

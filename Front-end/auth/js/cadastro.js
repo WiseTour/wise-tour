@@ -1,8 +1,5 @@
-
 function cadastrar() {
-
-  //Recupere o valor da nova input pelo nome do id
-  // Agora vá para o método fetch logo abaixo
+  // Recupera os valores dos inputs
   var nomeCompletoVar = nome_completo_input.value;
   var emailVar = email_input.value;
   var numeroUsuarioVar = numero_usuario_input.value;
@@ -14,22 +11,39 @@ function cadastrar() {
     numeroUsuarioVar == ""
   ) {
     cardErro.style.display = "block";
-    mensagem_erro.innerHTML =
-      "(Mensagem de erro para todos os campos em branco)";
-
+    mensagem.innerHTML =
+      "<b>[Atenção]</b> <br><br> Existem campos de cadastro <br> em branco.";
+    setTimeout(sumirMensagem, 3000);
+    return false;
+  } else if (!emailVar.includes("@") || !emailVar.includes(".com")) {
+    cardErro.style.display = "block";
+    mensagem.innerHTML =
+      "<b>[Atenção]</b> <br><br> O campo e-mail <br> não é válido.";
+    setTimeout(sumirMensagem, 3000);
+    return false;
+  } else if (nomeCompletoVar.length < 8) {
+    cardErro.style.display = "block";
+    mensagem.innerHTML =
+      "<b>[Atenção]</b> <br><br> O campo nome <br> deve conter ao mínimo 8 caracteres.";
+    setTimeout(sumirMensagem, 3000);
+    return false;
+  } else if (numeroUsuarioVar.length < 11) {
+    cardErro.style.display = "block";
+    mensagem.innerHTML =
+      "<b>[Atenção]</b> <br><br> O campo número <br> deve conter ao mínimo 11 caracteres.";
+    setTimeout(sumirMensagem, 3000);
     return false;
   } else {
     setInterval(sumirMensagem, 5000);
   }
 
+  // Envia os dados para o servidor
   fetch("/usuarios/cadastrar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
       nomeServer: nomeCompletoVar,
       emailServer: emailVar,
       numeroUsuarioServer: numeroUsuarioVar,
@@ -39,14 +53,20 @@ function cadastrar() {
       console.log("resposta: ", resposta);
 
       if (resposta.ok) {
-        cardErro.style.display = "block";
+        const popup = document.getElementById("popUpCadastro");
+        const overlay = document.getElementById("overlay");
 
-        mensagem_erro.innerHTML =
-          "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+        document.body.classList.add('popup-active');
+
+        popup.style.display = "block";
+        overlay.style.display = "block";
 
         setTimeout(() => {
-          window.location = "login.html";
-        }, "2000");
+          popup.style.display = "none";
+          overlay.style.display = "none";
+          document.body.classList.remove('popup-active');
+          window.location.href = "login.html";
+        }, 3000);
 
         limparFormulario();
       } else {
@@ -60,14 +80,6 @@ function cadastrar() {
   return false;
 }
 
-function excluirEmpresa() {
-
-}
-
-function excluirResponsavel() {
-
-}
-
-function excluirUsuario() {
-
+function sumirMensagem() {
+  cardErro.style.display = "none";
 }

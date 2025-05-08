@@ -24,28 +24,51 @@ function entrar() {
         senhaServer: senhaVar
       })
     }).then(function (resposta) {
-      console.log("ESTOU NO THEN DO entrar()!");
 
       if (resposta.ok) {
         resposta.json().then(json => {
           console.log(json);
 
           sessionStorage.setItem("EMAIL_USUARIO", json.email);
-          sessionStorage.setItem("ID_USUARIO", json.idLogin);
+          sessionStorage.setItem("ID_USUARIO", json.id_usuario);
+          sessionStorage.setItem("PERMISSAO", json.permissao);
 
-          setTimeout(function () {
-            window.location.href = "/private/index.html";
-          }, 1000);
+          if(json.permissao == "admin"){
+
+            setTimeout(function () {
+              window.location.href = "/internal/configuracao-cadastral-empresa.html";
+            }, 1000);
+
+          }else if(json.permissao == "padrao"){
+
+            setTimeout(function () {
+              window.location.href = "/private/index.html";
+            }, 1000);
+
+          }else{
+            alert("Houve um erro ao tentar realizar o login!");
+          }
+
+          
         });
       } else {
-        console.log("Houve um erro ao tentar realizar o login!");
         resposta.text().then(texto => {
           console.error(texto);
+    
+          // Mostra alerta se for erro de login inválido
+          if (texto === "Email e/ou senha inválido(s)") {
+            alert("Email ou senha inválidos. Verifique seus dados.");
+          } else if (texto === "Mais de um usuário com o mesmo login e senha!") {
+            alert("Conflito de dados: mais de um usuário com esse login.");
+          } else {
+            alert("Erro ao tentar realizar o login: " + texto);
+          }
         });
       }
-
+    
     }).catch(function (erro) {
       console.log(erro);
+      alert("Erro na comunicação com o servidor.");
     });
 
     return false;

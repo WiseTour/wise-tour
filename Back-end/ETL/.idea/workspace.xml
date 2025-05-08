@@ -44,15 +44,9 @@
     "Maven.ETL [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-
-    "git-widget-placeholder": "conexao-banco",
+    "git-widget-placeholder": "ETL-IAN",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/smrma/OneDrive/Documents/2º Semestre/Pesquisa e Inovação II/WiseTour/Back-end/ETL",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
-
+    "last_opened_file_path": "C:/Users/User/Desktop/Codificação/WiseTour/Back-end/ETL"
   }
 }]]></component>
   <component name="RunManager">

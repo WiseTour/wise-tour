@@ -1,15 +1,15 @@
-function cadastrarResponsavel() {
+function cadastrarFuncionario() {
 
-  var nomeResponsavelVar = responsavel_nome_input.value;
-  var cargoVar = responsavel_cargo_input.value;
-  var telefoneVar = responsavel_telefone_input.value;
-  var cnpjEmpresaVar = responsavel_cnpj_empresa_input.value;
-  var idInformacaoVar = responsavel_id_informacao_input.value;
-  var siglaUfVar = responsavel_sigla_uf_input.value;
+  var nomeFuncionarioVar = cadastro_funcionario_nome_input.value;
+  var cargoVar = cadastro_funcionario_cargo_input.value;
+  var telefoneVar = cadastro_funcionario_telefone_input.value;
+  var cnpjEmpresaVar = cadastro_funcionario_cnpj_empresa_input.value;
+  var idInformacaoVar = cadastro_funcionario_id_informacao_input.value;
+  var siglaUfVar = cadastro_funcionario_sigla_uf_input.value;
 
   // Verificando se há algum campo em branco
   if (
-    nomeResponsavelVar == "" ||
+    nomeFuncionarioVar == "" ||
     cargoVar == "" ||
     telefoneVar == "" ||
     cnpjEmpresaVar == "" ||
@@ -20,13 +20,13 @@ function cadastrarResponsavel() {
     return false;
   }
 
-  fetch("/usuarios/cadastrarResponsavel", {
+  fetch("/internalRoutes/cadastrarFuncionario", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      nomeServer: nomeResponsavelVar,
+      nomeServer: nomeFuncionarioVar,
       cargoServer: cargoVar,
       telefoneServer: telefoneVar,
       cnpjEmpresaServer: cnpjEmpresaVar,
@@ -38,7 +38,7 @@ function cadastrarResponsavel() {
       console.log("resposta: ", resposta);
 
       if (resposta.ok) {
-        alert ("Cadastro Responsavel realizado!!!")
+        alert ("Cadastro do funcionário realizado!!!")
 
         limparFormulario();
       } else {

@@ -18,7 +18,7 @@ function cadastrarUsuario() {
       return false;
     }
   
-    fetch("/usuarios/cadastrarUsuario", {
+    fetch("/internal/cadastrarUsuario", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
