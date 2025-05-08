@@ -69,7 +69,7 @@ header .container {
 }
 
 .icon_container img {
-    width: 60px;
+    width: 50px;
 }
 
 .icon_container img {
@@ -96,13 +96,15 @@ main {
   overflow: hidden;
 }
 
-main .gerenciamento-main{
-  display: flex;
+main .gerenciamento-main {
+  display: flex
+;
   align-items: center;
   justify-content: space-between;
-  height: 15vh;
-  width: 91%;
+  height: 70px;
+  width: 90%;
 }
+
 main .gerenciamento-main .titulo{
   display: flex;
   font-size: x-large;
@@ -125,29 +127,50 @@ main .gerenciamento-main .titulo{
 }
 
 .cabecalho {
-  background-color: var(--cor_base); 
+  background-color: var(--cor_base);
   color: black;
   font-weight: bold;
-  padding: 15px 20px;
+  padding: 15px 30px;
   border-radius: 15px 15px 0px 0px;
-  width: 100%; /* <-- ESSENCIAL! */
-  display: flex;
+  width: 100%;
+  display: flex
+;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+.texto-gerenciamento {
+    position: relative; /* Permite posicionar o ::after corretamente */
+    display: inline-block; /* Faz o título ocupar apenas o espaço do texto */
+}
+
+.texto-gerenciamento::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; 
+  left: 0;
+  width: 70%; 
+  height: 3.5px; 
+  background: #000; 
 }
 
 .cabecalho img {
   width: 20px;
 }
 
+#botao-delete {
+  width: 35px;
+}
+
 
 
 .conteudo-usuarios {
-  display: flex;
+  display: flex
+;
   justify-content: space-between;
   align-items: center;
-  width: 100%; 
-  padding: 20px;
+  width: 100%;
+  padding: 15px 40px;
   box-sizing: border-box;
 }
 
@@ -163,13 +186,14 @@ main .gerenciamento-main .titulo{
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  min-width: 200px;
+  /* min-width: 100px; */
   display: flex
 ;
   align-items: center;
   justify-content: center;
-  padding: 11px 21px;
+  padding: 8px 18px;
   gap: 5px;
+  transition: all 0.5s ease;
 }
 
 .add-btn img {
@@ -180,15 +204,20 @@ main .gerenciamento-main .titulo{
   transform: scale(1.1);
 }
 
+#icon-not {
+  width: 25px; 
+  height: auto; 
+}
+
 
 
 .filtros-usuarios {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-  margin-left: 20px; 
-  padding-left: 20px; 
+  gap: 10px;
+  margin-top: 12px;
+  margin-left: 10px; 
+  padding-left: 10px; 
 }
 
 .filtros-usuarios input,

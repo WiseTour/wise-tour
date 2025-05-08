@@ -69,7 +69,7 @@ header .container {
 }
 
 .icon_container img {
-    width: 60px;
+    width: 50px;
 }
 
 .icon_container img {
@@ -133,7 +133,10 @@ main .panorama_geral_linha_1 .filtros {
   align-items: center;
   /* height: 100%; */
   /* width: 70%; */
+  margin-right: 5px;
 }
+
+
 
 main .panorama_geral_linha_1 .filtros select {
   font-size: 40px;
@@ -368,6 +371,11 @@ select:hover {
 .grafico-container canvas {
   font-stretch: semi-condensed;  
   letter-spacing: -0.1px;   
+}
+
+#icon-not {
+  width: 25px; 
+  height: auto; 
 }
 
 

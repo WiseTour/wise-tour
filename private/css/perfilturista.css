@@ -69,7 +69,7 @@ header .container {
 }
 
 .icon_container img {
-    width: 60px;
+    width: 50px;
 }
 
 
@@ -82,8 +82,11 @@ body {
 
 main {
     background-color: #d6d1d1;
-    /* min-height: 100vw; */
-    display: flex;
+    min-height: 50vw
+
+;
+    display: flex
+;
     flex-direction: column;
     align-items: center;
     width: 100vw;
@@ -164,11 +167,13 @@ select:hover {
 
 .coluna-kpis {
     width: 95%;
-    display: flex;
+    display: flex
+;
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* gap: 10px; */
     /* margin: 5px auto; */
+    margin-top: -8px;
 }
 
 .card-amarelo-fundo {
@@ -350,6 +355,11 @@ canvas {
     transform: scale(1.1);
     
 }
+
+#icon-not {
+    width: 25px; 
+    height: auto; 
+  }
 
 
 
