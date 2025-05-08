@@ -77,7 +77,20 @@ function cadastrar() {
 
   return false;
 }
+  return false;
+}
 
 function sumirMensagem() {
   cardErro.style.display = "none";
+}
+function excluirEmpresa() {
+
+}
+
+function excluirResponsavel() {
+
+}
+
+function excluirUsuario() {
+
 }
