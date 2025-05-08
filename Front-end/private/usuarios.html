@@ -12,36 +12,33 @@
 </head>
 
 <body>
+    
     <header id="header" class="header">
         <div id="header_container" class="container">
-
-            <!-- Logo -->
             <div class="logo_container">
                 <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="Logo WiseTour">
             </div>
-
-            <!-- Menu de navegação -->
+    
             <nav class="menu_container">
-                <a class="opcao active" href="index.html">Panorama Geral</a>
-                <a class="opcao" href="sobre-nos.html">Perfil do Turista</a>
-                <a class="opcao" href="servicos.html">Sazonalidade</a>
+                <a class="opcao" href="index.html">Panorama Geral</a>
+                <a class="opcao" href="perfilturista.html">Perfil do Turista</a>
+                <a class="opcao" href="sazonalidade.html">Sazonalidade</a>
             </nav>
-
-            <!-- Ícones à direita -->
+    
             <div class="icon_container">
                 <a class="opcao entrar" href="/auth/login.html">
-                    <div class="user_div"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+                    <img src="assets/not-icon.png" alt="">
                 </a>
-                <a class="opcao entrar" href="/auth/login.html">
-                    <div class="user_div"><i class="fa-solid fa-gear" aria-hidden="true"></i></div>
+                <a class="opcao entrar" href="gerenciamento.html">
+                    <img src="assets/ger-icon.png" alt="">
                 </a>
-                <a class="opcao entrar" href="/auth/login.html">
-                    <div class="user_div"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                <a class="opcao entrar" href="usuarios.html">
+                    <img src="assets/user-icon.png" alt="">
                 </a>
             </div>
-
         </div>
     </header>
+
     <main>
         <h1>USUÁRIO</h1>
         <div class="tela-usuarios">
@@ -64,7 +61,7 @@
                         <div class="campo-info">
                             <span>FUNÇÃO:</span>
                             <select name="" id="">
-                                <option value="administrador" selected>ADIMINISTRADOR</option>
+                                <option value="administrador" selected>ADMINISTRADOR</option>
                                 <option value="marketing">MARKETING</option>
                                 <option value="vendedor">VENDEDOR</option>
                             </select>
@@ -74,7 +71,7 @@
                             <input type="text" value="(11) 987654321">
                         </div>
                         <div class="campo-info">
-                            <span>PREFERÊNCIA DE VIZUALIZAÇÃO DE TELA:</span>
+                            <span>PREFERÊNCIA DE VISUALIZAÇÃO DE TELA:</span>
                         </div>
                         <div class="campo-preferencia" style="display: flex;">
                             <label>
@@ -116,23 +113,23 @@
                             <div class="passaporte-tras">
                                 <div class="informacoes-pessoais">
                                     <div class="amarela"></div>
-                                    <img src="../common/assets/icon/user-icon.webp">
+                                    <img src="assets/icon.svg" id="iconuser">
                                     <div class="dados">
                                         <div>
-                                            <span>N. PASSAPORTE: </span>
+                                            <span class="titulobold">N. PASSAPORTE: </span>
                                             <span>0000</span>
                                         </div>
                                         <div>
-                                            <span>NOME: </span>
-                                            <span>Ian Pimenta</span>
+                                            <span class="titulobold">NOME: </span>
+                                            <span>IAN PIMENTA</span>
                                         </div>
                                         <div>
-                                            <span>DATA NASCIMENTO: </span>
+                                            <span class="titulobold">DATA NASCIMENTO: </span>
                                             <span>01/01/2001</span>
                                         </div>
                                         <div>
-                                            <span>NACIONALIDADE: </span>
-                                            <span>Brasileiro</span>
+                                            <span class="titulobold">NACIONALIDADE: </span>
+                                            <span>BRASILEIRO</span>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +137,7 @@
                                 <div class="campo-amarelo"></div>
                             </div>
                         </div>
-                        <button>Mudar logo de perfil</button>
+                        <button>ALTERAR FOTO DE PERFIL</button>
                     </div>
                 </div>
             </div>
