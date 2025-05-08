@@ -13,30 +13,30 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+    <script src="js/sazonalidade.js" defer></script>
 </head>
 
 <body id="sazonalidade_body">
     <header id="header" class="header">
         <div id="header_container" class="container">
-
             <div class="logo_container">
                 <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="Logo WiseTour">
             </div>
 
             <nav class="menu_container">
                 <a class="opcao" href="index.html">Panorama Geral</a>
-                <a class="opcao active" href="perfilturista.html">Perfil do Turista</a>
-                <a class="opcao" href="sazonalidade.html">Sazonalidade</a>
+                <a class="opcao" href="perfilturista.html">Perfil do Turista</a>
+                <a class="opcao active" href="sazonalidade.html">Sazonalidade</a>
             </nav>
 
             <div class="icon_container">
                 <a class="opcao entrar" href="/auth/login.html">
-                    <img src="assets/not-icon.png" alt="">
+                    <img src="assets/not-icon.svg" alt=""id=icon-not>
                 </a>
                 <a class="opcao entrar" href="gerenciamento.html">
                     <img src="assets/ger-icon.png" alt="">
                 </a>
-                <a class="opcao entrar" href="/auth/login.html">
+                <a class="opcao entrar" href="usuarios.html">
                     <img src="assets/user-icon.png" alt="">
                 </a>
             </div>
@@ -69,26 +69,30 @@
         </div>
 
 
+
+
         <!-- kpis -->
 
         <div class="coluna-kpis">
 
             <div class="card">
                 <div class="card-amarelo-fundo">
-                    <img src="assets/data-management.png" alt="">
+                    <img src="assets/kpi-img-7.svg" alt="">
                 </div>
-                <div class="card-kpi">
+                <div class="card-kpi kpilonga">
                     <h1>6.435,87</h1>
                     <h3>QUANTIDADE TOTAL DE TURISTAS</h3>
                 </div>
             </div>
 
+            
+
 
             <div class="card">
                 <div class="card-amarelo-fundo">
-                    <img src="assets/bar-chart.png" alt="">
+                    <img src="assets/kpi-img-6.svg" alt="">
                 </div>
-                <div class="card-kpi">
+                <div class="card-kpi kpilonga">
                     <h1>+10%</h1>
                     <h3>DE VARIAÇÃO DE TURISTAS EM RELAÇÃO À MAIO DO ANO ANTERIOR</h3>
                 </div>
@@ -97,13 +101,24 @@
 
             <div class="card">
                 <div class="card-amarelo-fundo">
-                    <img src="assets/medal.png" alt="">
+                    <img src="assets/kpi-img-9.svg" alt="">
                 </div>
                 <div class="card-kpi kpi-maior">
-                    <h1>TOP 3</h1>
-                    <h3>ESTADOS MAIS VISITADOS</h3>
+                    <div>
+                        <div>
+                            <h1>TOP 3</h1>
+                            <h3>ESTADOS MAIS VISITADOS</h3>
+                        </div>
+                        <div class="states-over-image">
+                            <span class="state">São Paulo</span>
+                            <span class="state">Rio de Janeiro</span>
+                            <span class="state">Santa Catarina</span>
+                            <img src="assets/top3.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
         <!--gráficos-->
@@ -112,7 +127,7 @@
 
             <div class="pico_de_visitas_por_nacionalidades_em_2024">
                 <div class="titulo_grafico">
-                    PICO DE VISITAS POR NACIONALIDADES EM 2024
+                    PICO DE VISITAS POR NACIONALIDADE
                 </div>
                 <div class="grafico">
                     <canvas id="picoVisitasChart"></canvas>
@@ -123,83 +138,15 @@
                 <div class="titulo_grafico">
                     ESTADOS MAIS VISITADOS
                 </div>
-                <div class="grafico-brasil" id="mapaBrasil" style="height: 400px; width: 100%;">
+                <div class="grafico">
+                    <div class="grafico-brasil" id="mapaBrasil" style="height: 260px; width: 600px;">
+                </div>
+
                 </div>
             </div>
 
         </div>
     </main>
-
-    <script>
-        // Gráfico de chegadas de turistas estrangeiros
-        const picoCtx = document.getElementById('picoVisitasChart');
-
-        new Chart(picoCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], // Meses
-                datasets: [{
-                    labels: false,
-                    data: [35000, 25000, 50000, 50000, 0, 80000, 35000, 70000, 51000, 20000, 20000, 53000], // Dados fictícios
-                    borderColor: '#F8CA26',
-                    fill: true,
-                    backgroundColor: '#F8CA26'
-
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        display: false // <<< Isso esconde a legenda
-                    }
-                },
-                responsive: true,
-                maintainAspectRatio: false, /* Permite definir altura e largura */
-                scales: { y: { beginAtZero: true } }
-            }
-        });
-
-
-        // Mapa dos estados brasileiros com cores personalizadas
-        Highcharts.mapChart('mapaBrasil', {
-            chart: {
-                map: 'countries/br/br-all'
-            },
-
-            title: { text: '' },
-
-            legend: {
-                enabled: false
-            },
-
-            series: [{
-                data: [
-                    ['br-sp', 10],
-                    ['br-rj', 9],
-                    ['br-sc', 8],
-                    ['br-ba', 6],
-                    ['br-mg', 7],
-                    ['br-pr', 7],
-                    ['br-rs', 6],
-                    ['br-pe', 5],
-                    ['br-ce', 4]
-                ],
-                name: 'Visitação',
-                states: {
-                    hover: {
-                        color: '#BADA55'
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                joinBy: ['hc-key', 0],
-                tooltip: {
-                    pointFormat: '{point.name}: {point.value}'
-                }
-            }]
-        });
-    </script>
 
     <footer>
         <div class="footer container">
