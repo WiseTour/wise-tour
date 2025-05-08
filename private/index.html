@@ -11,22 +11,23 @@
     <script src="https://kit.fontawesome.com/041dbc8823.js" crossorigin="anonymous"></script>
     <script src="/common/js/nav-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/index.js" defer></script>
 </head>
 
 <body id="panorama_geral_body">
     <header id="header" class="header">
         <div id="header_container" class="container">
-  
+
             <div class="logo_container">
                 <img class="logo" src="/common/assets/logo/logo_cinza_escuro.svg" alt="Logo WiseTour">
             </div>
-  
+
             <nav class="menu_container">
-                <a class="opcao" href="index.html">Panorama Geral</a>
-                <a class="opcao active" href="perfilturista.html">Perfil do Turista</a>
+                <a class="opcao active" href="index.html">Panorama Geral</a>
+                <a class="opcao" href="perfilturista.html">Perfil do Turista</a>
                 <a class="opcao" href="sazonalidade.html">Sazonalidade</a>
             </nav>
-  
+
             <div class="icon_container">
                 <a class="opcao entrar" href="/auth/login.html">
                     <img src="assets/not-icon.png" alt="">
@@ -34,12 +35,12 @@
                 <a class="opcao entrar" href="gerenciamento.html">
                     <img src="assets/ger-icon.png" alt="">
                 </a>
-                <a class="opcao entrar" href="/auth/login.html">
+                <a class="opcao entrar" href="usuarios.html">
                     <img src="assets/user-icon.png" alt="">
                 </a>
             </div>
         </div>
-    </header>      
+    </header>
 
 
     <main>
@@ -71,10 +72,13 @@
             <div class="panorama_geral_coluna_1">
                 <div class="principais_paises_origem">
                     <div class="titulo_grafico">
-                        PRINCIPAIS PAISES DE ORIGEM EM 2024
+                        PRINCIPAIS PAÍSES DE ORIGEM
                     </div>
                     <div class="grafico">
-                        <canvas id="myChart"></canvas>
+                        <div class="grafico-container">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
                     </div>
                 </div>
                 <div class="presenca_turista_uf">
@@ -82,7 +86,10 @@
                         PRESENÇA DE TURISTAS POR UNIDADE FEDERATIVA
                     </div>
                     <div class="grafico">
-                        <canvas id="presencaTuristaChart"></canvas>
+                        <div class="grafico-container">
+                            <canvas id="presencaTuristaChart"></canvas>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -91,29 +98,29 @@
                     <div class="kpi">
                         <div class="card">
                             <div class="icon-box">
-                                <i class="fas fa-plane-arrival"></i>
+                                <img src="assets/kpi-img-5.svg" alt="">
                             </div>
                             <div class="info-box">
                                 <div class="number">8.987.064</div>
-                                <div class="label">Total de chegadas <br><span>em 2023</span></div>
+                                <div class="label">TOTAL DE CHEGADAS <br><span>em 2023</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="kpi">
                         <div class="card">
                             <div class="icon-box">
-                                <i class="fas fa-plane-arrival"></i>
+                                <img src="assets/kpi-img-5.svg" alt="">
                             </div>
                             <div class="info-box">
                                 <div class="number">9.762,81</div>
-                                <div class="label">Total de chegadas <br><span>em 2024</span></div>
+                                <div class="label">TOTAL DE CHEGADAS <br><span>em 2024</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="kpi">
                         <div class="card">
                             <div class="icon-box">
-                                <i class="fa-solid fa-signal"></i>
+                                <img src="assets/kpi-img-6.svg" alt="">
                             </div>
                             <div class="info-box">
                                 <div class="number">+8,63%</div>
@@ -127,7 +134,10 @@
                         CHEGADA DE TURISTAS ESTRANGEIROS
                     </div>
                     <div class="grafico">
-                        <canvas id="chegadasTuristasChart"></canvas>
+                        <div class="grafico-container">
+                            <canvas id="chegadasTuristasChart"></canvas>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -167,65 +177,3 @@
 </body>
 
 </html>
-
-<script>
-    // Gráfico de países de origem
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Argentina', 'Chile', 'EUA', 'Paraguai', 'Uruguai'],
-            datasets: [{
-                label: '# of Votes',
-                data: [20, 15, 10, 5, 1],
-                borderWidth: 1,
-                backgroundColor: 'rgb(247, 202, 37)'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-    // Gráfico de presença de turistas por UF
-    const presencaCtx = document.getElementById('presencaTuristaChart');
-    new Chart(presencaCtx, {
-        type: 'bar',
-        data: {
-            labels: ['SP', 'RJ', 'MG', 'BA', 'RS'], // Estados
-            datasets: [{
-                label: 'Presença de turistas',
-                data: [5000, 3000, 2000, 1500, 1200], // Dados fictícios
-                backgroundColor: 'rgb(247, 202, 37)'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-    // Gráfico de chegadas de turistas estrangeiros
-    const chegadasCtx = document.getElementById('chegadasTuristasChart');
-
-    new Chart(chegadasCtx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'], // Meses
-            datasets: [{
-                label: 'Turistas Estrangeiros',
-                data: [35000, 25000, 50000, 50000, 0, 80000, 35000, 70000, 51000, 20000, 20000, 53000], // Dados fictícios
-                borderColor: 'rgba(247, 202, 37, 1)',
-                fill: false
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, /* Permite definir altura e largura */
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-</script>
