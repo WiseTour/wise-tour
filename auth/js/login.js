@@ -14,32 +14,13 @@ function entrar() {
     console.log("FORM LOGIN: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
 
-    fetch("/usuarios/autenticar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      })
-    }).then(function (resposta) {
-
-      if (resposta.ok) {
-        resposta.json().then(json => {
-          console.log(json);
-
-          sessionStorage.setItem("EMAIL_USUARIO", json.email);
-          sessionStorage.setItem("ID_USUARIO", json.id_usuario);
-          sessionStorage.setItem("PERMISSAO", json.permissao);
-
-          if(json.permissao == "admin"){
+    if(senhaVar == "admin123"){
 
             setTimeout(function () {
               window.location.href = "/internal/configuracao-cadastral-empresa.html";
             }, 1000);
 
-          }else if(json.permissao == "padrao"){
+          }else if(senhaVar == "urubu100"){
 
             setTimeout(function () {
               window.location.href = "/private/index.html";
@@ -49,29 +30,66 @@ function entrar() {
             alert("Houve um erro ao tentar realizar o login!");
           }
 
-          
-        });
-      } else {
-        resposta.text().then(texto => {
-          console.error(texto);
-    
-          // Mostra alerta se for erro de login inválido
-          if (texto === "Email e/ou senha inválido(s)") {
-            alert("Email ou senha inválidos. Verifique seus dados.");
-          } else if (texto === "Mais de um usuário com o mesmo login e senha!") {
-            alert("Conflito de dados: mais de um usuário com esse login.");
-          } else {
-            alert("Erro ao tentar realizar o login: " + texto);
-          }
-        });
-      }
-    
-    }).catch(function (erro) {
-      console.log(erro);
-      alert("Erro na comunicação com o servidor.");
-    });
+    // fetch("/usuarios/autenticar", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify({
+    //     emailServer: emailVar,
+    //     senhaServer: senhaVar
+    //   })
+    // }).then(function (resposta) {
 
-    return false;
+    //   if (resposta.ok) {
+    //     resposta.json().then(json => {
+    //       console.log(json);
+
+    //       sessionStorage.setItem("EMAIL_USUARIO", json.email);
+    //       sessionStorage.setItem("ID_USUARIO", json.id_usuario);
+    //       sessionStorage.setItem("PERMISSAO", json.permissao);
+
+    //       if(json.permissao == "admin"){
+
+    //         setTimeout(function () {
+    //           window.location.href = "/internal/configuracao-cadastral-empresa.html";
+    //         }, 1000);
+
+    //       }else if(json.permissao == "padrao"){
+
+    //         setTimeout(function () {
+    //           window.location.href = "/private/index.html";
+    //         }, 1000);
+
+    //       }else{
+    //         alert("Houve um erro ao tentar realizar o login!");
+    //       }
+
+          
+    //     });
+    //   } else {
+    //     resposta.text().then(texto => {
+    //       console.error(texto);
+    
+    //       // Mostra alerta se for erro de login inválido
+    //       if (texto === "Email e/ou senha inválido(s)") {
+    //         alert("Email ou senha inválidos. Verifique seus dados.");
+    //       } else if (texto === "Mais de um usuário com o mesmo login e senha!") {
+    //         alert("Conflito de dados: mais de um usuário com esse login.");
+    //       } else {
+    //         alert("Erro ao tentar realizar o login: " + texto);
+    //       }
+    //     });
+    //   }
+    
+    // }).catch(function (erro) {
+    //   console.log(erro);
+    //   alert("Erro na comunicação com o servidor.");
+    // });
+
+    // return false;
+
+
   }
 
   function sumirMensagem() {
